@@ -1,0 +1,649 @@
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.34 sort_p90=0.65 sort_max=0.83 cap_mean=32959 cap_worst=32434 valid=0.4446 fabric_valid=0.4446 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=30.3 ord_max=30.8 ord_last=30.2 miss=0.000 total_mean=529.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=30.3 ord_max=30.8 ord_last=30.2 miss=0.000 total_mean=280.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=30.3 ord_max=30.8 ord_last=30.2 miss=0.000 total_mean=130.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=30.3 ord_max=30.8 ord_last=30.2 miss=0.000 total_mean=80.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=30.3 ord_max=30.8 ord_last=30.2 miss=0.000 total_mean=55.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.60 sort_p90=1.11 sort_max=2.08 cap_mean=32676 cap_worst=31168 valid=0.4822 fabric_valid=0.4446 urgent_ok=NaN jain=0.9994
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=30.6 ord_max=32.1 ord_last=30.4 miss=0.000 total_mean=530.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=30.6 ord_max=32.1 ord_last=30.4 miss=0.000 total_mean=280.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=30.6 ord_max=32.1 ord_last=30.4 miss=0.000 total_mean=130.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=30.6 ord_max=32.1 ord_last=30.4 miss=0.000 total_mean=80.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=30.6 ord_max=32.1 ord_last=30.4 miss=0.000 total_mean=55.6
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 reps=20 sort_mean=1.63 sort_p90=2.34 sort_max=2.61 cap_mean=31613 cap_worst=30665 valid=0.5832 fabric_valid=0.4446 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=31.6 ord_max=32.6 ord_last=32.0 miss=0.000 total_mean=531.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=31.6 ord_max=32.6 ord_last=32.0 miss=0.000 total_mean=281.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=31.6 ord_max=32.6 ord_last=32.0 miss=0.000 total_mean=131.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=31.6 ord_max=32.6 ord_last=32.0 miss=0.000 total_mean=81.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=31.6 ord_max=32.6 ord_last=32.0 miss=0.000 total_mean=56.6
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 reps=20 sort_mean=3.15 sort_p90=3.98 sort_max=4.86 cap_mean=30169 cap_worst=28685 valid=0.6971 fabric_valid=0.4446 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=33.1 ord_max=34.9 ord_last=33.0 miss=0.000 total_mean=532.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=33.1 ord_max=34.9 ord_last=33.0 miss=0.000 total_mean=282.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=33.1 ord_max=34.9 ord_last=33.0 miss=0.000 total_mean=133.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=33.1 ord_max=34.9 ord_last=33.0 miss=0.000 total_mean=83.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=33.1 ord_max=34.9 ord_last=33.0 miss=0.000 total_mean=58.1
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 reps=20 sort_mean=3.20 sort_p90=4.02 sort_max=4.16 cap_mean=30117 cap_worst=29271 valid=0.6971 fabric_valid=0.4446 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=33.2 ord_max=34.2 ord_last=32.4 miss=0.000 total_mean=532.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=33.2 ord_max=34.2 ord_last=32.4 miss=0.000 total_mean=283.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=33.2 ord_max=34.2 ord_last=32.4 miss=0.000 total_mean=133.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=33.2 ord_max=34.2 ord_last=32.4 miss=0.000 total_mean=83.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=33.2 ord_max=34.2 ord_last=32.4 miss=0.000 total_mean=58.2
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 reps=20 sort_mean=5.95 sort_p90=7.32 sort_max=7.44 cap_mean=27819 cap_worst=26712 valid=0.7981 fabric_valid=0.4446 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=35.9 ord_max=37.4 ord_last=35.1 miss=0.000 total_mean=535.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=35.9 ord_max=37.4 ord_last=35.1 miss=0.000 total_mean=285.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=35.9 ord_max=37.4 ord_last=35.1 miss=0.000 total_mean=135.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=35.9 ord_max=37.4 ord_last=35.1 miss=0.000 total_mean=85.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=35.9 ord_max=37.4 ord_last=35.1 miss=0.000 total_mean=60.9
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.28 sort_p90=0.51 sort_max=1.32 cap_mean=33024 cap_worst=31927 valid=0.2611 fabric_valid=0.2611 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=30.3 ord_max=31.3 ord_last=30.2 miss=0.000 total_mean=529.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=30.3 ord_max=31.3 ord_last=30.2 miss=0.000 total_mean=280.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=30.3 ord_max=31.3 ord_last=30.2 miss=0.000 total_mean=130.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=30.3 ord_max=31.3 ord_last=30.2 miss=0.000 total_mean=80.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=30.3 ord_max=31.3 ord_last=30.2 miss=0.000 total_mean=55.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.83 sort_p90=1.34 sort_max=2.59 cap_mean=32439 cap_worst=30680 valid=0.3216 fabric_valid=0.2611 urgent_ok=NaN jain=0.9997
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=30.8 ord_max=32.6 ord_last=31.1 miss=0.000 total_mean=530.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=30.8 ord_max=32.6 ord_last=31.1 miss=0.000 total_mean=280.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=30.8 ord_max=32.6 ord_last=31.1 miss=0.000 total_mean=130.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=30.8 ord_max=32.6 ord_last=31.1 miss=0.000 total_mean=80.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=30.8 ord_max=32.6 ord_last=31.1 miss=0.000 total_mean=55.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 reps=20 sort_mean=2.26 sort_p90=3.18 sort_max=3.18 cap_mean=30998 cap_worst=30137 valid=0.4156 fabric_valid=0.2611 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=32.3 ord_max=33.2 ord_last=31.7 miss=0.000 total_mean=531.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=32.3 ord_max=33.2 ord_last=31.7 miss=0.000 total_mean=282.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=32.3 ord_max=33.2 ord_last=31.7 miss=0.000 total_mean=132.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=32.3 ord_max=33.2 ord_last=31.7 miss=0.000 total_mean=82.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=32.3 ord_max=33.2 ord_last=31.7 miss=0.000 total_mean=57.2
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 reps=20 sort_mean=4.83 sort_p90=6.88 sort_max=7.02 cap_mean=28714 cap_worst=27011 valid=0.5011 fabric_valid=0.2611 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=34.8 ord_max=37.0 ord_last=33.7 miss=0.000 total_mean=534.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=34.8 ord_max=37.0 ord_last=33.7 miss=0.000 total_mean=284.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=34.8 ord_max=37.0 ord_last=33.7 miss=0.000 total_mean=134.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=34.8 ord_max=37.0 ord_last=33.7 miss=0.000 total_mean=84.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=34.8 ord_max=37.0 ord_last=33.7 miss=0.000 total_mean=59.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 reps=20 sort_mean=4.91 sort_p90=7.08 sort_max=7.19 cap_mean=28643 cap_worst=26889 valid=0.5011 fabric_valid=0.2611 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=34.9 ord_max=37.2 ord_last=33.7 miss=0.000 total_mean=534.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=34.9 ord_max=37.2 ord_last=33.7 miss=0.000 total_mean=284.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=34.9 ord_max=37.2 ord_last=33.7 miss=0.000 total_mean=134.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=34.9 ord_max=37.2 ord_last=33.7 miss=0.000 total_mean=84.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=34.9 ord_max=37.2 ord_last=33.7 miss=0.000 total_mean=59.9
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 reps=20 sort_mean=9.41 sort_p90=15.26 sort_max=15.84 cap_mean=25376 cap_worst=21816 valid=0.5860 fabric_valid=0.2611 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=39.4 ord_max=45.8 ord_last=37.8 miss=0.000 total_mean=538.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=39.4 ord_max=45.8 ord_last=37.8 miss=0.000 total_mean=289.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=39.4 ord_max=45.8 ord_last=37.8 miss=0.000 total_mean=139.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=39.4 ord_max=45.8 ord_last=37.8 miss=0.000 total_mean=89.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=39.4 ord_max=45.8 ord_last=37.8 miss=0.000 total_mean=64.4
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.21 sort_p90=0.45 sort_max=0.57 cap_mean=33106 cap_worst=32713 valid=0.1437 fabric_valid=0.1437 urgent_ok=NaN jain=0.9970
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=30.2 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=529.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=30.2 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=280.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=30.2 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=130.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=30.2 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=80.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=30.2 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=55.2
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 reps=20 sort_mean=1.10 sort_p90=1.76 sort_max=2.34 cap_mean=32150 cap_worst=30926 valid=0.2028 fabric_valid=0.1437 urgent_ok=NaN jain=0.9993
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=31.1 ord_max=32.3 ord_last=30.8 miss=0.000 total_mean=530.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=31.1 ord_max=32.3 ord_last=30.8 miss=0.000 total_mean=280.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=31.1 ord_max=32.3 ord_last=30.8 miss=0.000 total_mean=131.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=31.1 ord_max=32.3 ord_last=30.8 miss=0.000 total_mean=81.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=31.1 ord_max=32.3 ord_last=30.8 miss=0.000 total_mean=56.1
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 reps=20 sort_mean=2.65 sort_p90=4.07 sort_max=4.11 cap_mean=30631 cap_worst=29319 valid=0.2747 fabric_valid=0.1437 urgent_ok=NaN jain=0.9995
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=32.6 ord_max=34.1 ord_last=31.8 miss=0.000 total_mean=532.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=32.6 ord_max=34.1 ord_last=31.8 miss=0.000 total_mean=282.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=32.6 ord_max=34.1 ord_last=31.8 miss=0.000 total_mean=132.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=32.6 ord_max=34.1 ord_last=31.8 miss=0.000 total_mean=82.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=32.6 ord_max=34.1 ord_last=31.8 miss=0.000 total_mean=57.6
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 reps=20 sort_mean=5.31 sort_p90=7.35 sort_max=7.82 cap_mean=28321 cap_worst=26444 valid=0.3464 fabric_valid=0.1437 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=35.3 ord_max=37.8 ord_last=34.4 miss=0.000 total_mean=534.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=35.3 ord_max=37.8 ord_last=34.4 miss=0.000 total_mean=285.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=35.3 ord_max=37.8 ord_last=34.4 miss=0.000 total_mean=135.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=35.3 ord_max=37.8 ord_last=34.4 miss=0.000 total_mean=85.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=35.3 ord_max=37.8 ord_last=34.4 miss=0.000 total_mean=60.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 reps=20 sort_mean=4.94 sort_p90=6.47 sort_max=7.09 cap_mean=28618 cap_worst=26962 valid=0.3464 fabric_valid=0.1437 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=34.9 ord_max=37.1 ord_last=34.3 miss=0.000 total_mean=534.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=34.9 ord_max=37.1 ord_last=34.3 miss=0.000 total_mean=284.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=34.9 ord_max=37.1 ord_last=34.3 miss=0.000 total_mean=134.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=34.9 ord_max=37.1 ord_last=34.3 miss=0.000 total_mean=84.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=34.9 ord_max=37.1 ord_last=34.3 miss=0.000 total_mean=59.9
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 reps=20 sort_mean=8.33 sort_p90=10.63 sort_max=10.66 cap_mean=26088 cap_worst=24592 valid=0.4108 fabric_valid=0.1437 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=38.3 ord_max=40.7 ord_last=40.6 miss=0.000 total_mean=537.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=38.3 ord_max=40.7 ord_last=40.6 miss=0.000 total_mean=288.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=38.3 ord_max=40.7 ord_last=40.6 miss=0.000 total_mean=138.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=38.3 ord_max=40.7 ord_last=40.6 miss=0.000 total_mean=88.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=38.3 ord_max=40.7 ord_last=40.6 miss=0.000 total_mean=63.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=1.12 sort_p90=1.59 sort_max=1.67 cap_mean=44996 cap_worst=44773 valid=0.2052 fabric_valid=0.2052 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=111.1 ord_max=111.7 ord_last=110.8 miss=0.000 total_mean=2610.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=111.1 ord_max=111.7 ord_last=110.8 miss=0.000 total_mean=1360.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=111.1 ord_max=111.7 ord_last=110.8 miss=0.000 total_mean=611.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=111.1 ord_max=111.7 ord_last=110.8 miss=0.000 total_mean=361.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=111.1 ord_max=111.7 ord_last=110.8 miss=0.000 total_mean=236.1
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=10.33 sort_p90=15.04 sort_max=15.73 cap_mean=41551 cap_worst=39767 valid=0.2475 fabric_valid=0.2052 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=120.3 ord_max=125.7 ord_last=119.2 miss=0.000 total_mean=2619.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=120.3 ord_max=125.7 ord_last=119.2 miss=0.000 total_mean=1370.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=120.3 ord_max=125.7 ord_last=119.2 miss=0.000 total_mean=620.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=120.3 ord_max=125.7 ord_last=119.2 miss=0.000 total_mean=370.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=120.3 ord_max=125.7 ord_last=119.2 miss=0.000 total_mean=245.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=52.61 sort_p90=86.57 sort_max=128.23 cap_mean=30749 cap_worst=20988 valid=0.2831 fabric_valid=0.2052 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=162.6 ord_max=238.2 ord_last=157.0 miss=0.000 total_mean=2662.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=162.6 ord_max=238.2 ord_last=157.0 miss=0.000 total_mean=1412.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=162.6 ord_max=238.2 ord_last=157.0 miss=0.000 total_mean=662.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=162.6 ord_max=238.2 ord_last=157.0 miss=0.000 total_mean=412.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=162.6 ord_max=238.2 ord_last=157.0 miss=0.000 total_mean=287.6
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=129.67 sort_p90=313.95 sort_max=324.24 cap_mean=20862 cap_worst=11514 valid=0.3056 fabric_valid=0.2052 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=239.7 ord_max=434.2 ord_last=214.8 miss=0.000 total_mean=2739.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=239.7 ord_max=434.2 ord_last=214.8 miss=0.000 total_mean=1489.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=239.7 ord_max=434.2 ord_last=214.8 miss=0.000 total_mean=739.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=239.7 ord_max=434.2 ord_last=214.8 miss=0.000 total_mean=489.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=324.5 ord_max=481.5 ord_last=254.1 miss=0.000 total_mean=449.5
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=131.25 sort_p90=324.04 sort_max=326.86 cap_mean=20725 cap_worst=11445 valid=0.3056 fabric_valid=0.2052 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=241.3 ord_max=436.9 ord_last=219.5 miss=0.000 total_mean=2740.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=241.3 ord_max=436.9 ord_last=219.5 miss=0.000 total_mean=1491.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=241.3 ord_max=436.9 ord_last=219.5 miss=0.000 total_mean=741.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=241.3 ord_max=436.9 ord_last=219.5 miss=0.000 total_mean=491.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=339.3 ord_max=502.3 ord_last=262.3 miss=0.000 total_mean=464.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=218.71 sort_p90=546.79 sort_max=564.01 cap_mean=15211 cap_worst=7418 valid=0.3207 fabric_valid=0.2052 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=328.7 ord_max=674.0 ord_last=281.5 miss=0.000 total_mean=2828.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=328.7 ord_max=674.0 ord_last=281.5 miss=0.000 total_mean=1578.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=328.7 ord_max=674.0 ord_last=281.5 miss=0.000 total_mean=828.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=349.6 ord_max=674.0 ord_last=281.5 miss=0.000 total_mean=599.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=15211 ord_mean=1300.3 ord_max=1824.2 ord_last=1824.2 miss=0.800 total_mean=1425.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.95 sort_p90=1.46 sort_max=1.71 cap_mean=45064 cap_worst=44758 valid=0.1172 fabric_valid=0.1172 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=111.0 ord_max=111.7 ord_last=111.0 miss=0.000 total_mean=2610.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=111.0 ord_max=111.7 ord_last=111.0 miss=0.000 total_mean=1360.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=111.0 ord_max=111.7 ord_last=111.0 miss=0.000 total_mean=610.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=111.0 ord_max=111.7 ord_last=111.0 miss=0.000 total_mean=360.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=111.0 ord_max=111.7 ord_last=111.0 miss=0.000 total_mean=235.9
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=14.53 sort_p90=18.61 sort_max=28.90 cap_mean=40152 cap_worst=35998 valid=0.1712 fabric_valid=0.1172 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=124.5 ord_max=138.9 ord_last=128.4 miss=0.000 total_mean=2624.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=124.5 ord_max=138.9 ord_last=128.4 miss=0.000 total_mean=1374.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=124.5 ord_max=138.9 ord_last=128.4 miss=0.000 total_mean=624.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=124.5 ord_max=138.9 ord_last=128.4 miss=0.000 total_mean=374.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=124.5 ord_max=138.9 ord_last=128.4 miss=0.000 total_mean=249.5
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=71.41 sort_p90=123.56 sort_max=192.64 cap_mean=27562 cap_worst=16521 valid=0.2130 fabric_valid=0.1172 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=181.4 ord_max=302.6 ord_last=180.1 miss=0.000 total_mean=2680.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=181.4 ord_max=302.6 ord_last=180.1 miss=0.000 total_mean=1431.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=181.4 ord_max=302.6 ord_last=180.1 miss=0.000 total_mean=681.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=181.4 ord_max=302.6 ord_last=180.1 miss=0.000 total_mean=431.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=184.0 ord_max=302.6 ord_last=180.1 miss=0.000 total_mean=309.0
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=173.54 sort_p90=381.95 sort_max=565.52 cap_mean=17634 cap_worst=7402 valid=0.2418 fabric_valid=0.1172 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=283.5 ord_max=675.5 ord_last=255.3 miss=0.000 total_mean=2783.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=283.5 ord_max=675.5 ord_last=255.3 miss=0.000 total_mean=1533.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=283.5 ord_max=675.5 ord_last=255.3 miss=0.000 total_mean=783.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=292.3 ord_max=675.5 ord_last=255.3 miss=0.000 total_mean=542.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=17634 ord_mean=500.5 ord_max=1017.7 ord_last=977.1 miss=0.050 total_mean=625.5
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=173.99 sort_p90=382.11 sort_max=562.68 cap_mean=17606 cap_worst=7433 valid=0.2418 fabric_valid=0.1172 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=284.0 ord_max=672.7 ord_last=253.4 miss=0.000 total_mean=2783.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=284.0 ord_max=672.7 ord_last=253.4 miss=0.000 total_mean=1533.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=284.0 ord_max=672.7 ord_last=253.4 miss=0.000 total_mean=783.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=292.6 ord_max=672.7 ord_last=253.4 miss=0.000 total_mean=542.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=17606 ord_mean=503.9 ord_max=1014.6 ord_last=975.3 miss=0.050 total_mean=628.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=315.24 sort_p90=784.05 sort_max=1011.08 cap_mean=11758 cap_worst=4460 valid=0.2612 fabric_valid=0.1172 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=425.2 ord_max=1121.1 ord_last=348.0 miss=0.050 total_mean=2924.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=425.2 ord_max=1121.1 ord_last=348.0 miss=0.050 total_mean=1675.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=431.3 ord_max=1121.1 ord_last=348.0 miss=0.050 total_mean=931.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=515.5 ord_max=1121.1 ord_last=737.7 miss=0.050 total_mean=765.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=11758 ord_mean=1800.5 ord_max=3754.7 ord_last=3754.7 miss=0.600 total_mean=1925.5
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.91 sort_p90=1.36 sort_max=1.49 cap_mean=45083 cap_worst=44847 valid=0.0558 fabric_valid=0.0558 urgent_ok=NaN jain=0.9992
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=110.9 ord_max=111.5 ord_last=111.1 miss=0.000 total_mean=2610.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=110.9 ord_max=111.5 ord_last=111.1 miss=0.000 total_mean=1360.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=110.9 ord_max=111.5 ord_last=111.1 miss=0.000 total_mean=610.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=110.9 ord_max=111.5 ord_last=111.1 miss=0.000 total_mean=360.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=110.9 ord_max=111.5 ord_last=111.1 miss=0.000 total_mean=235.9
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=13.01 sort_p90=16.79 sort_max=17.08 cap_mean=40648 cap_worst=39344 valid=0.1086 fabric_valid=0.0558 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=123.0 ord_max=127.1 ord_last=122.4 miss=0.000 total_mean=2622.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=123.0 ord_max=127.1 ord_last=122.4 miss=0.000 total_mean=1372.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=123.0 ord_max=127.1 ord_last=122.4 miss=0.000 total_mean=622.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=123.0 ord_max=127.1 ord_last=122.4 miss=0.000 total_mean=373.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=123.0 ord_max=127.1 ord_last=122.4 miss=0.000 total_mean=248.0
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=55.55 sort_p90=82.94 sort_max=136.61 cap_mean=30203 cap_worst=20275 valid=0.1551 fabric_valid=0.0558 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=165.5 ord_max=246.6 ord_last=163.2 miss=0.000 total_mean=2665.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=165.5 ord_max=246.6 ord_last=163.2 miss=0.000 total_mean=1415.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=165.5 ord_max=246.6 ord_last=163.2 miss=0.000 total_mean=665.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=165.5 ord_max=246.6 ord_last=163.2 miss=0.000 total_mean=415.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=165.5 ord_max=246.6 ord_last=163.2 miss=0.000 total_mean=290.5
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=133.28 sort_p90=243.03 sort_max=292.23 cap_mean=20553 cap_worst=12431 valid=0.1901 fabric_valid=0.0558 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=243.3 ord_max=402.2 ord_last=244.8 miss=0.000 total_mean=2742.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=243.3 ord_max=402.2 ord_last=244.8 miss=0.000 total_mean=1493.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=243.3 ord_max=402.2 ord_last=244.8 miss=0.000 total_mean=743.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=243.3 ord_max=402.2 ord_last=244.8 miss=0.000 total_mean=493.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=301.1 ord_max=422.0 ord_last=244.8 miss=0.000 total_mean=426.1
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=132.64 sort_p90=250.08 sort_max=292.33 cap_mean=20606 cap_worst=12428 valid=0.1901 fabric_valid=0.0558 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=242.6 ord_max=402.3 ord_last=242.4 miss=0.000 total_mean=2742.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=242.6 ord_max=402.3 ord_last=242.4 miss=0.000 total_mean=1492.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=242.6 ord_max=402.3 ord_last=242.4 miss=0.000 total_mean=742.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=242.6 ord_max=402.3 ord_last=242.4 miss=0.000 total_mean=492.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=291.3 ord_max=412.2 ord_last=242.4 miss=0.000 total_mean=416.3
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=245.95 sort_p90=471.64 sort_max=495.47 cap_mean=14047 cap_worst=8258 valid=0.2180 fabric_valid=0.0558 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=356.0 ord_max=605.5 ord_last=369.5 miss=0.000 total_mean=2855.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=356.0 ord_max=605.5 ord_last=369.5 miss=0.000 total_mean=1605.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=356.0 ord_max=605.5 ord_last=369.5 miss=0.000 total_mean=855.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=367.0 ord_max=605.5 ord_last=369.5 miss=0.000 total_mean=617.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=14047 ord_mean=1520.8 ord_max=2369.1 ord_last=2369.1 miss=0.750 total_mean=1645.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=2.14 sort_p90=3.10 sort_max=3.11 cap_mean=47138 cap_worst=46925 valid=0.1381 fabric_valid=0.1381 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=212.1 ord_max=213.1 ord_last=212.0 miss=0.000 total_mean=5211.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=212.1 ord_max=213.1 ord_last=212.0 miss=0.000 total_mean=2711.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=212.1 ord_max=213.1 ord_last=212.0 miss=0.000 total_mean=1212.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=212.1 ord_max=213.1 ord_last=212.0 miss=0.000 total_mean=712.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=212.1 ord_max=213.1 ord_last=212.0 miss=0.000 total_mean=462.1
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=57.73 sort_p90=83.18 sort_max=121.78 cap_mean=37352 cap_worst=30140 valid=0.1629 fabric_valid=0.1381 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=267.7 ord_max=331.8 ord_last=259.4 miss=0.000 total_mean=5267.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=267.7 ord_max=331.8 ord_last=259.4 miss=0.000 total_mean=2767.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=267.7 ord_max=331.8 ord_last=259.4 miss=0.000 total_mean=1267.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=267.7 ord_max=331.8 ord_last=259.4 miss=0.000 total_mean=767.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=267.7 ord_max=331.8 ord_last=259.4 miss=0.000 total_mean=517.7
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=277.12 sort_p90=559.90 sort_max=563.05 cap_mean=20529 cap_worst=12936 valid=0.1754 fabric_valid=0.1381 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=487.1 ord_max=773.0 ord_last=773.0 miss=0.000 total_mean=5486.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=487.1 ord_max=773.0 ord_last=773.0 miss=0.000 total_mean=2986.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=487.1 ord_max=773.0 ord_last=773.0 miss=0.000 total_mean=1487.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=487.1 ord_max=773.0 ord_last=773.0 miss=0.000 total_mean=987.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=685.8 ord_max=989.3 ord_last=773.0 miss=0.000 total_mean=935.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=558.27 sort_p90=990.82 sort_max=1879.91 cap_mean=13016 cap_worst=4785 valid=0.1822 fabric_valid=0.1381 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=768.3 ord_max=2089.9 ord_last=2089.9 miss=0.167 total_mean=5767.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=768.3 ord_max=2089.9 ord_last=2089.9 miss=0.167 total_mean=3268.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=768.3 ord_max=2089.9 ord_last=2089.9 miss=0.167 total_mean=1768.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=785.0 ord_max=2089.9 ord_last=2089.9 miss=0.167 total_mean=1285.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=13016 ord_mean=2083.5 ord_max=3719.2 ord_last=3719.2 miss=0.917 total_mean=2333.4
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=559.00 sort_p90=983.34 sort_max=1870.84 cap_mean=13004 cap_worst=4806 valid=0.1822 fabric_valid=0.1381 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=769.0 ord_max=2080.8 ord_last=2080.8 miss=0.167 total_mean=5768.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=769.0 ord_max=2080.8 ord_last=2080.8 miss=0.167 total_mean=3268.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=769.0 ord_max=2080.8 ord_last=2080.8 miss=0.167 total_mean=1768.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=785.1 ord_max=2080.8 ord_last=2080.8 miss=0.167 total_mean=1285.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=13004 ord_mean=2109.1 ord_max=3728.0 ord_last=3728.0 miss=0.917 total_mean=2359.1
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=879.95 sort_p90=1461.44 sort_max=3267.84 cap_mean=9175 cap_worst=2875 valid=0.1859 fabric_valid=0.1381 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=1090.0 ord_max=3477.8 ord_last=3477.8 miss=0.250 total_mean=6089.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=1090.0 ord_max=3477.8 ord_last=3477.8 miss=0.250 total_mean=3589.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=1090.0 ord_max=3477.8 ord_last=3477.8 miss=0.250 total_mean=2089.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=9175 ord_mean=1369.6 ord_max=3477.8 ord_last=3477.8 miss=0.667 total_mean=1869.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=9175 ord_mean=3852.5 ord_max=7579.5 ord_last=7579.5 miss=1.000 total_mean=4102.5
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=1.58 sort_p90=1.75 sort_max=2.17 cap_mean=47264 cap_worst=47133 valid=0.0857 fabric_valid=0.0857 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=211.6 ord_max=212.2 ord_last=211.4 miss=0.000 total_mean=5211.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=211.6 ord_max=212.2 ord_last=211.4 miss=0.000 total_mean=2711.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=211.6 ord_max=212.2 ord_last=211.4 miss=0.000 total_mean=1211.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=211.6 ord_max=212.2 ord_last=211.4 miss=0.000 total_mean=711.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=211.6 ord_max=212.2 ord_last=211.4 miss=0.000 total_mean=461.6
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=71.00 sort_p90=108.29 sort_max=122.17 cap_mean=35587 cap_worst=30105 valid=0.1209 fabric_valid=0.0857 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=281.0 ord_max=332.2 ord_last=288.5 miss=0.000 total_mean=5280.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=281.0 ord_max=332.2 ord_last=288.5 miss=0.000 total_mean=2780.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=281.0 ord_max=332.2 ord_last=288.5 miss=0.000 total_mean=1280.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=281.0 ord_max=332.2 ord_last=288.5 miss=0.000 total_mean=780.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=281.0 ord_max=332.2 ord_last=288.5 miss=0.000 total_mean=531.0
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=313.42 sort_p90=451.14 sort_max=772.41 cap_mean=19105 cap_worst=10179 valid=0.1414 fabric_valid=0.0857 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=523.4 ord_max=982.4 ord_last=616.5 miss=0.000 total_mean=5522.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=523.4 ord_max=982.4 ord_last=616.5 miss=0.000 total_mean=3023.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=523.4 ord_max=982.4 ord_last=616.5 miss=0.000 total_mean=1523.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=523.4 ord_max=982.4 ord_last=616.5 miss=0.000 total_mean=1023.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=19105 ord_mean=756.9 ord_max=1201.9 ord_last=859.6 miss=0.250 total_mean=1006.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=644.50 sort_p90=850.23 sort_max=1704.61 cap_mean=11703 cap_worst=5223 valid=0.1541 fabric_valid=0.0857 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=854.5 ord_max=1914.6 ord_last=1024.6 miss=0.250 total_mean=5854.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=854.5 ord_max=1914.6 ord_last=1024.6 miss=0.250 total_mean=3354.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=854.5 ord_max=1914.6 ord_last=1024.6 miss=0.250 total_mean=1854.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=1001.4 ord_max=1974.8 ord_last=1024.6 miss=0.417 total_mean=1501.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=11703 ord_mean=2872.0 ord_max=4754.0 ord_last=4754.0 miss=0.917 total_mean=3122.0
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=632.13 sort_p90=845.18 sort_max=1647.87 cap_mean=11875 cap_worst=5383 valid=0.1541 fabric_valid=0.0857 urgent_ok=NaN jain=1.0000
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=842.1 ord_max=1857.9 ord_last=1025.3 miss=0.250 total_mean=5841.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=842.1 ord_max=1857.9 ord_last=1025.3 miss=0.250 total_mean=3341.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=842.1 ord_max=1857.9 ord_last=1025.3 miss=0.250 total_mean=1842.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=972.5 ord_max=1913.0 ord_last=1025.3 miss=0.417 total_mean=1472.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=11875 ord_mean=2782.8 ord_max=4605.5 ord_last=4605.5 miss=0.917 total_mean=3032.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=1027.34 sort_p90=1362.43 sort_max=2793.11 cap_mean=8082 cap_worst=3330 valid=0.1641 fabric_valid=0.0857 urgent_ok=NaN jain=0.9999
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=1237.3 ord_max=3003.1 ord_last=1572.4 miss=0.667 total_mean=6236.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=1237.3 ord_max=3003.1 ord_last=1572.4 miss=0.667 total_mean=3737.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=1320.9 ord_max=3003.1 ord_last=1572.4 miss=0.750 total_mean=2320.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=8082 ord_mean=2685.2 ord_max=4245.7 ord_last=4028.9 miss=0.917 total_mean=3185.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=8082 ord_mean=5269.5 ord_max=9348.1 ord_last=9348.1 miss=0.917 total_mean=5519.4
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=1.40 sort_p90=1.73 sort_max=1.93 cap_mean=47304 cap_worst=47185 valid=0.0381 fabric_valid=0.0381 urgent_ok=NaN jain=0.9990
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=211.4 ord_max=211.9 ord_last=211.2 miss=0.000 total_mean=5210.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=211.4 ord_max=211.9 ord_last=211.2 miss=0.000 total_mean=2711.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=211.4 ord_max=211.9 ord_last=211.2 miss=0.000 total_mean=1211.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=211.4 ord_max=211.9 ord_last=211.2 miss=0.000 total_mean=711.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=211.4 ord_max=211.9 ord_last=211.2 miss=0.000 total_mean=461.4
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=50.78 sort_p90=58.33 sort_max=61.63 cap_mean=38346 cap_worst=36815 valid=0.0842 fabric_valid=0.0381 urgent_ok=NaN jain=0.9997
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=260.8 ord_max=271.6 ord_last=261.0 miss=0.000 total_mean=5260.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=260.8 ord_max=271.6 ord_last=261.0 miss=0.000 total_mean=2760.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=260.8 ord_max=271.6 ord_last=261.0 miss=0.000 total_mean=1260.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=260.8 ord_max=271.6 ord_last=261.0 miss=0.000 total_mean=760.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=260.8 ord_max=271.6 ord_last=261.0 miss=0.000 total_mean=510.8
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=236.98 sort_p90=336.61 sort_max=351.26 cap_mean=22373 cap_worst=17817 valid=0.1153 fabric_valid=0.0381 urgent_ok=NaN jain=0.9994
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=447.0 ord_max=561.3 ord_last=439.2 miss=0.000 total_mean=5446.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=447.0 ord_max=561.3 ord_last=439.2 miss=0.000 total_mean=2946.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=447.0 ord_max=561.3 ord_last=439.2 miss=0.000 total_mean=1446.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=447.0 ord_max=561.3 ord_last=439.2 miss=0.000 total_mean=946.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=456.8 ord_max=561.3 ord_last=500.5 miss=0.000 total_mean=706.7
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=572.10 sort_p90=801.75 sort_max=910.32 cap_mean=12786 cap_worst=8926 valid=0.1388 fabric_valid=0.0381 urgent_ok=NaN jain=0.9997
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=782.1 ord_max=1120.3 ord_last=755.0 miss=0.167 total_mean=5781.6
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=782.1 ord_max=1120.3 ord_last=755.0 miss=0.167 total_mean=3281.8
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=782.1 ord_max=1120.3 ord_last=755.0 miss=0.167 total_mean=1782.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=793.1 ord_max=1120.3 ord_last=875.3 miss=0.167 total_mean=1293.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=12786 ord_mean=2219.6 ord_max=3885.2 ord_last=3885.2 miss=0.917 total_mean=2469.6
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=568.46 sort_p90=820.34 sort_max=901.87 cap_mean=12846 cap_worst=8994 valid=0.1388 fabric_valid=0.0381 urgent_ok=NaN jain=0.9997
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=778.5 ord_max=1111.9 ord_last=764.3 miss=0.167 total_mean=5778.0
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=778.5 ord_max=1111.9 ord_last=764.3 miss=0.167 total_mean=3278.2
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=778.5 ord_max=1111.9 ord_last=764.3 miss=0.167 total_mean=1778.4
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=790.3 ord_max=1111.9 ord_last=876.2 miss=0.167 total_mean=1290.3
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=12846 ord_mean=2185.9 ord_max=3841.5 ord_last=3841.5 miss=0.833 total_mean=2435.9
+[EPSSIM-BATCH] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=1027.98 sort_p90=1402.78 sort_max=1710.15 cap_mean=8078 cap_worst=5208 valid=0.1555 fabric_valid=0.0381 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=1238.0 ord_max=1920.2 ord_last=1171.0 miss=0.667 total_mean=6237.5
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=1238.0 ord_max=1920.2 ord_last=1171.0 miss=0.667 total_mean=3737.7
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=1238.0 ord_max=1920.2 ord_last=1171.0 miss=0.667 total_mean=2237.9
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=8078 ord_mean=2344.1 ord_max=3855.8 ord_last=3855.8 miss=1.000 total_mean=2844.1
+[EPSSIM-TPS] mode=custom urgent=false hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=8078 ord_mean=5094.1 ord_max=9355.8 ord_last=9355.8 miss=1.000 total_mean=5344.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.30 sort_p90=0.56 sort_max=1.07 cap_mean=33000 cap_worst=32182 valid=0.4491 fabric_valid=0.4446 urgent_ok=0.7375 jain=0.9067
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=30.3 ord_max=31.1 ord_last=30.2 miss=0.000 total_mean=529.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=30.3 ord_max=31.1 ord_last=30.2 miss=0.000 total_mean=280.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=30.3 ord_max=31.1 ord_last=30.2 miss=0.000 total_mean=130.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=30.3 ord_max=31.1 ord_last=30.2 miss=0.000 total_mean=80.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=30.3 ord_max=31.1 ord_last=30.2 miss=0.000 total_mean=55.3
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.50 sort_p90=0.90 sort_max=1.70 cap_mean=32786 cap_worst=31551 valid=0.4625 fabric_valid=0.4446 urgent_ok=0.7542 jain=0.9098
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=30.5 ord_max=31.7 ord_last=30.8 miss=0.000 total_mean=530.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=30.5 ord_max=31.7 ord_last=30.8 miss=0.000 total_mean=280.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=30.5 ord_max=31.7 ord_last=30.8 miss=0.000 total_mean=130.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=30.5 ord_max=31.7 ord_last=30.8 miss=0.000 total_mean=80.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=30.5 ord_max=31.7 ord_last=30.8 miss=0.000 total_mean=55.5
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 reps=20 sort_mean=0.56 sort_p90=0.66 sort_max=1.00 cap_mean=32727 cap_worst=32259 valid=0.4945 fabric_valid=0.4446 urgent_ok=0.8058 jain=0.9102
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=30.6 ord_max=31.0 ord_last=30.7 miss=0.000 total_mean=530.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=30.6 ord_max=31.0 ord_last=30.7 miss=0.000 total_mean=280.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=30.6 ord_max=31.0 ord_last=30.7 miss=0.000 total_mean=130.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=30.6 ord_max=31.0 ord_last=30.7 miss=0.000 total_mean=80.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=30.6 ord_max=31.0 ord_last=30.7 miss=0.000 total_mean=55.5
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 reps=20 sort_mean=0.95 sort_p90=1.98 sort_max=2.17 cap_mean=32315 cap_worst=31090 valid=0.5453 fabric_valid=0.4446 urgent_ok=0.7408 jain=0.9689
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=30.9 ord_max=32.2 ord_last=30.7 miss=0.000 total_mean=530.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=30.9 ord_max=32.2 ord_last=30.7 miss=0.000 total_mean=280.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=30.9 ord_max=32.2 ord_last=30.7 miss=0.000 total_mean=130.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=30.9 ord_max=32.2 ord_last=30.7 miss=0.000 total_mean=80.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=30.9 ord_max=32.2 ord_last=30.7 miss=0.000 total_mean=55.9
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 reps=20 sort_mean=0.96 sort_p90=1.39 sort_max=2.31 cap_mean=32304 cap_worst=30947 valid=0.5431 fabric_valid=0.4446 urgent_ok=0.8878 jain=0.9090
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=31.0 ord_max=32.3 ord_last=31.1 miss=0.000 total_mean=530.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=31.0 ord_max=32.3 ord_last=31.1 miss=0.000 total_mean=280.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=31.0 ord_max=32.3 ord_last=31.1 miss=0.000 total_mean=130.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=31.0 ord_max=32.3 ord_last=31.1 miss=0.000 total_mean=80.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=31.0 ord_max=32.3 ord_last=31.1 miss=0.000 total_mean=55.9
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 reps=20 sort_mean=1.15 sort_p90=1.63 sort_max=2.02 cap_mean=32101 cap_worst=31235 valid=0.5934 fabric_valid=0.4446 urgent_ok=0.9970 jain=0.8969
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=31.2 ord_max=32.0 ord_last=30.9 miss=0.000 total_mean=530.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=31.2 ord_max=32.0 ord_last=30.9 miss=0.000 total_mean=280.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=31.2 ord_max=32.0 ord_last=30.9 miss=0.000 total_mean=131.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=31.2 ord_max=32.0 ord_last=30.9 miss=0.000 total_mean=81.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=31.2 ord_max=32.0 ord_last=30.9 miss=0.000 total_mean=56.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.24 sort_p90=0.47 sort_max=0.86 cap_mean=33065 cap_worst=32406 valid=0.2584 fabric_valid=0.2611 urgent_ok=0.5340 jain=0.7788
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=30.2 ord_max=30.9 ord_last=30.2 miss=0.000 total_mean=529.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=30.2 ord_max=30.9 ord_last=30.2 miss=0.000 total_mean=280.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=30.2 ord_max=30.9 ord_last=30.2 miss=0.000 total_mean=130.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=30.2 ord_max=30.9 ord_last=30.2 miss=0.000 total_mean=80.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=30.2 ord_max=30.9 ord_last=30.2 miss=0.000 total_mean=55.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.40 sort_p90=0.92 sort_max=1.10 cap_mean=32890 cap_worst=32151 valid=0.2686 fabric_valid=0.2611 urgent_ok=0.5618 jain=0.7707
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=30.4 ord_max=31.1 ord_last=30.3 miss=0.000 total_mean=529.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=30.4 ord_max=31.1 ord_last=30.3 miss=0.000 total_mean=280.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=30.4 ord_max=31.1 ord_last=30.3 miss=0.000 total_mean=130.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=30.4 ord_max=31.1 ord_last=30.3 miss=0.000 total_mean=80.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=30.4 ord_max=31.1 ord_last=30.3 miss=0.000 total_mean=55.4
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 reps=20 sort_mean=0.65 sort_p90=1.20 sort_max=1.27 cap_mean=32621 cap_worst=31984 valid=0.2949 fabric_valid=0.2611 urgent_ok=0.6555 jain=0.7284
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=30.7 ord_max=31.3 ord_last=30.6 miss=0.000 total_mean=530.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=30.7 ord_max=31.3 ord_last=30.6 miss=0.000 total_mean=280.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=30.7 ord_max=31.3 ord_last=30.6 miss=0.000 total_mean=130.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=30.7 ord_max=31.3 ord_last=30.6 miss=0.000 total_mean=80.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=30.7 ord_max=31.3 ord_last=30.6 miss=0.000 total_mean=55.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 reps=20 sort_mean=0.71 sort_p90=1.65 sort_max=1.91 cap_mean=32558 cap_worst=31339 valid=0.3211 fabric_valid=0.2611 urgent_ok=0.5395 jain=0.8964
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=30.7 ord_max=31.9 ord_last=30.5 miss=0.000 total_mean=530.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=30.7 ord_max=31.9 ord_last=30.5 miss=0.000 total_mean=280.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=30.7 ord_max=31.9 ord_last=30.5 miss=0.000 total_mean=130.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=30.7 ord_max=31.9 ord_last=30.5 miss=0.000 total_mean=80.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=30.7 ord_max=31.9 ord_last=30.5 miss=0.000 total_mean=55.7
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 reps=20 sort_mean=0.64 sort_p90=1.14 sort_max=1.37 cap_mean=32633 cap_worst=31881 valid=0.3217 fabric_valid=0.2611 urgent_ok=0.7747 jain=0.6692
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=30.6 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=530.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=30.6 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=280.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=30.6 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=130.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=30.6 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=80.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=30.6 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=55.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 reps=20 sort_mean=0.81 sort_p90=1.41 sort_max=1.84 cap_mean=32454 cap_worst=31407 valid=0.3524 fabric_valid=0.2611 urgent_ok=0.8960 jain=0.6277
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=30.8 ord_max=31.8 ord_last=30.6 miss=0.000 total_mean=530.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=30.8 ord_max=31.8 ord_last=30.6 miss=0.000 total_mean=280.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=30.8 ord_max=31.8 ord_last=30.6 miss=0.000 total_mean=130.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=30.8 ord_max=31.8 ord_last=30.6 miss=0.000 total_mean=80.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=30.8 ord_max=31.8 ord_last=30.6 miss=0.000 total_mean=55.8
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.21 sort_p90=0.44 sort_max=0.49 cap_mean=33099 cap_worst=32800 valid=0.1426 fabric_valid=0.1437 urgent_ok=0.3566 jain=0.6406
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=30.2 ord_max=30.5 ord_last=30.2 miss=0.000 total_mean=529.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=30.2 ord_max=30.5 ord_last=30.2 miss=0.000 total_mean=280.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=30.2 ord_max=30.5 ord_last=30.2 miss=0.000 total_mean=130.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=30.2 ord_max=30.5 ord_last=30.2 miss=0.000 total_mean=80.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=30.2 ord_max=30.5 ord_last=30.2 miss=0.000 total_mean=55.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.26 sort_p90=0.29 sort_max=0.59 cap_mean=33046 cap_worst=32695 valid=0.1498 fabric_valid=0.1437 urgent_ok=0.3942 jain=0.6016
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=30.3 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=529.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=30.3 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=280.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=30.3 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=130.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=30.3 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=80.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=30.3 ord_max=30.6 ord_last=30.2 miss=0.000 total_mean=55.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 reps=20 sort_mean=0.46 sort_p90=0.90 sort_max=1.10 cap_mean=32832 cap_worst=32159 valid=0.1697 fabric_valid=0.1437 urgent_ok=0.4901 jain=0.5301
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=30.5 ord_max=31.1 ord_last=30.4 miss=0.000 total_mean=530.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=30.5 ord_max=31.1 ord_last=30.4 miss=0.000 total_mean=280.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=30.5 ord_max=31.1 ord_last=30.4 miss=0.000 total_mean=130.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=30.5 ord_max=31.1 ord_last=30.4 miss=0.000 total_mean=80.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=30.5 ord_max=31.1 ord_last=30.4 miss=0.000 total_mean=55.4
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 reps=20 sort_mean=0.42 sort_p90=0.92 sort_max=1.02 cap_mean=32873 cap_worst=32234 valid=0.1802 fabric_valid=0.1437 urgent_ok=0.3609 jain=0.7999
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=30.4 ord_max=31.0 ord_last=30.3 miss=0.000 total_mean=529.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=30.4 ord_max=31.0 ord_last=30.3 miss=0.000 total_mean=280.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=30.4 ord_max=31.0 ord_last=30.3 miss=0.000 total_mean=130.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=30.4 ord_max=31.0 ord_last=30.3 miss=0.000 total_mean=80.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=30.4 ord_max=31.0 ord_last=30.3 miss=0.000 total_mean=55.4
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 reps=20 sort_mean=0.67 sort_p90=1.33 sort_max=1.37 cap_mean=32608 cap_worst=31876 valid=0.1910 fabric_valid=0.1437 urgent_ok=0.5867 jain=0.4838
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=30.7 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=530.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=30.7 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=280.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=30.7 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=130.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=30.7 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=80.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=30.7 ord_max=31.4 ord_last=30.5 miss=0.000 total_mean=55.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 reps=20 sort_mean=0.83 sort_p90=1.29 sort_max=1.31 cap_mean=32435 cap_worst=31942 valid=0.2134 fabric_valid=0.1437 urgent_ok=0.6773 jain=0.4599
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=30.8 ord_max=31.3 ord_last=31.1 miss=0.000 total_mean=530.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=30.8 ord_max=31.3 ord_last=31.1 miss=0.000 total_mean=280.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=30.8 ord_max=31.3 ord_last=31.1 miss=0.000 total_mean=130.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=30.8 ord_max=31.3 ord_last=31.1 miss=0.000 total_mean=80.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=1000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=30.8 ord_max=31.3 ord_last=31.1 miss=0.000 total_mean=55.8
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=1.48 sort_p90=1.97 sort_max=2.01 cap_mean=44850 cap_worst=44639 valid=0.2061 fabric_valid=0.2052 urgent_ok=0.4388 jain=0.7583
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=111.5 ord_max=112.0 ord_last=111.5 miss=0.000 total_mean=2611.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=111.5 ord_max=112.0 ord_last=111.5 miss=0.000 total_mean=1361.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=111.5 ord_max=112.0 ord_last=111.5 miss=0.000 total_mean=611.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=111.5 ord_max=112.0 ord_last=111.5 miss=0.000 total_mean=361.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=111.5 ord_max=112.0 ord_last=111.5 miss=0.000 total_mean=236.5
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=1.75 sort_p90=2.39 sort_max=2.42 cap_mean=44741 cap_worst=44475 valid=0.2132 fabric_valid=0.2052 urgent_ok=0.4790 jain=0.7199
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=111.8 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=2611.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=111.8 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=1361.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=111.8 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=611.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=111.8 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=361.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=111.8 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=236.7
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=2.46 sort_p90=3.00 sort_max=3.31 cap_mean=44462 cap_worst=44125 valid=0.2307 fabric_valid=0.2052 urgent_ok=0.5784 jain=0.6375
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=112.5 ord_max=113.3 ord_last=112.8 miss=0.000 total_mean=2612.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=112.5 ord_max=113.3 ord_last=112.8 miss=0.000 total_mean=1362.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=112.5 ord_max=113.3 ord_last=112.8 miss=0.000 total_mean=612.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=112.5 ord_max=113.3 ord_last=112.8 miss=0.000 total_mean=362.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=112.5 ord_max=113.3 ord_last=112.8 miss=0.000 total_mean=237.4
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=2.87 sort_p90=3.55 sort_max=3.92 cap_mean=44299 cap_worst=43891 valid=0.2544 fabric_valid=0.2052 urgent_ok=0.4446 jain=0.8771
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=112.9 ord_max=113.9 ord_last=112.5 miss=0.000 total_mean=2612.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=112.9 ord_max=113.9 ord_last=112.5 miss=0.000 total_mean=1362.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=112.9 ord_max=113.9 ord_last=112.5 miss=0.000 total_mean=612.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=112.9 ord_max=113.9 ord_last=112.5 miss=0.000 total_mean=362.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=112.9 ord_max=113.9 ord_last=112.5 miss=0.000 total_mean=237.8
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=4.27 sort_p90=5.18 sort_max=5.24 cap_mean=43755 cap_worst=43389 valid=0.2518 fabric_valid=0.2052 urgent_ok=0.6886 jain=0.5707
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=114.3 ord_max=115.2 ord_last=114.3 miss=0.000 total_mean=2613.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=114.3 ord_max=115.2 ord_last=114.3 miss=0.000 total_mean=1364.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=114.3 ord_max=115.2 ord_last=114.3 miss=0.000 total_mean=614.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=114.3 ord_max=115.2 ord_last=114.3 miss=0.000 total_mean=364.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=114.3 ord_max=115.2 ord_last=114.3 miss=0.000 total_mean=239.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=6.79 sort_p90=8.21 sort_max=8.90 cap_mean=42812 cap_worst=42051 valid=0.2708 fabric_valid=0.2052 urgent_ok=0.7867 jain=0.5242
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=116.8 ord_max=118.9 ord_last=116.2 miss=0.000 total_mean=2616.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=116.8 ord_max=118.9 ord_last=116.2 miss=0.000 total_mean=1366.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=116.8 ord_max=118.9 ord_last=116.2 miss=0.000 total_mean=616.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=116.8 ord_max=118.9 ord_last=116.2 miss=0.000 total_mean=366.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=116.8 ord_max=118.9 ord_last=116.2 miss=0.000 total_mean=241.8
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=1.09 sort_p90=1.68 sort_max=2.39 cap_mean=45007 cap_worst=44487 valid=0.1170 fabric_valid=0.1172 urgent_ok=0.2564 jain=0.7392
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=111.1 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=2610.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=111.1 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=1360.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=111.1 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=611.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=111.1 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=361.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=111.1 ord_max=112.4 ord_last=111.5 miss=0.000 total_mean=236.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=1.61 sort_p90=2.11 sort_max=2.11 cap_mean=44797 cap_worst=44597 valid=0.1273 fabric_valid=0.1172 urgent_ok=0.3207 jain=0.6359
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=111.6 ord_max=112.1 ord_last=111.5 miss=0.000 total_mean=2611.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=111.6 ord_max=112.1 ord_last=111.5 miss=0.000 total_mean=1361.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=111.6 ord_max=112.1 ord_last=111.5 miss=0.000 total_mean=611.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=111.6 ord_max=112.1 ord_last=111.5 miss=0.000 total_mean=361.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=111.6 ord_max=112.1 ord_last=111.5 miss=0.000 total_mean=236.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=3.07 sort_p90=4.05 sort_max=4.27 cap_mean=44222 cap_worst=43755 valid=0.1427 fabric_valid=0.1172 urgent_ok=0.4103 jain=0.5342
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=113.1 ord_max=114.3 ord_last=112.4 miss=0.000 total_mean=2612.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=113.1 ord_max=114.3 ord_last=112.4 miss=0.000 total_mean=1362.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=113.1 ord_max=114.3 ord_last=112.4 miss=0.000 total_mean=613.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=113.1 ord_max=114.3 ord_last=112.4 miss=0.000 total_mean=363.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=113.1 ord_max=114.3 ord_last=112.4 miss=0.000 total_mean=238.0
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=1.63 sort_p90=2.12 sort_max=2.21 cap_mean=44791 cap_worst=44559 valid=0.1391 fabric_valid=0.1172 urgent_ok=0.2672 jain=0.8259
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=111.6 ord_max=112.2 ord_last=111.5 miss=0.000 total_mean=2611.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=111.6 ord_max=112.2 ord_last=111.5 miss=0.000 total_mean=1361.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=111.6 ord_max=112.2 ord_last=111.5 miss=0.000 total_mean=611.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=111.6 ord_max=112.2 ord_last=111.5 miss=0.000 total_mean=361.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=111.6 ord_max=112.2 ord_last=111.5 miss=0.000 total_mean=236.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=5.48 sort_p90=6.59 sort_max=7.58 cap_mean=43299 cap_worst=42525 valid=0.1588 fabric_valid=0.1172 urgent_ok=0.4967 jain=0.4712
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=115.5 ord_max=117.6 ord_last=114.2 miss=0.000 total_mean=2615.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=115.5 ord_max=117.6 ord_last=114.2 miss=0.000 total_mean=1365.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=115.5 ord_max=117.6 ord_last=114.2 miss=0.000 total_mean=615.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=115.5 ord_max=117.6 ord_last=114.2 miss=0.000 total_mean=365.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=115.5 ord_max=117.6 ord_last=114.2 miss=0.000 total_mean=240.5
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=8.10 sort_p90=10.91 sort_max=11.74 cap_mean=42338 cap_worst=41072 valid=0.1744 fabric_valid=0.1172 urgent_ok=0.5765 jain=0.4317
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=118.1 ord_max=121.7 ord_last=116.4 miss=0.000 total_mean=2617.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=118.1 ord_max=121.7 ord_last=116.4 miss=0.000 total_mean=1367.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=118.1 ord_max=121.7 ord_last=116.4 miss=0.000 total_mean=618.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=118.1 ord_max=121.7 ord_last=116.4 miss=0.000 total_mean=368.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=118.1 ord_max=121.7 ord_last=116.4 miss=0.000 total_mean=243.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.91 sort_p90=1.35 sort_max=1.85 cap_mean=45083 cap_worst=44702 valid=0.0547 fabric_valid=0.0558 urgent_ok=0.1393 jain=0.6244
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=110.9 ord_max=111.9 ord_last=110.9 miss=0.000 total_mean=2610.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=110.9 ord_max=111.9 ord_last=110.9 miss=0.000 total_mean=1360.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=110.9 ord_max=111.9 ord_last=110.9 miss=0.000 total_mean=610.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=110.9 ord_max=111.9 ord_last=110.9 miss=0.000 total_mean=360.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=110.9 ord_max=111.9 ord_last=110.9 miss=0.000 total_mean=235.9
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=1.88 sort_p90=2.45 sort_max=2.50 cap_mean=44692 cap_worst=44444 valid=0.0665 fabric_valid=0.0558 urgent_ok=0.2034 jain=0.4841
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=111.9 ord_max=112.5 ord_last=112.3 miss=0.000 total_mean=2611.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=111.9 ord_max=112.5 ord_last=112.3 miss=0.000 total_mean=1361.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=111.9 ord_max=112.5 ord_last=112.3 miss=0.000 total_mean=611.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=111.9 ord_max=112.5 ord_last=112.3 miss=0.000 total_mean=361.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=111.9 ord_max=112.5 ord_last=112.3 miss=0.000 total_mean=236.9
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=3.09 sort_p90=4.36 sort_max=4.38 cap_mean=44214 cap_worst=43713 valid=0.0799 fabric_valid=0.0558 urgent_ok=0.2727 jain=0.4056
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=113.1 ord_max=114.4 ord_last=114.4 miss=0.000 total_mean=2612.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=113.1 ord_max=114.4 ord_last=114.4 miss=0.000 total_mean=1362.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=113.1 ord_max=114.4 ord_last=114.4 miss=0.000 total_mean=613.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=113.1 ord_max=114.4 ord_last=114.4 miss=0.000 total_mean=363.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=113.1 ord_max=114.4 ord_last=114.4 miss=0.000 total_mean=238.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=1.20 sort_p90=1.74 sort_max=1.76 cap_mean=44962 cap_worst=44738 valid=0.0662 fabric_valid=0.0558 urgent_ok=0.1594 jain=0.6668
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=111.2 ord_max=111.8 ord_last=111.0 miss=0.000 total_mean=2610.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=111.2 ord_max=111.8 ord_last=111.0 miss=0.000 total_mean=1361.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=111.2 ord_max=111.8 ord_last=111.0 miss=0.000 total_mean=611.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=111.2 ord_max=111.8 ord_last=111.0 miss=0.000 total_mean=361.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=111.2 ord_max=111.8 ord_last=111.0 miss=0.000 total_mean=236.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=5.68 sort_p90=7.93 sort_max=8.85 cap_mean=43222 cap_worst=42069 valid=0.0935 fabric_valid=0.0558 urgent_ok=0.3399 jain=0.3641
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=115.7 ord_max=118.9 ord_last=116.0 miss=0.000 total_mean=2615.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=115.7 ord_max=118.9 ord_last=116.0 miss=0.000 total_mean=1365.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=115.7 ord_max=118.9 ord_last=116.0 miss=0.000 total_mean=615.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=115.7 ord_max=118.9 ord_last=116.0 miss=0.000 total_mean=365.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=115.7 ord_max=118.9 ord_last=116.0 miss=0.000 total_mean=240.7
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=9.25 sort_p90=12.12 sort_max=15.89 cap_mean=41930 cap_worst=39718 valid=0.1073 fabric_valid=0.0558 urgent_ok=0.4039 jain=0.3418
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=119.2 ord_max=125.9 ord_last=119.4 miss=0.000 total_mean=2618.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=119.2 ord_max=125.9 ord_last=119.4 miss=0.000 total_mean=1369.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=119.2 ord_max=125.9 ord_last=119.4 miss=0.000 total_mean=619.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=119.2 ord_max=125.9 ord_last=119.4 miss=0.000 total_mean=369.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=119.2 ord_max=125.9 ord_last=119.4 miss=0.000 total_mean=244.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=2.05 sort_p90=2.32 sort_max=2.97 cap_mean=47159 cap_worst=46954 valid=0.1379 fabric_valid=0.1381 urgent_ok=0.3230 jain=0.6894
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=212.0 ord_max=213.0 ord_last=211.7 miss=0.000 total_mean=5211.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=212.0 ord_max=213.0 ord_last=211.7 miss=0.000 total_mean=2711.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=212.0 ord_max=213.0 ord_last=211.7 miss=0.000 total_mean=1211.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=212.0 ord_max=213.0 ord_last=211.7 miss=0.000 total_mean=712.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=212.0 ord_max=213.0 ord_last=211.7 miss=0.000 total_mean=462.0
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=3.26 sort_p90=3.86 sort_max=3.96 cap_mean=46890 cap_worst=46737 valid=0.1439 fabric_valid=0.1381 urgent_ok=0.3751 jain=0.6077
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=213.3 ord_max=214.0 ord_last=213.1 miss=0.000 total_mean=5212.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=213.3 ord_max=214.0 ord_last=213.1 miss=0.000 total_mean=2713.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=213.3 ord_max=214.0 ord_last=213.1 miss=0.000 total_mean=1213.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=213.3 ord_max=214.0 ord_last=213.1 miss=0.000 total_mean=713.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=213.3 ord_max=214.0 ord_last=213.1 miss=0.000 total_mean=463.2
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=7.47 sort_p90=8.84 sort_max=10.17 cap_mean=45984 cap_worst=45419 valid=0.1550 fabric_valid=0.1381 urgent_ok=0.4569 jain=0.5129
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=217.5 ord_max=220.2 ord_last=218.0 miss=0.000 total_mean=5217.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=217.5 ord_max=220.2 ord_last=218.0 miss=0.000 total_mean=2717.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=217.5 ord_max=220.2 ord_last=218.0 miss=0.000 total_mean=1217.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=217.5 ord_max=220.2 ord_last=218.0 miss=0.000 total_mean=717.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=217.5 ord_max=220.2 ord_last=218.0 miss=0.000 total_mean=467.4
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=4.64 sort_p90=5.19 sort_max=5.85 cap_mean=46589 cap_worst=46328 valid=0.1697 fabric_valid=0.1381 urgent_ok=0.3324 jain=0.8130
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=214.6 ord_max=215.9 ord_last=215.1 miss=0.000 total_mean=5214.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=214.6 ord_max=215.9 ord_last=215.1 miss=0.000 total_mean=2714.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=214.6 ord_max=215.9 ord_last=215.1 miss=0.000 total_mean=1214.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=214.6 ord_max=215.9 ord_last=215.1 miss=0.000 total_mean=714.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=214.6 ord_max=215.9 ord_last=215.1 miss=0.000 total_mean=464.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=16.76 sort_p90=20.73 sort_max=24.57 cap_mean=44099 cap_worst=42631 valid=0.1669 fabric_valid=0.1381 urgent_ok=0.5246 jain=0.4653
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=226.8 ord_max=234.6 ord_last=229.9 miss=0.000 total_mean=5226.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=226.8 ord_max=234.6 ord_last=229.9 miss=0.000 total_mean=2726.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=226.8 ord_max=234.6 ord_last=229.9 miss=0.000 total_mean=1226.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=226.8 ord_max=234.6 ord_last=229.9 miss=0.000 total_mean=726.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=226.8 ord_max=234.6 ord_last=229.9 miss=0.000 total_mean=476.7
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=31.15 sort_p90=50.14 sort_max=50.60 cap_mean=41468 cap_worst=38373 valid=0.1776 fabric_valid=0.1381 urgent_ok=0.5763 jain=0.4420
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=241.1 ord_max=260.6 ord_last=245.3 miss=0.000 total_mean=5240.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=241.1 ord_max=260.6 ord_last=245.3 miss=0.000 total_mean=2740.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=241.1 ord_max=260.6 ord_last=245.3 miss=0.000 total_mean=1241.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=241.1 ord_max=260.6 ord_last=245.3 miss=0.000 total_mean=741.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.20 hw=0.10 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=241.1 ord_max=260.6 ord_last=245.3 miss=0.000 total_mean=491.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=1.95 sort_p90=2.62 sort_max=3.16 cap_mean=47182 cap_worst=46913 valid=0.0857 fabric_valid=0.0857 urgent_ok=0.1853 jain=0.7487
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=211.9 ord_max=213.2 ord_last=211.9 miss=0.000 total_mean=5211.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=211.9 ord_max=213.2 ord_last=211.9 miss=0.000 total_mean=2711.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=211.9 ord_max=213.2 ord_last=211.9 miss=0.000 total_mean=1211.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=211.9 ord_max=213.2 ord_last=211.9 miss=0.000 total_mean=711.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=211.9 ord_max=213.2 ord_last=211.9 miss=0.000 total_mean=461.9
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=3.60 sort_p90=4.67 sort_max=5.32 cap_mean=46817 cap_worst=46443 valid=0.0927 fabric_valid=0.0857 urgent_ok=0.2497 jain=0.5839
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=213.6 ord_max=215.3 ord_last=213.3 miss=0.000 total_mean=5213.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=213.6 ord_max=215.3 ord_last=213.3 miss=0.000 total_mean=2713.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=213.6 ord_max=215.3 ord_last=213.3 miss=0.000 total_mean=1213.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=213.6 ord_max=215.3 ord_last=213.3 miss=0.000 total_mean=713.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=213.6 ord_max=215.3 ord_last=213.3 miss=0.000 total_mean=463.6
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=8.52 sort_p90=10.01 sort_max=12.29 cap_mean=45761 cap_worst=44987 valid=0.1032 fabric_valid=0.0857 urgent_ok=0.3225 jain=0.4710
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=218.5 ord_max=222.3 ord_last=218.0 miss=0.000 total_mean=5218.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=218.5 ord_max=222.3 ord_last=218.0 miss=0.000 total_mean=2718.3
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=218.5 ord_max=222.3 ord_last=218.0 miss=0.000 total_mean=1218.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=218.5 ord_max=222.3 ord_last=218.0 miss=0.000 total_mean=718.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=218.5 ord_max=222.3 ord_last=218.0 miss=0.000 total_mean=468.5
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=2.95 sort_p90=3.66 sort_max=3.79 cap_mean=46960 cap_worst=46775 valid=0.1021 fabric_valid=0.0857 urgent_ok=0.2029 jain=0.8045
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=212.9 ord_max=213.8 ord_last=212.7 miss=0.000 total_mean=5212.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=212.9 ord_max=213.8 ord_last=212.7 miss=0.000 total_mean=2712.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=212.9 ord_max=213.8 ord_last=212.7 miss=0.000 total_mean=1212.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=212.9 ord_max=213.8 ord_last=212.7 miss=0.000 total_mean=712.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=212.9 ord_max=213.8 ord_last=212.7 miss=0.000 total_mean=462.9
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=17.14 sort_p90=18.13 sort_max=20.18 cap_mean=44025 cap_worst=43444 valid=0.1138 fabric_valid=0.0857 urgent_ok=0.3900 jain=0.4062
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=227.1 ord_max=230.2 ord_last=226.0 miss=0.000 total_mean=5226.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=227.1 ord_max=230.2 ord_last=226.0 miss=0.000 total_mean=2726.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=227.1 ord_max=230.2 ord_last=226.0 miss=0.000 total_mean=1227.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=227.1 ord_max=230.2 ord_last=226.0 miss=0.000 total_mean=727.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=227.1 ord_max=230.2 ord_last=226.0 miss=0.000 total_mean=477.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=31.08 sort_p90=36.00 sort_max=41.88 cap_mean=41480 cap_worst=39701 valid=0.1233 fabric_valid=0.0857 urgent_ok=0.4481 jain=0.3675
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=241.1 ord_max=251.9 ord_last=235.7 miss=0.000 total_mean=5240.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=241.1 ord_max=251.9 ord_last=235.7 miss=0.000 total_mean=2740.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=241.1 ord_max=251.9 ord_last=235.7 miss=0.000 total_mean=1241.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=241.1 ord_max=251.9 ord_last=235.7 miss=0.000 total_mean=741.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.40 hw=0.20 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=241.1 ord_max=251.9 ord_last=235.7 miss=0.000 total_mean=491.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=1.71 sort_p90=2.42 sort_max=2.82 cap_mean=47233 cap_worst=46988 valid=0.0379 fabric_valid=0.0381 urgent_ok=0.0931 jain=0.6508
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=1000 ord_mean=211.7 ord_max=212.8 ord_last=211.6 miss=0.000 total_mean=5211.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=2000 ord_mean=211.7 ord_max=212.8 ord_last=211.6 miss=0.000 total_mean=2711.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=5000 ord_mean=211.7 ord_max=212.8 ord_last=211.6 miss=0.000 total_mean=1211.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=10000 ord_mean=211.7 ord_max=212.8 ord_last=211.6 miss=0.000 total_mean=711.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=20000 ord_mean=211.7 ord_max=212.8 ord_last=211.6 miss=0.000 total_mean=461.7
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=4.05 sort_p90=5.24 sort_max=5.50 cap_mean=46718 cap_worst=46404 valid=0.0486 fabric_valid=0.0381 urgent_ok=0.1550 jain=0.4521
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=1000 ord_mean=214.1 ord_max=215.5 ord_last=213.4 miss=0.000 total_mean=5213.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=2000 ord_mean=214.1 ord_max=215.5 ord_last=213.4 miss=0.000 total_mean=2713.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=5000 ord_mean=214.1 ord_max=215.5 ord_last=213.4 miss=0.000 total_mean=1214.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=10000 ord_mean=214.1 ord_max=215.5 ord_last=213.4 miss=0.000 total_mean=714.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=20000 ord_mean=214.1 ord_max=215.5 ord_last=213.4 miss=0.000 total_mean=464.0
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=9.86 sort_p90=13.19 sort_max=15.24 cap_mean=45483 cap_worst=44397 valid=0.0596 fabric_valid=0.0381 urgent_ok=0.2151 jain=0.3670
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=1000 ord_mean=219.9 ord_max=225.2 ord_last=218.6 miss=0.000 total_mean=5219.4
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=2000 ord_mean=219.9 ord_max=225.2 ord_last=218.6 miss=0.000 total_mean=2719.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=5000 ord_mean=219.9 ord_max=225.2 ord_last=218.6 miss=0.000 total_mean=1219.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=10000 ord_mean=219.9 ord_max=225.2 ord_last=218.6 miss=0.000 total_mean=719.8
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=20000 ord_mean=219.9 ord_max=225.2 ord_last=218.6 miss=0.000 total_mean=469.8
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=2.12 sort_p90=2.36 sort_max=3.05 cap_mean=47143 cap_worst=46938 valid=0.0481 fabric_valid=0.0381 urgent_ok=0.1169 jain=0.6591
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=1000 ord_mean=212.1 ord_max=213.0 ord_last=212.0 miss=0.000 total_mean=5211.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=2000 ord_mean=212.1 ord_max=213.0 ord_last=212.0 miss=0.000 total_mean=2711.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=5000 ord_mean=212.1 ord_max=213.0 ord_last=212.0 miss=0.000 total_mean=1212.0
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=10000 ord_mean=212.1 ord_max=213.0 ord_last=212.0 miss=0.000 total_mean=712.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=20000 ord_mean=212.1 ord_max=213.0 ord_last=212.0 miss=0.000 total_mean=462.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=20.16 sort_p90=25.20 sort_max=30.96 cap_mean=43449 cap_worst=41501 valid=0.0705 fabric_valid=0.0381 urgent_ok=0.2697 jain=0.3303
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=1000 ord_mean=230.2 ord_max=241.0 ord_last=228.7 miss=0.000 total_mean=5229.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=2000 ord_mean=230.2 ord_max=241.0 ord_last=228.7 miss=0.000 total_mean=2729.9
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=5000 ord_mean=230.2 ord_max=241.0 ord_last=228.7 miss=0.000 total_mean=1230.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=10000 ord_mean=230.2 ord_max=241.0 ord_last=228.7 miss=0.000 total_mean=730.1
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=20000 ord_mean=230.2 ord_max=241.0 ord_last=228.7 miss=0.000 total_mean=480.1
+[EPSSIM-BATCH] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=35.75 sort_p90=37.99 sort_max=48.86 cap_mean=40693 cap_worst=38630 valid=0.0809 fabric_valid=0.0381 urgent_ok=0.3189 jain=0.3125
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=1000 ord_mean=245.7 ord_max=258.9 ord_last=241.9 miss=0.000 total_mean=5245.2
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=2000 ord_mean=245.7 ord_max=258.9 ord_last=241.9 miss=0.000 total_mean=2745.5
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=5000 ord_mean=245.7 ord_max=258.9 ord_last=241.9 miss=0.000 total_mean=1245.6
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=10000 ord_mean=245.7 ord_max=258.9 ord_last=241.9 miss=0.000 total_mean=745.7
+[EPSSIM-TPS] mode=custom urgent=true hr=0.60 hw=0.30 qs=0.00 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=20000 ord_mean=245.7 ord_max=258.9 ord_last=241.9 miss=0.000 total_mean=495.7
+SIM-DONE

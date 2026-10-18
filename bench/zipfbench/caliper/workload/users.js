@@ -83,7 +83,25 @@ class UsersWorkload extends WorkloadModuleBase {
         this.contractId = a.contractId || 'smallbank';
         this.slowMs = (Number(a.timeoutSec || 10) - 0.5) * 1000;
         this.outDir = a.outDir || '/out';
-        this.cdf = buildCdf(this.accountCount, a.zipfS === undefined ? 1.15 : Number(a.zipfS));
+        installFastTxListener();
+        // WORKLOAD_CPU_PROF=1 이면 이 워커의 CPU 프로파일을 outDir/prof 에 남긴다 (§68). --cpu-prof 는 NODE_OPTIONS 로 줄 수 없다
+        if (process.env.WORKLOAD_CPU_PROF === '1') {
+            this.profSession = new (require('inspector').Session)();
+            this.profSession.connect();
+            this.profSession.post('Profiler.enable', () => this.profSession.post('Profiler.start'));
+            // SDK 이벤트 처리 횟수도 센다: 블록의 tx 마다 불리는 _callTransactionListener 와 그때 훑는 리스너 수
+            try {
+                const fc = require(require.resolve('fabric-common', { paths: ['/home/node/.npm-global/lib/node_modules/fabric-network'] }));
+                const proto = fc.EventService.prototype, orig = proto._callTransactionListener;
+                const st = this.sdkStats = { calls: 0, regsScanned: 0, maxRegs: 0, services: new Set() };
+                proto._callTransactionListener = function (...args) {
+                    const n = this._eventListenerRegistrations.size;
+                    st.calls++; st.regsScanned += n; if (n > st.maxRegs) st.maxRegs = n; st.services.add(this.myNumber + '/' + this.name);
+                    return orig.apply(this, args);
+                };
+            } catch (e) { console.error(`SDK 계측 실패: ${e.message}`); }
+        }
+        this.cdf =buildCdf(this.accountCount, a.zipfS === undefined ? 1.15 : Number(a.zipfS));
         this.mode = a.mode || 'smallbank';
         this.itemCount = Number(a.itemCount || 10000);
         this.rw = Number(a.rw || 4);
@@ -264,6 +282,15 @@ class UsersWorkload extends WorkloadModuleBase {
         // 집계 파일을 먼저 쓴다. 부하가 높을 때 kafkajs 소비자가 그룹에서 밀려났다 다시 들어가는 중이면
         // disconnect 가 끝나지 않아 워커가 멈출 수 있다(실제로 Caliper 라운드가 15분 넘게 끝나지 않았다).
         this.writeTally();
+        if (this.profSession) {
+            await new Promise((resolve) => this.profSession.post('Profiler.stop', (err, res) => {
+                try {
+                    fs.mkdirSync(path.join(this.outDir, 'prof'), { recursive: true });
+                    if (!err) fs.writeFileSync(path.join(this.outDir, 'prof', `w${this.workerIndex}-${this.user}.cpuprofile`), JSON.stringify(res.profile));
+                } catch (e) { console.error(`프로파일을 쓰지 못했다: ${e.message}`); }
+                resolve();
+            }));
+        }
         if (this.consumer) {
             await Promise.race([this.consumer.disconnect().catch(() => {}), sleep(5000)]);
         }
@@ -280,12 +307,56 @@ class UsersWorkload extends WorkloadModuleBase {
             tallySteady: this.tallySteady,
             series: this.series
         };
+        if (this.sdkStats) out.sdkStats = { ...this.sdkStats, services: [...this.sdkStats.services] };
         try {
             fs.writeFileSync(path.join(this.outDir, `user-${this.user}-w${this.workerIndex}.json`), JSON.stringify(out, null, 2));
         } catch (e) {
             // 집계 파일을 못 써도 라운드 결과는 남는다
             console.error(`user-${this.user}-w${this.workerIndex}.json 을 쓰지 못했다: ${e.message}`);
         }
+    }
+}
+
+// fabric-common 2.2 의 EventService._callTransactionListener 는 블록의 tx 하나마다 등록된 리스너를 모두 훑고,
+// 맞지 않는 리스너마다 logger.debug(...'not called') 를 부른다. 디버그가 꺼져 있어도 winston 인자 처리 비용이 든다.
+// abort 된 tx 는 블록에 나오지 않아 그 커밋 리스너가 시간 초과까지 남으므로, Serializer 실행에서는 워커당 리스너가
+// 2,000개 넘게 쌓여 이 호출이 Fabric 의 약 19배(워커당 1,700만 번)가 되고 워커 CPU 를 채워 보내는 TPS 가 떨어졌다(§68).
+// 맞는 리스너만 원래 함수에 넘겨 같은 동작을 하되 'not called' 디버그 호출만 없앤다. WORKLOAD_SDK_FASTTX=0 이면 끈다.
+let fastTxInstalled = false;
+function installFastTxListener() {
+    if (fastTxInstalled || process.env.WORKLOAD_SDK_FASTTX === '0') return;
+    fastTxInstalled = true;
+    try {
+        const fc = require(require.resolve('fabric-common', { paths: ['/home/node/.npm-global/lib/node_modules/fabric-network'] }));
+        const TX = fc.EventListener.TX, proto = fc.EventService.prototype, orig = proto._callTransactionListener;
+        proto._callTransactionListener = function (txId, ...rest) {
+            const all = this._eventListenerRegistrations;
+            const sub = new Map();
+            for (const [k, r] of all) {
+                if (r.listenerType === TX && (r.event === txId || r.event === 'all')) sub.set(k, r);
+            }
+            if (sub.size === 0) return undefined;
+            const matched = new Set(sub.keys());
+            this._eventListenerRegistrations = sub;
+            try {
+                return orig.call(this, txId, ...rest);
+            } finally {
+                // 원래 함수가 지운 것(자동 해제)은 원래 표에서도 지우고, 그 사이 새로 등록된 것은 옮긴다
+                this._eventListenerRegistrations = all;
+                for (const k of matched) if (!sub.has(k)) all.delete(k);
+                for (const [k, r] of sub) if (!matched.has(k)) all.set(k, r);
+                // 해제할 때 SDK 는 그때의 표(위의 sub)로 리스너 유무 표시를 다시 계산한다. 원래 표로 다시 맞춘다
+                let b = false, t = false, c = false;
+                for (const r of all.values()) {
+                    if (r.listenerType === fc.EventListener.BLOCK) b = true;
+                    else if (r.listenerType === TX) t = true;
+                    else if (r.listenerType === fc.EventListener.CHAINCODE) c = true;
+                }
+                this._haveBlockListeners = b; this._haveTxListeners = t; this._haveChaincodeListeners = c;
+            }
+        };
+    } catch (e) {
+        console.error(`SDK 리스너 우회를 설치하지 못했다: ${e.message}`);
     }
 }
 

@@ -9,6 +9,7 @@
 #   URGENT_RATIO(0, User3 의 쓰기 중 긴급 비율)  LATENCIES("4.5, 50, 50, 50, 100")  SEED(12345)
 #   ABORT_NOTIFY(true: abort 토픽을 읽어 버려진 트랜잭션을 바로 끝낸다)
 #   WORKERS(5, 사용자 수의 배수. 사용자 하나를 워커 여럿이 나눠 보낸다)
+#   CALIPER_CPU_PROF(1 이면 원격 실행에서 워커마다 CPU 프로파일을 출력폴더/prof 에 남긴다, §68)
 #   MODE(smallbank | custom)  custom 일 때: ITEM_COUNT(10000) RW(4) HR(0.2) HW(0.1) HOT_SHARE(0.01)
 # 출력폴더에 benchconfig.yaml, caliper.log, report.html, user-User*.json 을 남긴다.
 set -euo pipefail
@@ -78,6 +79,7 @@ if [ -n "$REMOTE" ]; then
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e CALIPER_BENCHCONFIG=/out/benchconfig.yaml \
     -e CALIPER_FABRIC_TIMEOUT_INVOKEORQUERY=${CALIPER_TIMEOUT:-10} \
+    ${CALIPER_CPU_PROF:+-e WORKLOAD_CPU_PROF=1} \
     -e CALIPER_NETWORKCONFIG=networkconfig-users.cloud.yaml \
     -e CALIPER_REPORT_PATH=/out/report.html \
     "$IMAGE" launch manager >/dev/null

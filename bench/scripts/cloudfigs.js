@@ -1,7 +1,9 @@
 // §56 그림: (A) s 1.0 고정 배치 효과, (B) Fabric 실패율 대비 이득·지연 곡선. §54(계좌 100, 3회) + §55(저충돌, 1회분)
 //   node cloudfigs.js [출력 폴더]   → fig-a-batch.svg, fig-b-contention.svg, fig-data.json
 const fs = require('fs'), path = require('path');
-const R = path.join(__dirname, '../zipfbench/results/cloud');
+// CLOUD_DIR·CLOUD_PREFIX 로 다른 묶음을 쓸 수 있다(§78 재측정: results/cloud2, cloud2)
+const R = process.env.CLOUD_DIR || path.join(__dirname, '../zipfbench/results/cloud');
+const PFX = process.env.CLOUD_PREFIX || 'cloud';
 const OUT = process.argv[2] || path.join(__dirname, '../../experiments/cloud-figs');
 fs.mkdirSync(OUT, { recursive: true });
 const m = (a) => a.reduce((x, y) => x + y, 0) / a.length;
@@ -32,8 +34,8 @@ function cond(name, extra) {
 }
 const SS = ['0', '0.5', '1.0', '1.5', '2.0'], BS = [100, 500, 1000];
 const pts = [];
-for (const b of BS) for (const s of SS) { const c = cond(`cloud-s${s}-b${b}`, { acct: 100, s, b }); if (c) pts.push(c); }
-for (const a of [1000, 10000]) for (const b of BS) for (const s of SS) { const c = cond(`cloud-a${a}-s${s}-b${b}`, { acct: a, s, b }); if (c) pts.push(c); }
+for (const b of BS) for (const s of SS) { const c = cond(`${PFX}-s${s}-b${b}`, { acct: 100, s, b }); if (c) pts.push(c); }
+for (const a of [1000, 10000]) for (const b of BS) for (const s of SS) { const c = cond(`${PFX}-a${a}-s${s}-b${b}`, { acct: a, s, b }); if (c) pts.push(c); }
 for (const p of pts) { p.ratio = p.S.sp[0] / p.F.sp[0]; p.dLat = p.S.lat[0] - p.F.lat[0]; p.dAll = p.S.all[0] - p.F.all[0]; }
 fs.writeFileSync(path.join(OUT, 'fig-data.json'), JSON.stringify(pts, null, 1));
 
@@ -68,8 +70,8 @@ const legend = (x, y, items) => items.map(([lab, col, kind], i) => {
   let body = '';
   // (a) 성공 처리량
   {
-    const x0 = 90, ymax = 500, ym = (v) => y0 - (v / ymax) * h;
-    body += axes(x0, y0, pw, h, [0, 100, 200, 300, 400, 500], ym, '성공 tx / s', '(a) 성공 처리량');
+    const x0 = 90, ymax = 600, ym = (v) => y0 - (v / ymax) * h;
+    body += axes(x0, y0, pw, h, [0, 100, 200, 300, 400, 500, 600], ym, '성공 tx / s', '(a) 성공 처리량');
     A.forEach((p, i) => {
       const cx = x0 + 55 + i * 110, bw = 32;
       [['F', cx - bw - 2], ['S', cx + 2]].forEach(([k, x]) => {
@@ -92,7 +94,7 @@ const legend = (x, y, items) => items.map(([lab, col, kind], i) => {
         body += `<rect x="${x}" y="${ym(v[0])}" width="${bw}" height="${y0 - ym(v[0])}" fill="${C[k]}"/>` + errbar(dx, ym(v[0] + v[1]), ym(v[0] - v[1]));
         body += `<path d="M${dx} ${ym(a) - 6} l5 6 l-5 6 l-5 -6z" fill="#fff" stroke="#111" stroke-width="1.3"/>`;
       });
-      body += T(cx + 2 + bw / 2, ym(p.S.lat[0] + p.S.lat[1]) - 8, `+${p.dLat.toFixed(0)} ms`, 'text-anchor="middle" font-weight="bold"');
+      body += T(cx + 2 + bw / 2, ym(p.S.lat[0] + p.S.lat[1]) - 8, `${p.dLat >= 0 ? '+' : ''}${p.dLat.toFixed(0)} ms`, 'text-anchor="middle" font-weight="bold"');
       body += T(cx, y0 + 18, `배치 ${p.b}`, 'text-anchor="middle"');
       body += T(cx, y0 + 34, `모든 tx ${p.dAll >= 0 ? '+' : ''}${p.dAll.toFixed(0)} ms`, 'text-anchor="middle" fill="#666" font-size="11"');
     });

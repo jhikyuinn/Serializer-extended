@@ -2,7 +2,9 @@
 //   그림 4 Query(읽기 전용) 성공률, 그림 5 블록에 담긴 tx 구성(성공 / 피어 무효 / 미리 걸러냄), 그림 6 사용자별 성공 처리량
 //   node cloudfigs3.js [출력 폴더]
 const fs = require('fs'), path = require('path');
-const R = path.join(__dirname, '../zipfbench/results/cloud');
+// CLOUD_DIR·CLOUD_PREFIX 로 다른 묶음을 쓸 수 있다(§78 재측정: results/cloud2, cloud2)
+const R = process.env.CLOUD_DIR || path.join(__dirname, '../zipfbench/results/cloud');
+const PFX = process.env.CLOUD_PREFIX || 'cloud';
 const OUT = process.argv[2] || path.join(__dirname, '../../experiments/cloud-figs');
 const m = (a) => a.reduce((x, y) => x + y, 0) / a.length;
 const sd = (a) => a.length < 2 ? 0 : Math.sqrt(a.reduce((x, y) => x + (y - m(a)) ** 2, 0) / (a.length - 1));
@@ -11,7 +13,7 @@ const USERS = ['User1', 'User2', 'User3', 'User4', 'User5'], ULAT = { User1: 4.5
 
 const D = {};
 for (const b of BS) for (const s of SS) for (const sys of SYS) {
-  const dir = path.join(R, `cloud-s${s}-b${b}`, sys, 'u0'); const reps = [];
+  const dir = path.join(R, `${PFX}-s${s}-b${b}`, sys, 'u0'); const reps = [];
   for (const rep of fs.readdirSync(dir)) {
     const d = path.join(dir, rep); if (!fs.existsSync(path.join(d, 'meta.json'))) continue;
     const meta = JSON.parse(fs.readFileSync(path.join(d, 'meta.json'))); const dur = meta.duration - (meta.warmupSec || 0);

@@ -1,7 +1,9 @@
 # 클라우드 1,000 TPS 실험 그림 (NOTES §54~§56)
 
-- 그림은 `HLF/bench-scripts/cloudfigs.js`로 만든다.
-  - 원자료는 `HLF/fabric-samples/zipfbench/results/cloud/`에 있다.
+> **주의 (2026-10-18, NOTES §68):** 이 폴더의 Serializer 수치는 Caliper 워커의 Fabric SDK 부담(abort된 tx의 커밋 리스너가 쌓여 워커 CPU가 포화됨)이 섞여 **Serializer에 불리하게** 나왔다. 보낸 TPS 867~986, 배치 100의 지연 +5~42 ms, 블록 간격이 길다는 것이 그 영향이다. 수정 후 s 2.0·배치 100에서 Serializer는 1,004 TPS를 보냈고, 성공 342/s, 커밋 지연 175 ms였다(수정 전 849 / 279 / 244 ms). Fabric은 그대로였다. 다시 잰 결과는 [cloud-figs-v2](../cloud-figs-v2/README.md)에 있다(§78).
+
+- 그림은 `bench/scripts/cloudfigs.js`로 만든다.
+  - 원자료는 `bench/zipfbench/results/cloud/`에 있다.
   - 그림에 쓴 값은 `fig-data.json`에 있다.
   - 다시 만들려면 `node cloudfigs.js`를 실행한다.
 - 파일
@@ -97,7 +99,7 @@
 # 그림 1~3: s에 따른 비교 (2026-10-18, 사용자 요청, NOTES §57)
 
 - 원자료는 §54의 계좌 100, s 0~2 × 배치 100/500/1000, 3회 결과다.
-- 생성 스크립트는 `HLF/bench-scripts/cloudfigs2.js`다. 블록 시각 분해는 `blocktime.js`에서 한다.
+- 생성 스크립트는 `bench/scripts/cloudfigs2.js`다. 블록 시각 분해는 `blocktime.js`에서 한다.
 - 그림에 쓴 값은 `fig123-data.json`에 있다.
 
 ## 그림 1: 블록당 처리 시간
@@ -202,7 +204,7 @@
 
 - 지금까지의 결과에서 Serializer의 장점으로 그림을 그릴 수 있는 것을 검토했다.
 - 원자료는 클라우드 §54(계좌 100, s 0~2 × 배치 100/500/1000, 3회)다. 같은 환경이고 반복이 있어 근거가 가장 단단하다.
-- 스크립트는 `HLF/bench-scripts/cloudfigs3.js`이고, 그림에 쓴 값은 `fig456-data.json`에 있다.
+- 스크립트는 `bench/scripts/cloudfigs3.js`이고, 그림에 쓴 값은 `fig456-data.json`에 있다.
 
 ## 검토 결과
 
@@ -264,7 +266,7 @@
 
 - **목적:** 그림 3만 보면 이득이 가장 큰 s 2.0을 두고 왜 1.0을 골랐는지 드러나지 않는다(사용자 지적). 그래서 고른 이유를 한 그림에 모았다.
 - **데이터:** 배치 100(주 실험 배치), 계좌 100, 3회.
-- **스크립트:** `HLF/bench-scripts/cloudfig-choice.js`. `fig-data.json`을 읽는다.
+- **스크립트:** `bench/scripts/cloudfig-choice.js`. `fig-data.json`을 읽는다.
 
 **같은 s 축에 세 행을 놓았다**
 1. **이득:** 초당 성공 tx와 배율.

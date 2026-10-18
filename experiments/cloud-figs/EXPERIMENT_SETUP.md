@@ -55,7 +55,7 @@
 ## 6. 반복과 순서
 
 - **반복:** 3바퀴. 조건 15개 × 시스템 2개 × 3 = 90회이고, 모두 정상이었다.
-- **순서 섞기:** 바퀴마다 (시스템, 배치) 묶음 6개의 순서를 섞고, 묶음 안에서도 s 순서를 섞었다(`HLF/bench-scripts/cloud-sb.sh`).
+- **순서 섞기:** 바퀴마다 (시스템, 배치) 묶음 6개의 순서를 섞고, 묶음 안에서도 s 순서를 섞었다(`bench/scripts/cloud-sb.sh`).
 - **네트워크 재사용:** 같은 (시스템, 배치) 묶음 안에서는 Fabric 네트워크를 다시 쓴다(`REUSE_NETWORK=1`).
   - 새로 띄운 것은 18회, 재사용은 72회다.
   - 사전 점검에서 새로 띄운 것과 재사용의 차이는 0.3%였다.
@@ -82,8 +82,8 @@
 
 ## 9. 결과와 그림
 
-- **원자료:** `HLF/fabric-samples/zipfbench/results/cloud/cloud-s<s>-b<B>/{A1,BE}/u0/rep<n>`
-- **요약:** `HLF/bench-scripts/cloudsummary.js`가 `cloud-summary.json`을 만든다.
+- **원자료:** `bench/zipfbench/results/cloud/cloud-s<s>-b<B>/{A1,BE}/u0/rep<n>`
+- **요약:** `bench/scripts/cloudsummary.js`가 `cloud-summary.json`을 만든다.
 - **그림:** 이 폴더의 그림 A·B, 그림 1~6. 각 그림의 설명은 `README.md`에 있다.
 
 ## 10. 밝혀 둘 한계

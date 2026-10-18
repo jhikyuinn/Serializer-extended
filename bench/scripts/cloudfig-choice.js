@@ -44,13 +44,13 @@ body += `<line x1="${X(0.99)}" y1="${top - 4}" x2="${X(0.99)}" y2="${bot}" strok
 }
 // (2) 지연 비용
 {
-  const R = row(...rows[1], -20, 60, [-20, 0, 20, 40, 60], '지연 차이 S − F (ms)', '② 비용: 지연 차이 (막대 = 성공 tx 커밋 지연, ◇ = 모든 tx 결과까지)');
+  const R = row(...rows[1], -60, 60, [-60, -40, -20, 0, 20, 40, 60], '지연 차이 S − F (ms)', '② 비용: 지연 차이 (막대 = 성공 tx 커밋 지연, ◇ = 모든 tx 결과까지)');
   body += R.s + `<line x1="${x0}" y1="${R.ym(0)}" x2="${x0 + pw}" y2="${R.ym(0)}" stroke="#111"/>`;
   for (const p of pts) {
     const x = X(+p.s), e = Math.hypot(p.F.lat[1], p.S.lat[1]);
     body += `<rect x="${x - 13}" y="${Math.min(R.ym(p.dLat), R.ym(0))}" width="26" height="${Math.abs(R.ym(p.dLat) - R.ym(0))}" fill="#93c5fd"/>` + errbar(x, R.ym(p.dLat + e), R.ym(p.dLat - e), '#1e3a8a');
     body += `<path d="M${x} ${R.ym(p.dAll) - 6} l5 6 l-5 6 l-5 -6z" fill="#fff" stroke="#111" stroke-width="1.3"/>`;
-    body += T(x + 17, R.ym(p.dLat) + 4, `+${p.dLat.toFixed(0)}`, 'font-size="10.5" fill="#1e3a8a"');
+    body += T(x + 17, R.ym(p.dLat) + 4, `${p.dLat >= 0 ? '+' : ''}${p.dLat.toFixed(0)}`, 'font-size="10.5" fill="#1e3a8a"');
   }
 }
 // (3) 기준 Fabric 의 상태
@@ -73,12 +73,12 @@ const notes = [
   ['s 1.0을 고른 기준', '#111', true],
   ['결과를 보기 전에 정할 수 있고(YCSB 0.99),', '#333'],
   ['기준 시스템이 아직 동작하는 범위에서', '#333'],
-  ['지연 비용이 작고 이득이 뚜렷한 지점.', '#333'],
+  ['지연 손해 없이 이득이 뚜렷한 지점.', '#333'],
   ['', ''],
   [`① 이득 ×${p1.ratio.toFixed(2)}`, C.S, true],
   [`   s 0~0.5의 ×${p0.ratio.toFixed(2)}보다 뚜렷하다`, '#333'],
-  [`② 지연 +${p1.dLat.toFixed(0)} ms (모든 tx +${p1.dAll.toFixed(0)})`, '#1e3a8a', true],
-  ['   배치 100은 s와 상관없이 +5~42 ms로 작다', '#333'],
+  [`② 지연 ${p1.dLat >= 0 ? '+' : ''}${p1.dLat.toFixed(0)} ms (모든 tx ${p1.dAll >= 0 ? '+' : ''}${p1.dAll.toFixed(0)})`, '#1e3a8a', true],
+  [`   배치 100은 s와 상관없이 ${Math.min(...pts.map((p) => p.dLat)).toFixed(0)}~${Math.max(...pts.map((p) => p.dLat)).toFixed(0)} ms`, '#333'],
   ['   → 지연은 s를 가르는 기준이 되지 못한다', '#333'],
   [`③ Fabric 실패 ${p1.F.fail[0].toFixed(0)}%`, C.bad, true],
   [`   성공 ${p1.F.sp[0].toFixed(0)}/s로 아직 동작한다`, '#333'],

@@ -324,6 +324,8 @@
 
 ## 8. 클라우드 1,000 TPS 실험 (§54~§56, AWS 4 VM)
 
+> 이 절의 Serializer 수치는 측정 도구(Caliper SDK) 부담이 섞인 첫 측정이다(§68). 다시 잰 결과는 [results.md](results.md)와 [experiments/cloud-figs-v2](../experiments/cloud-figs-v2/README.md)에 있다(§78).
+
 그림과 자세한 설명은 [experiments/cloud-figs/README.md](../experiments/cloud-figs/README.md)에 있다.
 
 **조건:** smallbank, 1,000 TPS, Query 50%, 사용자 5명, 정상 구간 25초 × 3회.

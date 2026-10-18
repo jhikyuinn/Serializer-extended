@@ -3,7 +3,9 @@
 //   node cloudfigs2.js [출력 폴더]
 const fs = require('fs'), path = require('path');
 const { blockTimes } = require('./blocktime');
-const R = path.join(__dirname, '../zipfbench/results/cloud');
+// CLOUD_DIR·CLOUD_PREFIX 로 다른 묶음을 쓸 수 있다(§78 재측정: results/cloud2, cloud2)
+const R = process.env.CLOUD_DIR || path.join(__dirname, '../zipfbench/results/cloud');
+const PFX = process.env.CLOUD_PREFIX || 'cloud';
 const OUT = process.argv[2] || path.join(__dirname, '../../experiments/cloud-figs');
 const m = (a) => a.reduce((x, y) => x + y, 0) / a.length;
 const sd = (a) => a.length < 2 ? 0 : Math.sqrt(a.reduce((x, y) => x + (y - m(a)) ** 2, 0) / (a.length - 1));
@@ -11,7 +13,7 @@ const SS = ['0', '0.5', '1.0', '1.5', '2.0'], BS = [100, 500, 1000], SYS = ['A1'
 
 const D = {};
 for (const b of BS) for (const s of SS) for (const sys of SYS) {
-  const dir = path.join(R, `cloud-s${s}-b${b}`, sys, 'u0'); const reps = [];
+  const dir = path.join(R, `${PFX}-s${s}-b${b}`, sys, 'u0'); const reps = [];
   for (const rep of fs.readdirSync(dir)) {
     const d = path.join(dir, rep); if (!fs.existsSync(path.join(d, 'meta.json'))) continue;
     const meta = JSON.parse(fs.readFileSync(path.join(d, 'meta.json'))); const dur = meta.duration - (meta.warmupSec || 0);

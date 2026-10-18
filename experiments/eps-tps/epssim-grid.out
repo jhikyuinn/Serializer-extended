@@ -1,0 +1,433 @@
+[EPSSIM-BATCH] urgent=false s=1.0 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.41 sort_p90=0.78 sort_max=0.83 valid=0.5348 fabric_valid=0.0561 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=999 ord_mean=110.4 ord_max=110.8 ord_last=110.2 miss=0.000 total_mean=2609.9
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=1996 ord_mean=110.4 ord_max=110.8 ord_last=110.2 miss=0.000 total_mean=1360.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=4973 ord_mean=110.4 ord_max=110.8 ord_last=110.2 miss=0.000 total_mean=610.3
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=9891 ord_mean=110.4 ord_max=110.8 ord_last=110.2 miss=0.000 total_mean=360.4
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=19569 ord_mean=110.4 ord_max=110.8 ord_last=110.2 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=false s=1.0 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=3.17 sort_p90=6.56 sort_max=8.00 valid=0.5351 fabric_valid=0.0561 urgent_ok=NaN jain=0.9992
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=999 ord_mean=113.2 ord_max=118.0 ord_last=111.3 miss=0.000 total_mean=2612.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=1996 ord_mean=113.2 ord_max=118.0 ord_last=111.3 miss=0.000 total_mean=1362.9
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=4972 ord_mean=113.2 ord_max=118.0 ord_last=111.3 miss=0.000 total_mean=613.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=9890 ord_mean=113.2 ord_max=118.0 ord_last=111.3 miss=0.000 total_mean=363.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=19565 ord_mean=113.2 ord_max=118.0 ord_last=111.3 miss=0.000 total_mean=238.1
+[EPSSIM-BATCH] urgent=false s=1.0 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=16.45 sort_p90=33.99 sort_max=48.67 valid=0.5353 fabric_valid=0.0561 urgent_ok=NaN jain=0.9981
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=999 ord_mean=126.5 ord_max=158.7 ord_last=118.3 miss=0.000 total_mean=2626.0
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=1995 ord_mean=126.5 ord_max=158.7 ord_last=118.3 miss=0.000 total_mean=1376.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=4971 ord_mean=126.5 ord_max=158.7 ord_last=118.3 miss=0.000 total_mean=626.4
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=9883 ord_mean=126.5 ord_max=158.7 ord_last=118.3 miss=0.000 total_mean=376.4
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=19538 ord_mean=126.5 ord_max=158.7 ord_last=118.3 miss=0.000 total_mean=251.4
+[EPSSIM-BATCH] urgent=false s=1.0 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=43.55 sort_p90=92.61 sort_max=127.69 valid=0.5355 fabric_valid=0.0561 urgent_ok=NaN jain=0.9980
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=999 ord_mean=153.5 ord_max=237.7 ord_last=128.1 miss=0.000 total_mean=2653.0
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=1995 ord_mean=153.5 ord_max=237.7 ord_last=128.1 miss=0.000 total_mean=1403.3
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=4968 ord_mean=153.5 ord_max=237.7 ord_last=128.1 miss=0.000 total_mean=653.4
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=9874 ord_mean=153.5 ord_max=237.7 ord_last=128.1 miss=0.000 total_mean=403.5
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=19501 ord_mean=153.5 ord_max=237.7 ord_last=128.1 miss=0.000 total_mean=278.5
+[EPSSIM-BATCH] urgent=false s=1.0 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=43.22 sort_p90=93.88 sort_max=115.75 valid=0.5355 fabric_valid=0.0561 urgent_ok=NaN jain=0.9980
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=999 ord_mean=153.2 ord_max=225.8 ord_last=128.3 miss=0.000 total_mean=2652.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=1995 ord_mean=153.2 ord_max=225.8 ord_last=128.3 miss=0.000 total_mean=1403.0
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=4968 ord_mean=153.2 ord_max=225.8 ord_last=128.3 miss=0.000 total_mean=653.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=9873 ord_mean=153.2 ord_max=225.8 ord_last=128.3 miss=0.000 total_mean=403.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=19500 ord_mean=153.2 ord_max=225.8 ord_last=128.3 miss=0.000 total_mean=278.2
+[EPSSIM-BATCH] urgent=false s=1.0 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=84.95 sort_p90=158.46 sort_max=223.53 valid=0.5354 fabric_valid=0.0561 urgent_ok=NaN jain=0.9972
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=999 ord_mean=195.0 ord_max=333.5 ord_last=145.3 miss=0.000 total_mean=2694.5
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=1994 ord_mean=195.0 ord_max=333.5 ord_last=145.3 miss=0.000 total_mean=1444.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=4964 ord_mean=195.0 ord_max=333.5 ord_last=145.3 miss=0.000 total_mean=694.9
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=9857 ord_mean=195.0 ord_max=333.5 ord_last=145.3 miss=0.000 total_mean=444.9
+[EPSSIM-TPS] urgent=false s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=19435 ord_mean=200.3 ord_max=333.5 ord_last=145.3 miss=0.000 total_mean=325.3
+[EPSSIM-BATCH] urgent=false s=1.5 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.34 sort_p90=0.70 sort_max=1.04 valid=0.5258 fabric_valid=0.0454 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=999 ord_mean=110.3 ord_max=111.0 ord_last=110.2 miss=0.000 total_mean=2609.8
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=1996 ord_mean=110.3 ord_max=111.0 ord_last=110.2 miss=0.000 total_mean=1360.1
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=4973 ord_mean=110.3 ord_max=111.0 ord_last=110.2 miss=0.000 total_mean=610.2
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=9891 ord_mean=110.3 ord_max=111.0 ord_last=110.2 miss=0.000 total_mean=360.3
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=19569 ord_mean=110.3 ord_max=111.0 ord_last=110.2 miss=0.000 total_mean=235.3
+[EPSSIM-BATCH] urgent=false s=1.5 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=5.17 sort_p90=9.09 sort_max=16.79 valid=0.5259 fabric_valid=0.0454 urgent_ok=NaN jain=0.9995
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=999 ord_mean=115.2 ord_max=126.8 ord_last=113.7 miss=0.000 total_mean=2614.7
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=1995 ord_mean=115.2 ord_max=126.8 ord_last=113.7 miss=0.000 total_mean=1364.9
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=4972 ord_mean=115.2 ord_max=126.8 ord_last=113.7 miss=0.000 total_mean=615.1
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=9888 ord_mean=115.2 ord_max=126.8 ord_last=113.7 miss=0.000 total_mean=365.1
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=19556 ord_mean=115.2 ord_max=126.8 ord_last=113.7 miss=0.000 total_mean=240.1
+[EPSSIM-BATCH] urgent=false s=1.5 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=22.82 sort_p90=57.04 sort_max=59.87 valid=0.5261 fabric_valid=0.0454 urgent_ok=NaN jain=0.9998
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=999 ord_mean=132.8 ord_max=169.9 ord_last=127.3 miss=0.000 total_mean=2632.3
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=1995 ord_mean=132.8 ord_max=169.9 ord_last=127.3 miss=0.000 total_mean=1382.6
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=4968 ord_mean=132.8 ord_max=169.9 ord_last=127.3 miss=0.000 total_mean=632.7
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=9874 ord_mean=132.8 ord_max=169.9 ord_last=127.3 miss=0.000 total_mean=382.8
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=19504 ord_mean=132.8 ord_max=169.9 ord_last=127.3 miss=0.000 total_mean=257.8
+[EPSSIM-BATCH] urgent=false s=1.5 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=53.94 sort_p90=130.81 sort_max=154.54 valid=0.5263 fabric_valid=0.0454 urgent_ok=NaN jain=0.9990
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=999 ord_mean=163.9 ord_max=264.5 ord_last=150.3 miss=0.000 total_mean=2663.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=1994 ord_mean=163.9 ord_max=264.5 ord_last=150.3 miss=0.000 total_mean=1413.7
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=4963 ord_mean=163.9 ord_max=264.5 ord_last=150.3 miss=0.000 total_mean=663.8
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=9852 ord_mean=163.9 ord_max=264.5 ord_last=150.3 miss=0.000 total_mean=413.9
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=19417 ord_mean=164.7 ord_max=264.5 ord_last=150.3 miss=0.000 total_mean=289.6
+[EPSSIM-BATCH] urgent=false s=1.5 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=52.53 sort_p90=133.57 sort_max=155.08 valid=0.5263 fabric_valid=0.0454 urgent_ok=NaN jain=0.9990
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=999 ord_mean=162.5 ord_max=265.1 ord_last=151.1 miss=0.000 total_mean=2662.0
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=1994 ord_mean=162.5 ord_max=265.1 ord_last=151.1 miss=0.000 total_mean=1412.3
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=4963 ord_mean=162.5 ord_max=265.1 ord_last=151.1 miss=0.000 total_mean=662.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=9851 ord_mean=162.5 ord_max=265.1 ord_last=151.1 miss=0.000 total_mean=412.5
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=19413 ord_mean=163.3 ord_max=265.1 ord_last=151.1 miss=0.000 total_mean=288.3
+[EPSSIM-BATCH] urgent=false s=1.5 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=126.81 sort_p90=379.69 sort_max=437.49 valid=0.5265 fabric_valid=0.0454 urgent_ok=NaN jain=0.9986
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=998 ord_mean=236.8 ord_max=547.5 ord_last=191.5 miss=0.000 total_mean=2736.3
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=1992 ord_mean=236.8 ord_max=547.5 ord_last=191.5 miss=0.000 total_mean=1486.6
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=4953 ord_mean=236.8 ord_max=547.5 ord_last=191.5 miss=0.000 total_mean=736.7
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=9812 ord_mean=239.2 ord_max=547.5 ord_last=191.5 miss=0.000 total_mean=489.1
+[EPSSIM-TPS] urgent=false s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=19192 ord_mean=420.4 ord_max=787.2 ord_last=210.5 miss=0.000 total_mean=545.3
+[EPSSIM-BATCH] urgent=false s=2.0 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.47 sort_p90=0.82 sort_max=2.80 valid=0.5143 fabric_valid=0.0260 urgent_ok=NaN jain=0.9989
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=999 ord_mean=110.5 ord_max=112.8 ord_last=110.8 miss=0.000 total_mean=2610.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=1996 ord_mean=110.5 ord_max=112.8 ord_last=110.8 miss=0.000 total_mean=1360.2
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=4972 ord_mean=110.5 ord_max=112.8 ord_last=110.8 miss=0.000 total_mean=610.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=9890 ord_mean=110.5 ord_max=112.8 ord_last=110.8 miss=0.000 total_mean=360.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=19567 ord_mean=110.5 ord_max=112.8 ord_last=110.8 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=false s=2.0 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=9.95 sort_p90=21.37 sort_max=24.72 valid=0.5144 fabric_valid=0.0260 urgent_ok=NaN jain=0.9989
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=999 ord_mean=119.9 ord_max=134.7 ord_last=114.8 miss=0.000 total_mean=2619.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=1995 ord_mean=119.9 ord_max=134.7 ord_last=114.8 miss=0.000 total_mean=1369.7
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=4972 ord_mean=119.9 ord_max=134.7 ord_last=114.8 miss=0.000 total_mean=619.8
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=9887 ord_mean=119.9 ord_max=134.7 ord_last=114.8 miss=0.000 total_mean=369.9
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=19551 ord_mean=119.9 ord_max=134.7 ord_last=114.8 miss=0.000 total_mean=244.9
+[EPSSIM-BATCH] urgent=false s=2.0 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=51.54 sort_p90=109.33 sort_max=131.37 valid=0.5144 fabric_valid=0.0260 urgent_ok=NaN jain=0.9990
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=999 ord_mean=161.5 ord_max=241.4 ord_last=131.2 miss=0.000 total_mean=2661.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=1995 ord_mean=161.5 ord_max=241.4 ord_last=131.2 miss=0.000 total_mean=1411.3
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=4967 ord_mean=161.5 ord_max=241.4 ord_last=131.2 miss=0.000 total_mean=661.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=9871 ord_mean=161.5 ord_max=241.4 ord_last=131.2 miss=0.000 total_mean=411.5
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=19489 ord_mean=161.5 ord_max=241.4 ord_last=131.2 miss=0.000 total_mean=286.5
+[EPSSIM-BATCH] urgent=false s=2.0 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=141.18 sort_p90=282.59 sort_max=347.55 valid=0.5145 fabric_valid=0.0260 urgent_ok=NaN jain=0.9983
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=998 ord_mean=251.2 ord_max=457.6 ord_last=156.7 miss=0.000 total_mean=2750.7
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=1994 ord_mean=251.2 ord_max=457.6 ord_last=156.7 miss=0.000 total_mean=1500.9
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=4961 ord_mean=251.2 ord_max=457.6 ord_last=156.7 miss=0.000 total_mean=751.1
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=9846 ord_mean=251.2 ord_max=457.6 ord_last=156.7 miss=0.000 total_mean=501.1
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=18928 ord_mean=352.3 ord_max=472.1 ord_last=283.3 miss=0.000 total_mean=477.3
+[EPSSIM-BATCH] urgent=false s=2.0 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=139.84 sort_p90=282.06 sort_max=346.30 valid=0.5145 fabric_valid=0.0260 urgent_ok=NaN jain=0.9983
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=998 ord_mean=249.8 ord_max=456.3 ord_last=155.5 miss=0.000 total_mean=2749.3
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=1994 ord_mean=249.8 ord_max=456.3 ord_last=155.5 miss=0.000 total_mean=1499.6
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=4961 ord_mean=249.8 ord_max=456.3 ord_last=155.5 miss=0.000 total_mean=749.7
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=9847 ord_mean=249.8 ord_max=456.3 ord_last=155.5 miss=0.000 total_mean=499.8
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=18982 ord_mean=345.0 ord_max=456.3 ord_last=268.3 miss=0.000 total_mean=470.0
+[EPSSIM-BATCH] urgent=false s=2.0 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=315.90 sort_p90=661.94 sort_max=829.58 valid=0.5145 fabric_valid=0.0260 urgent_ok=NaN jain=0.9980
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=998 ord_mean=425.9 ord_max=939.6 ord_last=206.6 miss=0.000 total_mean=2925.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=1992 ord_mean=425.9 ord_max=939.6 ord_last=206.6 miss=0.000 total_mean=1675.6
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=4949 ord_mean=425.9 ord_max=939.6 ord_last=206.6 miss=0.000 total_mean=925.8
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=9630 ord_mean=516.7 ord_max=939.6 ord_last=383.8 miss=0.000 total_mean=766.7
+[EPSSIM-TPS] urgent=false s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=11405 ord_mean=2292.0 ord_max=3823.7 ord_last=3768.0 miss=0.900 total_mean=2416.9
+[EPSSIM-BATCH] urgent=false s=1.0 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=0.56 sort_p90=0.66 sort_max=1.40 valid=0.5209 fabric_valid=0.0298 urgent_ok=NaN jain=0.9987
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=998 ord_mean=210.6 ord_max=211.4 ord_last=210.4 miss=0.000 total_mean=5210.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=1993 ord_mean=210.6 ord_max=211.4 ord_last=210.4 miss=0.000 total_mean=2710.3
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=4957 ord_mean=210.6 ord_max=211.4 ord_last=210.4 miss=0.000 total_mean=1210.5
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=9828 ord_mean=210.6 ord_max=211.4 ord_last=210.4 miss=0.000 total_mean=710.5
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=19323 ord_mean=210.6 ord_max=211.4 ord_last=210.4 miss=0.000 total_mean=460.5
+[EPSSIM-BATCH] urgent=false s=1.0 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=16.73 sort_p90=30.22 sort_max=44.94 valid=0.5211 fabric_valid=0.0298 urgent_ok=NaN jain=0.9986
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=998 ord_mean=226.7 ord_max=254.9 ord_last=217.6 miss=0.000 total_mean=5226.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=1993 ord_mean=226.7 ord_max=254.9 ord_last=217.6 miss=0.000 total_mean=2726.5
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=4955 ord_mean=226.7 ord_max=254.9 ord_last=217.6 miss=0.000 total_mean=1226.6
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=9822 ord_mean=226.7 ord_max=254.9 ord_last=217.6 miss=0.000 total_mean=726.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=19300 ord_mean=226.7 ord_max=254.9 ord_last=217.6 miss=0.000 total_mean=476.7
+[EPSSIM-BATCH] urgent=false s=1.0 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=87.26 sort_p90=154.10 sort_max=217.84 valid=0.5212 fabric_valid=0.0298 urgent_ok=NaN jain=0.9965
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=998 ord_mean=297.3 ord_max=427.8 ord_last=258.3 miss=0.000 total_mean=5296.8
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=1991 ord_mean=297.3 ord_max=427.8 ord_last=258.3 miss=0.000 total_mean=2797.0
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=4947 ord_mean=297.3 ord_max=427.8 ord_last=258.3 miss=0.000 total_mean=1297.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=9789 ord_mean=297.3 ord_max=427.8 ord_last=258.3 miss=0.000 total_mean=797.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=19175 ord_mean=297.3 ord_max=427.8 ord_last=258.3 miss=0.000 total_mean=547.2
+[EPSSIM-BATCH] urgent=false s=1.0 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=223.15 sort_p90=364.24 sort_max=537.14 valid=0.5212 fabric_valid=0.0298 urgent_ok=NaN jain=0.9938
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=997 ord_mean=433.2 ord_max=747.1 ord_last=323.2 miss=0.000 total_mean=5432.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=1989 ord_mean=433.2 ord_max=747.1 ord_last=323.2 miss=0.000 total_mean=2932.9
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=4934 ord_mean=433.2 ord_max=747.1 ord_last=323.2 miss=0.000 total_mean=1433.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=9738 ord_mean=433.2 ord_max=747.1 ord_last=323.2 miss=0.000 total_mean=933.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=18978 ord_mean=539.5 ord_max=792.3 ord_last=323.2 miss=0.000 total_mean=789.5
+[EPSSIM-BATCH] urgent=false s=1.0 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=225.21 sort_p90=377.04 sort_max=537.45 valid=0.5212 fabric_valid=0.0298 urgent_ok=NaN jain=0.9938
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=997 ord_mean=435.2 ord_max=747.5 ord_last=323.9 miss=0.000 total_mean=5434.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=1989 ord_mean=435.2 ord_max=747.5 ord_last=323.9 miss=0.000 total_mean=2935.0
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=4933 ord_mean=435.2 ord_max=747.5 ord_last=323.9 miss=0.000 total_mean=1435.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=9737 ord_mean=435.2 ord_max=747.5 ord_last=323.9 miss=0.000 total_mean=935.2
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=18976 ord_mean=545.1 ord_max=797.5 ord_last=323.9 miss=0.000 total_mean=795.1
+[EPSSIM-BATCH] urgent=false s=1.0 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=498.22 sort_p90=1049.71 sort_max=1253.45 valid=0.5212 fabric_valid=0.0298 urgent_ok=NaN jain=0.9987
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=996 ord_mean=708.2 ord_max=1463.5 ord_last=423.1 miss=0.250 total_mean=5707.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=1986 ord_mean=708.2 ord_max=1463.5 ord_last=423.1 miss=0.250 total_mean=3208.0
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=4913 ord_mean=708.2 ord_max=1463.5 ord_last=423.1 miss=0.250 total_mean=1708.1
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=9660 ord_mean=784.8 ord_max=1463.5 ord_last=423.1 miss=0.333 total_mean=1284.7
+[EPSSIM-TPS] urgent=false s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=13335 ord_mean=2464.5 ord_max=3297.5 ord_last=2998.6 miss=1.000 total_mean=2714.5
+[EPSSIM-BATCH] urgent=false s=1.5 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=0.48 sort_p90=0.57 sort_max=0.84 valid=0.5182 fabric_valid=0.0282 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=998 ord_mean=210.5 ord_max=210.8 ord_last=210.4 miss=0.000 total_mean=5210.0
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=1993 ord_mean=210.5 ord_max=210.8 ord_last=210.4 miss=0.000 total_mean=2710.2
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=4957 ord_mean=210.5 ord_max=210.8 ord_last=210.4 miss=0.000 total_mean=1210.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=9828 ord_mean=210.5 ord_max=210.8 ord_last=210.4 miss=0.000 total_mean=710.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=19322 ord_mean=210.5 ord_max=210.8 ord_last=210.4 miss=0.000 total_mean=460.5
+[EPSSIM-BATCH] urgent=false s=1.5 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=19.02 sort_p90=34.54 sort_max=55.83 valid=0.5183 fabric_valid=0.0282 urgent_ok=NaN jain=0.9997
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=998 ord_mean=229.0 ord_max=265.8 ord_last=224.4 miss=0.000 total_mean=5228.5
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=1993 ord_mean=229.0 ord_max=265.8 ord_last=224.4 miss=0.000 total_mean=2728.8
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=4954 ord_mean=229.0 ord_max=265.8 ord_last=224.4 miss=0.000 total_mean=1228.9
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=9817 ord_mean=229.0 ord_max=265.8 ord_last=224.4 miss=0.000 total_mean=729.0
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=19279 ord_mean=229.0 ord_max=265.8 ord_last=224.4 miss=0.000 total_mean=479.0
+[EPSSIM-BATCH] urgent=false s=1.5 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=95.45 sort_p90=159.66 sort_max=363.53 valid=0.5185 fabric_valid=0.0282 urgent_ok=NaN jain=0.9984
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=998 ord_mean=305.5 ord_max=573.5 ord_last=268.6 miss=0.000 total_mean=5305.0
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=1991 ord_mean=305.5 ord_max=573.5 ord_last=268.6 miss=0.000 total_mean=2805.2
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=4945 ord_mean=305.5 ord_max=573.5 ord_last=268.6 miss=0.000 total_mean=1305.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=9781 ord_mean=305.5 ord_max=573.5 ord_last=268.6 miss=0.000 total_mean=805.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=19143 ord_mean=311.6 ord_max=573.5 ord_last=268.6 miss=0.000 total_mean=561.6
+[EPSSIM-BATCH] urgent=false s=1.5 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=239.43 sort_p90=424.00 sort_max=990.91 valid=0.5185 fabric_valid=0.0282 urgent_ok=NaN jain=0.9975
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=997 ord_mean=449.4 ord_max=1200.9 ord_last=360.7 miss=0.083 total_mean=5448.9
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=1988 ord_mean=449.4 ord_max=1200.9 ord_last=360.7 miss=0.083 total_mean=2949.2
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=4926 ord_mean=449.4 ord_max=1200.9 ord_last=360.7 miss=0.083 total_mean=1449.3
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=9708 ord_mean=466.2 ord_max=1200.9 ord_last=360.7 miss=0.083 total_mean=966.1
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=18866 ord_mean=623.5 ord_max=1200.9 ord_last=360.7 miss=0.167 total_mean=873.5
+[EPSSIM-BATCH] urgent=false s=1.5 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=238.20 sort_p90=416.25 sort_max=997.12 valid=0.5185 fabric_valid=0.0282 urgent_ok=NaN jain=0.9975
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=997 ord_mean=448.2 ord_max=1207.1 ord_last=354.3 miss=0.083 total_mean=5447.7
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=1988 ord_mean=448.2 ord_max=1207.1 ord_last=354.3 miss=0.083 total_mean=2947.9
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=4927 ord_mean=448.2 ord_max=1207.1 ord_last=354.3 miss=0.083 total_mean=1448.1
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=9713 ord_mean=465.5 ord_max=1207.1 ord_last=354.3 miss=0.083 total_mean=965.4
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=18885 ord_mean=621.8 ord_max=1207.1 ord_last=354.3 miss=0.167 total_mean=871.8
+[EPSSIM-BATCH] urgent=false s=1.5 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=489.83 sort_p90=1062.28 sort_max=1355.63 valid=0.5187 fabric_valid=0.0282 urgent_ok=NaN jain=0.9996
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=996 ord_mean=699.8 ord_max=1565.6 ord_last=484.3 miss=0.250 total_mean=5699.3
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=1984 ord_mean=699.8 ord_max=1565.6 ord_last=484.3 miss=0.250 total_mean=3199.6
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=4901 ord_mean=699.8 ord_max=1565.6 ord_last=484.3 miss=0.250 total_mean=1699.7
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=9612 ord_mean=780.0 ord_max=1565.6 ord_last=484.3 miss=0.333 total_mean=1279.9
+[EPSSIM-TPS] urgent=false s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=13486 ord_mean=2021.6 ord_max=2968.9 ord_last=2898.0 miss=1.000 total_mean=2271.5
+[EPSSIM-BATCH] urgent=false s=2.0 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=0.48 sort_p90=0.55 sort_max=0.95 valid=0.5108 fabric_valid=0.0173 urgent_ok=NaN jain=0.9978
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=998 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=5210.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=1993 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=2710.2
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=4957 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=1210.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=9828 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=710.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=19323 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=460.5
+[EPSSIM-BATCH] urgent=false s=2.0 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=60.50 sort_p90=97.07 sort_max=115.50 valid=0.5109 fabric_valid=0.0173 urgent_ok=NaN jain=0.9982
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=998 ord_mean=270.5 ord_max=325.5 ord_last=229.6 miss=0.000 total_mean=5270.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=1992 ord_mean=270.5 ord_max=325.5 ord_last=229.6 miss=0.000 total_mean=2770.2
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=4953 ord_mean=270.5 ord_max=325.5 ord_last=229.6 miss=0.000 total_mean=1270.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=9812 ord_mean=270.5 ord_max=325.5 ord_last=229.6 miss=0.000 total_mean=770.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=19263 ord_mean=270.5 ord_max=325.5 ord_last=229.6 miss=0.000 total_mean=520.5
+[EPSSIM-BATCH] urgent=false s=2.0 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=347.00 sort_p90=660.83 sort_max=673.59 valid=0.5109 fabric_valid=0.0173 urgent_ok=NaN jain=0.9964
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=998 ord_mean=557.0 ord_max=883.6 ord_last=290.8 miss=0.000 total_mean=5556.5
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=1990 ord_mean=557.0 ord_max=883.6 ord_last=290.8 miss=0.000 total_mean=3056.8
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=4940 ord_mean=557.0 ord_max=883.6 ord_last=290.8 miss=0.000 total_mean=1556.9
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=9764 ord_mean=557.0 ord_max=883.6 ord_last=290.8 miss=0.000 total_mean=1057.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=16704 ord_mean=1220.0 ord_max=1635.0 ord_last=1184.0 miss=0.833 total_mean=1470.0
+[EPSSIM-BATCH] urgent=false s=2.0 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=1085.50 sort_p90=2114.25 sort_max=2321.69 valid=0.5110 fabric_valid=0.0173 urgent_ok=NaN jain=0.9978
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=997 ord_mean=1295.5 ord_max=2531.7 ord_last=401.0 miss=0.583 total_mean=6295.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=1987 ord_mean=1295.5 ord_max=2531.7 ord_last=401.0 miss=0.583 total_mean=3795.3
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=4918 ord_mean=1426.1 ord_max=2531.7 ord_last=401.0 miss=0.583 total_mean=2426.0
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=7253 ord_mean=4193.8 ord_max=5838.7 ord_last=4546.0 miss=1.000 total_mean=4693.8
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=7479 ord_mean=6943.8 ord_max=10145.0 ord_last=10046.0 miss=1.000 total_mean=7193.8
+[EPSSIM-BATCH] urgent=false s=2.0 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=1070.06 sort_p90=2022.37 sort_max=2287.03 valid=0.5110 fabric_valid=0.0173 urgent_ok=NaN jain=0.9978
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=997 ord_mean=1280.1 ord_max=2497.0 ord_last=406.3 miss=0.583 total_mean=6279.6
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=1987 ord_mean=1280.1 ord_max=2497.0 ord_last=406.3 miss=0.583 total_mean=3779.8
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=4917 ord_mean=1393.5 ord_max=2497.0 ord_last=406.3 miss=0.583 total_mean=2393.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=7335 ord_mean=4075.6 ord_max=5650.5 ord_last=4360.7 miss=1.000 total_mean=4575.5
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=7566 ord_mean=6825.6 ord_max=9954.4 ord_last=9860.7 miss=1.000 total_mean=7075.5
+[EPSSIM-BATCH] urgent=false s=2.0 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=2311.91 sort_p90=4688.70 sort_max=5216.80 valid=0.5110 fabric_valid=0.0173 urgent_ok=NaN jain=0.9974
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=995 ord_mean=2521.9 ord_max=5426.8 ord_last=603.8 miss=0.583 total_mean=7521.4
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=1980 ord_mean=2557.5 ord_max=5426.8 ord_last=603.8 miss=0.583 total_mean=5057.2
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=3719 ord_mean=7364.7 ord_max=11061.1 ord_last=8262.9 miss=1.000 total_mean=8364.6
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=3838 ord_mean=12864.7 ord_max=19659.1 ord_last=19262.9 miss=1.000 total_mean=13364.6
+[EPSSIM-TPS] urgent=false s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=3901 ord_mean=15614.7 ord_max=24762.9 ord_last=24762.9 miss=1.000 total_mean=15864.6
+[EPSSIM-BATCH] urgent=true s=1.0 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.38 sort_p90=1.20 sort_max=1.57 valid=0.5346 fabric_valid=0.0561 urgent_ok=0.1918 jain=0.4994
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=999 ord_mean=110.4 ord_max=111.6 ord_last=110.2 miss=0.000 total_mean=2609.9
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=1996 ord_mean=110.4 ord_max=111.6 ord_last=110.2 miss=0.000 total_mean=1360.1
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=4973 ord_mean=110.4 ord_max=111.6 ord_last=110.2 miss=0.000 total_mean=610.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=9891 ord_mean=110.4 ord_max=111.6 ord_last=110.2 miss=0.000 total_mean=360.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=19569 ord_mean=110.4 ord_max=111.6 ord_last=110.2 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=true s=1.0 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.45 sort_p90=0.82 sort_max=1.15 valid=0.5347 fabric_valid=0.0561 urgent_ok=0.1925 jain=0.4999
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=999 ord_mean=110.4 ord_max=111.2 ord_last=110.4 miss=0.000 total_mean=2609.9
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=1996 ord_mean=110.4 ord_max=111.2 ord_last=110.4 miss=0.000 total_mean=1360.2
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=4973 ord_mean=110.4 ord_max=111.2 ord_last=110.4 miss=0.000 total_mean=610.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=9891 ord_mean=110.4 ord_max=111.2 ord_last=110.4 miss=0.000 total_mean=360.4
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=19568 ord_mean=110.4 ord_max=111.2 ord_last=110.4 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=true s=1.0 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=0.71 sort_p90=1.23 sort_max=1.85 valid=0.5348 fabric_valid=0.0561 urgent_ok=0.1936 jain=0.4970
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=999 ord_mean=110.7 ord_max=111.9 ord_last=111.0 miss=0.000 total_mean=2610.2
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=1996 ord_mean=110.7 ord_max=111.9 ord_last=111.0 miss=0.000 total_mean=1360.5
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=4972 ord_mean=110.7 ord_max=111.9 ord_last=111.0 miss=0.000 total_mean=610.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=9890 ord_mean=110.7 ord_max=111.9 ord_last=111.0 miss=0.000 total_mean=360.7
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=19566 ord_mean=110.7 ord_max=111.9 ord_last=111.0 miss=0.000 total_mean=235.7
+[EPSSIM-BATCH] urgent=true s=1.0 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=0.44 sort_p90=0.47 sort_max=1.97 valid=0.5347 fabric_valid=0.0561 urgent_ok=0.1922 jain=0.5008
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=999 ord_mean=110.4 ord_max=112.0 ord_last=110.4 miss=0.000 total_mean=2609.9
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=1996 ord_mean=110.4 ord_max=112.0 ord_last=110.4 miss=0.000 total_mean=1360.2
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=4973 ord_mean=110.4 ord_max=112.0 ord_last=110.4 miss=0.000 total_mean=610.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=9891 ord_mean=110.4 ord_max=112.0 ord_last=110.4 miss=0.000 total_mean=360.4
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=19568 ord_mean=110.4 ord_max=112.0 ord_last=110.4 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=true s=1.0 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=1.05 sort_p90=1.77 sort_max=1.82 valid=0.5349 fabric_valid=0.0561 urgent_ok=0.1949 jain=0.4938
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=999 ord_mean=111.1 ord_max=111.8 ord_last=111.2 miss=0.000 total_mean=2610.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=1996 ord_mean=111.1 ord_max=111.8 ord_last=111.2 miss=0.000 total_mean=1360.8
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=4972 ord_mean=111.1 ord_max=111.8 ord_last=111.2 miss=0.000 total_mean=611.0
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=9890 ord_mean=111.1 ord_max=111.8 ord_last=111.2 miss=0.000 total_mean=361.0
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=19565 ord_mean=111.1 ord_max=111.8 ord_last=111.2 miss=0.000 total_mean=236.0
+[EPSSIM-BATCH] urgent=true s=1.0 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=2.08 sort_p90=3.37 sort_max=8.88 valid=0.5349 fabric_valid=0.0561 urgent_ok=0.1966 jain=0.4892
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=999 ord_mean=112.1 ord_max=118.9 ord_last=112.2 miss=0.000 total_mean=2611.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=1996 ord_mean=112.1 ord_max=118.9 ord_last=112.2 miss=0.000 total_mean=1361.8
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=4972 ord_mean=112.1 ord_max=118.9 ord_last=112.2 miss=0.000 total_mean=612.0
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=9889 ord_mean=112.1 ord_max=118.9 ord_last=112.2 miss=0.000 total_mean=362.0
+[EPSSIM-TPS] urgent=true s=1.0 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=19561 ord_mean=112.1 ord_max=118.9 ord_last=112.2 miss=0.000 total_mean=237.1
+[EPSSIM-BATCH] urgent=true s=1.5 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.41 sort_p90=0.87 sort_max=2.15 valid=0.5260 fabric_valid=0.0454 urgent_ok=0.1082 jain=0.6852
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=999 ord_mean=110.4 ord_max=112.1 ord_last=110.3 miss=0.000 total_mean=2609.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=1996 ord_mean=110.4 ord_max=112.1 ord_last=110.3 miss=0.000 total_mean=1360.2
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=4973 ord_mean=110.4 ord_max=112.1 ord_last=110.3 miss=0.000 total_mean=610.3
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=9891 ord_mean=110.4 ord_max=112.1 ord_last=110.3 miss=0.000 total_mean=360.4
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=19569 ord_mean=110.4 ord_max=112.1 ord_last=110.3 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=true s=1.5 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.53 sort_p90=1.07 sort_max=1.42 valid=0.5260 fabric_valid=0.0454 urgent_ok=0.1086 jain=0.6842
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=999 ord_mean=110.5 ord_max=111.4 ord_last=110.4 miss=0.000 total_mean=2610.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=1996 ord_mean=110.5 ord_max=111.4 ord_last=110.4 miss=0.000 total_mean=1360.3
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=4973 ord_mean=110.5 ord_max=111.4 ord_last=110.4 miss=0.000 total_mean=610.4
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=9891 ord_mean=110.5 ord_max=111.4 ord_last=110.4 miss=0.000 total_mean=360.5
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=19568 ord_mean=110.5 ord_max=111.4 ord_last=110.4 miss=0.000 total_mean=235.5
+[EPSSIM-BATCH] urgent=true s=1.5 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=1.04 sort_p90=1.67 sort_max=1.69 valid=0.5261 fabric_valid=0.0454 urgent_ok=0.1090 jain=0.6844
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=999 ord_mean=111.0 ord_max=111.7 ord_last=111.7 miss=0.000 total_mean=2610.5
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=1996 ord_mean=111.0 ord_max=111.7 ord_last=111.7 miss=0.000 total_mean=1360.8
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=4972 ord_mean=111.0 ord_max=111.7 ord_last=111.7 miss=0.000 total_mean=610.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=9890 ord_mean=111.0 ord_max=111.7 ord_last=111.7 miss=0.000 total_mean=361.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=19563 ord_mean=111.0 ord_max=111.7 ord_last=111.7 miss=0.000 total_mean=236.0
+[EPSSIM-BATCH] urgent=true s=1.5 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=0.42 sort_p90=0.84 sort_max=0.88 valid=0.5263 fabric_valid=0.0454 urgent_ok=0.1084 jain=0.6934
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=999 ord_mean=110.4 ord_max=110.9 ord_last=110.3 miss=0.000 total_mean=2609.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=1996 ord_mean=110.4 ord_max=110.9 ord_last=110.3 miss=0.000 total_mean=1360.2
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=4973 ord_mean=110.4 ord_max=110.9 ord_last=110.3 miss=0.000 total_mean=610.3
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=9891 ord_mean=110.4 ord_max=110.9 ord_last=110.3 miss=0.000 total_mean=360.4
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=19569 ord_mean=110.4 ord_max=110.9 ord_last=110.3 miss=0.000 total_mean=235.4
+[EPSSIM-BATCH] urgent=true s=1.5 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=2.56 sort_p90=3.68 sort_max=3.70 valid=0.5264 fabric_valid=0.0454 urgent_ok=0.1099 jain=0.6856
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=999 ord_mean=112.6 ord_max=113.7 ord_last=112.0 miss=0.000 total_mean=2612.1
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=1996 ord_mean=112.6 ord_max=113.7 ord_last=112.0 miss=0.000 total_mean=1362.3
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=4972 ord_mean=112.6 ord_max=113.7 ord_last=112.0 miss=0.000 total_mean=612.5
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=9889 ord_mean=112.6 ord_max=113.7 ord_last=112.0 miss=0.000 total_mean=362.5
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=19562 ord_mean=112.6 ord_max=113.7 ord_last=112.0 miss=0.000 total_mean=237.5
+[EPSSIM-BATCH] urgent=true s=1.5 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=4.15 sort_p90=7.09 sort_max=7.65 valid=0.5265 fabric_valid=0.0454 urgent_ok=0.1106 jain=0.6860
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=999 ord_mean=114.1 ord_max=117.6 ord_last=112.8 miss=0.000 total_mean=2613.6
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=1996 ord_mean=114.1 ord_max=117.6 ord_last=112.8 miss=0.000 total_mean=1363.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=4972 ord_mean=114.1 ord_max=117.6 ord_last=112.8 miss=0.000 total_mean=614.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=9889 ord_mean=114.1 ord_max=117.6 ord_last=112.8 miss=0.000 total_mean=364.1
+[EPSSIM-TPS] urgent=true s=1.5 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=19559 ord_mean=114.1 ord_max=117.6 ord_last=112.8 miss=0.000 total_mean=239.1
+[EPSSIM-BATCH] urgent=true s=2.0 batch=5000 epsU=0.00 epsL=0.00 reps=20 sort_mean=0.30 sort_p90=0.53 sort_max=0.72 valid=0.5143 fabric_valid=0.0260 urgent_ok=0.0579 jain=0.7116
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=1000 sustained=999 ord_mean=110.3 ord_max=110.7 ord_last=110.2 miss=0.000 total_mean=2609.8
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=2000 sustained=1996 ord_mean=110.3 ord_max=110.7 ord_last=110.2 miss=0.000 total_mean=1360.0
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=5000 sustained=4973 ord_mean=110.3 ord_max=110.7 ord_last=110.2 miss=0.000 total_mean=610.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=10000 sustained=9891 ord_mean=110.3 ord_max=110.7 ord_last=110.2 miss=0.000 total_mean=360.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.00 epsL=0.00 tps=20000 sustained=19569 ord_mean=110.3 ord_max=110.7 ord_last=110.2 miss=0.000 total_mean=235.3
+[EPSSIM-BATCH] urgent=true s=2.0 batch=5000 epsU=0.25 epsL=0.25 reps=20 sort_mean=0.57 sort_p90=1.28 sort_max=1.51 valid=0.5144 fabric_valid=0.0260 urgent_ok=0.0581 jain=0.7113
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=1000 sustained=999 ord_mean=110.6 ord_max=111.5 ord_last=110.4 miss=0.000 total_mean=2610.1
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=2000 sustained=1996 ord_mean=110.6 ord_max=111.5 ord_last=110.4 miss=0.000 total_mean=1360.3
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=5000 sustained=4973 ord_mean=110.6 ord_max=111.5 ord_last=110.4 miss=0.000 total_mean=610.5
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=10000 sustained=9891 ord_mean=110.6 ord_max=111.5 ord_last=110.4 miss=0.000 total_mean=360.5
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.25 epsL=0.25 tps=20000 sustained=19568 ord_mean=110.6 ord_max=111.5 ord_last=110.4 miss=0.000 total_mean=235.5
+[EPSSIM-BATCH] urgent=true s=2.0 batch=5000 epsU=0.50 epsL=0.50 reps=20 sort_mean=1.51 sort_p90=2.75 sort_max=3.33 valid=0.5144 fabric_valid=0.0260 urgent_ok=0.0581 jain=0.7136
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=1000 sustained=999 ord_mean=111.5 ord_max=113.3 ord_last=111.5 miss=0.000 total_mean=2611.0
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=2000 sustained=1996 ord_mean=111.5 ord_max=113.3 ord_last=111.5 miss=0.000 total_mean=1361.3
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=5000 sustained=4972 ord_mean=111.5 ord_max=113.3 ord_last=111.5 miss=0.000 total_mean=611.4
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=10000 sustained=9890 ord_mean=111.5 ord_max=113.3 ord_last=111.5 miss=0.000 total_mean=361.5
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.50 epsL=0.50 tps=20000 sustained=19564 ord_mean=111.5 ord_max=113.3 ord_last=111.5 miss=0.000 total_mean=236.5
+[EPSSIM-BATCH] urgent=true s=2.0 batch=5000 epsU=0.10 epsL=0.75 reps=20 sort_mean=0.34 sort_p90=0.55 sort_max=0.65 valid=0.5144 fabric_valid=0.0260 urgent_ok=0.0580 jain=0.7159
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=1000 sustained=999 ord_mean=110.3 ord_max=110.6 ord_last=110.3 miss=0.000 total_mean=2609.8
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=2000 sustained=1996 ord_mean=110.3 ord_max=110.6 ord_last=110.3 miss=0.000 total_mean=1360.1
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=5000 sustained=4973 ord_mean=110.3 ord_max=110.6 ord_last=110.3 miss=0.000 total_mean=610.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=10000 sustained=9891 ord_mean=110.3 ord_max=110.6 ord_last=110.3 miss=0.000 total_mean=360.3
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.10 epsL=0.75 tps=20000 sustained=19569 ord_mean=110.3 ord_max=110.6 ord_last=110.3 miss=0.000 total_mean=235.3
+[EPSSIM-BATCH] urgent=true s=2.0 batch=5000 epsU=0.75 epsL=0.75 reps=20 sort_mean=3.01 sort_p90=5.09 sort_max=5.54 valid=0.5145 fabric_valid=0.0260 urgent_ok=0.0584 jain=0.7121
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=1000 sustained=999 ord_mean=113.0 ord_max=115.5 ord_last=112.5 miss=0.000 total_mean=2612.5
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=2000 sustained=1996 ord_mean=113.0 ord_max=115.5 ord_last=112.5 miss=0.000 total_mean=1362.8
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=5000 sustained=4972 ord_mean=113.0 ord_max=115.5 ord_last=112.5 miss=0.000 total_mean=612.9
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=10000 sustained=9889 ord_mean=113.0 ord_max=115.5 ord_last=112.5 miss=0.000 total_mean=363.0
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=0.75 epsL=0.75 tps=20000 sustained=19560 ord_mean=113.0 ord_max=115.5 ord_last=112.5 miss=0.000 total_mean=238.0
+[EPSSIM-BATCH] urgent=true s=2.0 batch=5000 epsU=1.00 epsL=1.00 reps=20 sort_mean=5.20 sort_p90=11.16 sort_max=11.33 valid=0.5145 fabric_valid=0.0260 urgent_ok=0.0585 jain=0.7120
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=1000 sustained=999 ord_mean=115.2 ord_max=121.3 ord_last=114.1 miss=0.000 total_mean=2614.7
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=2000 sustained=1995 ord_mean=115.2 ord_max=121.3 ord_last=114.1 miss=0.000 total_mean=1365.0
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=5000 sustained=4972 ord_mean=115.2 ord_max=121.3 ord_last=114.1 miss=0.000 total_mean=615.1
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=10000 sustained=9887 ord_mean=115.2 ord_max=121.3 ord_last=114.1 miss=0.000 total_mean=365.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=5000 epsU=1.00 epsL=1.00 tps=20000 sustained=19554 ord_mean=115.2 ord_max=121.3 ord_last=114.1 miss=0.000 total_mean=240.2
+[EPSSIM-BATCH] urgent=true s=1.0 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=0.56 sort_p90=0.62 sort_max=1.22 valid=0.5208 fabric_valid=0.0298 urgent_ok=0.1234 jain=0.3863
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=998 ord_mean=210.6 ord_max=211.2 ord_last=210.5 miss=0.000 total_mean=5210.1
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=1993 ord_mean=210.6 ord_max=211.2 ord_last=210.5 miss=0.000 total_mean=2710.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=4957 ord_mean=210.6 ord_max=211.2 ord_last=210.5 miss=0.000 total_mean=1210.5
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=9828 ord_mean=210.6 ord_max=211.2 ord_last=210.5 miss=0.000 total_mean=710.5
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=19322 ord_mean=210.6 ord_max=211.2 ord_last=210.5 miss=0.000 total_mean=460.5
+[EPSSIM-BATCH] urgent=true s=1.0 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=1.19 sort_p90=2.13 sort_max=2.17 valid=0.5209 fabric_valid=0.0298 urgent_ok=0.1243 jain=0.3836
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=998 ord_mean=211.2 ord_max=212.2 ord_last=212.1 miss=0.000 total_mean=5210.7
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=1993 ord_mean=211.2 ord_max=212.2 ord_last=212.1 miss=0.000 total_mean=2710.9
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=4956 ord_mean=211.2 ord_max=212.2 ord_last=212.1 miss=0.000 total_mean=1211.1
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=9826 ord_mean=211.2 ord_max=212.2 ord_last=212.1 miss=0.000 total_mean=711.1
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=19317 ord_mean=211.2 ord_max=212.2 ord_last=212.1 miss=0.000 total_mean=461.2
+[EPSSIM-BATCH] urgent=true s=1.0 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=2.61 sort_p90=3.19 sort_max=5.25 valid=0.5209 fabric_valid=0.0298 urgent_ok=0.1255 jain=0.3781
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=998 ord_mean=212.6 ord_max=215.2 ord_last=212.7 miss=0.000 total_mean=5212.1
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=1993 ord_mean=212.6 ord_max=215.2 ord_last=212.7 miss=0.000 total_mean=2712.4
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=4956 ord_mean=212.6 ord_max=215.2 ord_last=212.7 miss=0.000 total_mean=1212.5
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=9826 ord_mean=212.6 ord_max=215.2 ord_last=212.7 miss=0.000 total_mean=712.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=19315 ord_mean=212.6 ord_max=215.2 ord_last=212.7 miss=0.000 total_mean=462.6
+[EPSSIM-BATCH] urgent=true s=1.0 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=0.68 sort_p90=0.93 sort_max=1.07 valid=0.5209 fabric_valid=0.0298 urgent_ok=0.1237 jain=0.3868
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=998 ord_mean=210.7 ord_max=211.1 ord_last=210.6 miss=0.000 total_mean=5210.2
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=1993 ord_mean=210.7 ord_max=211.1 ord_last=210.6 miss=0.000 total_mean=2710.4
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=4957 ord_mean=210.7 ord_max=211.1 ord_last=210.6 miss=0.000 total_mean=1210.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=9828 ord_mean=210.7 ord_max=211.1 ord_last=210.6 miss=0.000 total_mean=710.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=19322 ord_mean=210.7 ord_max=211.1 ord_last=210.6 miss=0.000 total_mean=460.7
+[EPSSIM-BATCH] urgent=true s=1.0 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=4.06 sort_p90=5.82 sort_max=7.99 valid=0.5210 fabric_valid=0.0298 urgent_ok=0.1263 jain=0.3773
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=998 ord_mean=214.1 ord_max=218.0 ord_last=215.2 miss=0.000 total_mean=5213.6
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=1993 ord_mean=214.1 ord_max=218.0 ord_last=215.2 miss=0.000 total_mean=2713.8
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=4956 ord_mean=214.1 ord_max=218.0 ord_last=215.2 miss=0.000 total_mean=1214.0
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=9824 ord_mean=214.1 ord_max=218.0 ord_last=215.2 miss=0.000 total_mean=714.0
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=19308 ord_mean=214.1 ord_max=218.0 ord_last=215.2 miss=0.000 total_mean=464.0
+[EPSSIM-BATCH] urgent=true s=1.0 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=6.39 sort_p90=10.21 sort_max=13.77 valid=0.5210 fabric_valid=0.0298 urgent_ok=0.1273 jain=0.3726
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=998 ord_mean=216.4 ord_max=223.8 ord_last=219.3 miss=0.000 total_mean=5215.9
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=1993 ord_mean=216.4 ord_max=223.8 ord_last=219.3 miss=0.000 total_mean=2716.1
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=4955 ord_mean=216.4 ord_max=223.8 ord_last=219.3 miss=0.000 total_mean=1216.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=9821 ord_mean=216.4 ord_max=223.8 ord_last=219.3 miss=0.000 total_mean=716.3
+[EPSSIM-TPS] urgent=true s=1.0 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=19295 ord_mean=216.4 ord_max=223.8 ord_last=219.3 miss=0.000 total_mean=466.4
+[EPSSIM-BATCH] urgent=true s=1.5 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=0.50 sort_p90=0.64 sort_max=0.95 valid=0.5184 fabric_valid=0.0282 urgent_ok=0.0764 jain=0.6031
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=998 ord_mean=210.5 ord_max=211.0 ord_last=210.4 miss=0.000 total_mean=5210.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=1993 ord_mean=210.5 ord_max=211.0 ord_last=210.4 miss=0.000 total_mean=2710.3
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=4957 ord_mean=210.5 ord_max=211.0 ord_last=210.4 miss=0.000 total_mean=1210.4
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=9828 ord_mean=210.5 ord_max=211.0 ord_last=210.4 miss=0.000 total_mean=710.5
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=19322 ord_mean=210.5 ord_max=211.0 ord_last=210.4 miss=0.000 total_mean=460.5
+[EPSSIM-BATCH] urgent=true s=1.5 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=1.21 sort_p90=1.58 sort_max=1.60 valid=0.5185 fabric_valid=0.0282 urgent_ok=0.0768 jain=0.6029
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=998 ord_mean=211.2 ord_max=211.6 ord_last=210.9 miss=0.000 total_mean=5210.7
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=1993 ord_mean=211.2 ord_max=211.6 ord_last=210.9 miss=0.000 total_mean=2711.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=4956 ord_mean=211.2 ord_max=211.6 ord_last=210.9 miss=0.000 total_mean=1211.1
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=9827 ord_mean=211.2 ord_max=211.6 ord_last=210.9 miss=0.000 total_mean=711.2
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=19321 ord_mean=211.2 ord_max=211.6 ord_last=210.9 miss=0.000 total_mean=461.2
+[EPSSIM-BATCH] urgent=true s=1.5 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=5.13 sort_p90=6.47 sort_max=10.21 valid=0.5185 fabric_valid=0.0282 urgent_ok=0.0770 jain=0.6022
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=998 ord_mean=215.1 ord_max=220.2 ord_last=213.7 miss=0.000 total_mean=5214.6
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=1993 ord_mean=215.1 ord_max=220.2 ord_last=213.7 miss=0.000 total_mean=2714.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=4956 ord_mean=215.1 ord_max=220.2 ord_last=213.7 miss=0.000 total_mean=1215.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=9825 ord_mean=215.1 ord_max=220.2 ord_last=213.7 miss=0.000 total_mean=715.1
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=19312 ord_mean=215.1 ord_max=220.2 ord_last=213.7 miss=0.000 total_mean=465.1
+[EPSSIM-BATCH] urgent=true s=1.5 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=0.71 sort_p90=0.80 sort_max=1.15 valid=0.5185 fabric_valid=0.0282 urgent_ok=0.0766 jain=0.6076
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=998 ord_mean=210.7 ord_max=211.1 ord_last=210.7 miss=0.000 total_mean=5210.2
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=1993 ord_mean=210.7 ord_max=211.1 ord_last=210.7 miss=0.000 total_mean=2710.5
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=4957 ord_mean=210.7 ord_max=211.1 ord_last=210.7 miss=0.000 total_mean=1210.6
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=9828 ord_mean=210.7 ord_max=211.1 ord_last=210.7 miss=0.000 total_mean=710.7
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=19322 ord_mean=210.7 ord_max=211.1 ord_last=210.7 miss=0.000 total_mean=460.7
+[EPSSIM-BATCH] urgent=true s=1.5 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=11.12 sort_p90=16.79 sort_max=23.79 valid=0.5185 fabric_valid=0.0282 urgent_ok=0.0774 jain=0.6014
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=998 ord_mean=221.1 ord_max=233.8 ord_last=215.6 miss=0.000 total_mean=5220.6
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=1993 ord_mean=221.1 ord_max=233.8 ord_last=215.6 miss=0.000 total_mean=2720.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=4956 ord_mean=221.1 ord_max=233.8 ord_last=215.6 miss=0.000 total_mean=1221.0
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=9824 ord_mean=221.1 ord_max=233.8 ord_last=215.6 miss=0.000 total_mean=721.1
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=19306 ord_mean=221.1 ord_max=233.8 ord_last=215.6 miss=0.000 total_mean=471.1
+[EPSSIM-BATCH] urgent=true s=1.5 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=21.45 sort_p90=35.93 sort_max=45.24 valid=0.5186 fabric_valid=0.0282 urgent_ok=0.0779 jain=0.6017
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=998 ord_mean=231.4 ord_max=255.2 ord_last=218.3 miss=0.000 total_mean=5230.9
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=1993 ord_mean=231.4 ord_max=255.2 ord_last=218.3 miss=0.000 total_mean=2731.2
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=4955 ord_mean=231.4 ord_max=255.2 ord_last=218.3 miss=0.000 total_mean=1231.3
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=9821 ord_mean=231.4 ord_max=255.2 ord_last=218.3 miss=0.000 total_mean=731.4
+[EPSSIM-TPS] urgent=true s=1.5 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=19298 ord_mean=231.4 ord_max=255.2 ord_last=218.3 miss=0.000 total_mean=481.4
+[EPSSIM-BATCH] urgent=true s=2.0 batch=10000 epsU=0.00 epsL=0.00 reps=12 sort_mean=0.49 sort_p90=0.55 sort_max=0.86 valid=0.5108 fabric_valid=0.0173 urgent_ok=0.0418 jain=0.6631
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=1000 sustained=998 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=5210.0
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=2000 sustained=1993 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=2710.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=5000 sustained=4957 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=1210.4
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=10000 sustained=9828 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=710.4
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.00 epsL=0.00 tps=20000 sustained=19322 ord_mean=210.5 ord_max=210.9 ord_last=210.4 miss=0.000 total_mean=460.5
+[EPSSIM-BATCH] urgent=true s=2.0 batch=10000 epsU=0.25 epsL=0.25 reps=12 sort_mean=2.32 sort_p90=3.10 sort_max=3.26 valid=0.5108 fabric_valid=0.0173 urgent_ok=0.0418 jain=0.6647
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=1000 sustained=998 ord_mean=212.3 ord_max=213.3 ord_last=211.2 miss=0.000 total_mean=5211.8
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=2000 sustained=1993 ord_mean=212.3 ord_max=213.3 ord_last=211.2 miss=0.000 total_mean=2712.1
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=5000 sustained=4956 ord_mean=212.3 ord_max=213.3 ord_last=211.2 miss=0.000 total_mean=1212.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=10000 sustained=9827 ord_mean=212.3 ord_max=213.3 ord_last=211.2 miss=0.000 total_mean=712.3
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.25 epsL=0.25 tps=20000 sustained=19320 ord_mean=212.3 ord_max=213.3 ord_last=211.2 miss=0.000 total_mean=462.3
+[EPSSIM-BATCH] urgent=true s=2.0 batch=10000 epsU=0.50 epsL=0.50 reps=12 sort_mean=5.12 sort_p90=6.64 sort_max=10.64 valid=0.5108 fabric_valid=0.0173 urgent_ok=0.0418 jain=0.6654
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=1000 sustained=998 ord_mean=215.1 ord_max=220.6 ord_last=214.2 miss=0.000 total_mean=5214.6
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=2000 sustained=1993 ord_mean=215.1 ord_max=220.6 ord_last=214.2 miss=0.000 total_mean=2714.9
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=5000 sustained=4956 ord_mean=215.1 ord_max=220.6 ord_last=214.2 miss=0.000 total_mean=1215.0
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=10000 sustained=9825 ord_mean=215.1 ord_max=220.6 ord_last=214.2 miss=0.000 total_mean=715.1
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.50 epsL=0.50 tps=20000 sustained=19311 ord_mean=215.1 ord_max=220.6 ord_last=214.2 miss=0.000 total_mean=465.1
+[EPSSIM-BATCH] urgent=true s=2.0 batch=10000 epsU=0.10 epsL=0.75 reps=12 sort_mean=0.71 sort_p90=0.80 sort_max=1.17 valid=0.5109 fabric_valid=0.0173 urgent_ok=0.0418 jain=0.6712
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=1000 sustained=998 ord_mean=210.7 ord_max=211.2 ord_last=210.8 miss=0.000 total_mean=5210.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=2000 sustained=1993 ord_mean=210.7 ord_max=211.2 ord_last=210.8 miss=0.000 total_mean=2710.5
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=5000 sustained=4957 ord_mean=210.7 ord_max=211.2 ord_last=210.8 miss=0.000 total_mean=1210.6
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=10000 sustained=9827 ord_mean=210.7 ord_max=211.2 ord_last=210.8 miss=0.000 total_mean=710.7
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.10 epsL=0.75 tps=20000 sustained=19321 ord_mean=210.7 ord_max=211.2 ord_last=210.8 miss=0.000 total_mean=460.7
+[EPSSIM-BATCH] urgent=true s=2.0 batch=10000 epsU=0.75 epsL=0.75 reps=12 sort_mean=10.79 sort_p90=14.91 sort_max=30.31 valid=0.5109 fabric_valid=0.0173 urgent_ok=0.0419 jain=0.6711
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=1000 sustained=998 ord_mean=220.8 ord_max=240.3 ord_last=217.6 miss=0.000 total_mean=5220.3
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=2000 sustained=1993 ord_mean=220.8 ord_max=240.3 ord_last=217.6 miss=0.000 total_mean=2720.5
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=5000 sustained=4955 ord_mean=220.8 ord_max=240.3 ord_last=217.6 miss=0.000 total_mean=1220.7
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=10000 sustained=9822 ord_mean=220.8 ord_max=240.3 ord_last=217.6 miss=0.000 total_mean=720.7
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=0.75 epsL=0.75 tps=20000 sustained=19300 ord_mean=220.8 ord_max=240.3 ord_last=217.6 miss=0.000 total_mean=470.8
+[EPSSIM-BATCH] urgent=true s=2.0 batch=10000 epsU=1.00 epsL=1.00 reps=12 sort_mean=19.42 sort_p90=26.65 sort_max=61.42 valid=0.5109 fabric_valid=0.0173 urgent_ok=0.0419 jain=0.6733
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=1000 sustained=998 ord_mean=229.4 ord_max=271.4 ord_last=221.8 miss=0.000 total_mean=5228.9
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=2000 sustained=1993 ord_mean=229.4 ord_max=271.4 ord_last=221.8 miss=0.000 total_mean=2729.2
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=5000 sustained=4954 ord_mean=229.4 ord_max=271.4 ord_last=221.8 miss=0.000 total_mean=1229.3
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=10000 sustained=9819 ord_mean=229.4 ord_max=271.4 ord_last=221.8 miss=0.000 total_mean=729.4
+[EPSSIM-TPS] urgent=true s=2.0 batch=10000 epsU=1.00 epsL=1.00 tps=20000 sustained=19287 ord_mean=229.4 ord_max=271.4 ord_last=221.8 miss=0.000 total_mean=479.4
+SIM-DONE
