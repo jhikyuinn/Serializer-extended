@@ -4,9 +4,9 @@
 
 Fabric 오더러는 트랜잭션을 도착한 순서대로 블록에 넣습니다. 그래서 같은 블록 안에서 앞선 트랜잭션이 쓴 키를 뒤의 트랜잭션이 읽으면, 뒤의 것은 피어에서 MVCC 충돌로 무효가 됩니다. Serializer는 배치를 오더러 밖(Kafka 프로세서)으로 보내 읽기→쓰기 의존 관계로 순서를 다시 정합니다. 충돌 고리에 걸린 트랜잭션만 버리고, 버린 기록은 별도의 BFT 합의망(Watchdog)이 원장에 남깁니다.
 
-> **원 연구:** 연구실 재학 중 혼자 진행했고, 논문 *Serializer: Transaction-Aware Byzantine Fault Tolerant Ordering Service for Fabric Blockchain*(IEEE Access 투고, 지도교수 ○○○ 교수 공동 저자)으로 정리했습니다. 원 코드: [jhikyuinn/Serializer](https://github.com/jhikyuinn/Serializer)
+> **원 연구:** 연구실 재학 중 진행한 연구로, 논문 *Serializer: Transaction-Aware Byzantine Fault Tolerant Ordering Service for Fabric Blockchain*(IEEE Access 투고, 지도교수 ○○○ 교수 공동 저자)으로 정리했습니다. 원 코드: [jhikyuinn/Serializer](https://github.com/jhikyuinn/Serializer)
 >
-> **이 저장소:** 연구실을 나온 뒤 그 위에 혼자 기능과 실험을 [확장](#원-연구에서-확장한-것)한 버전입니다. README의 수치는 모두 이 저장소의 코드로 직접 측정한 값이고, 넓힌 측정 범위에서 새로 확인한 내용은 [아래](#확장-실험에서-추가로-확인한-것)에 정리했습니다.
+> **이 저장소:** 원 연구 이후 기능과 실험을 [확장](#원-연구에서-확장한-것)한 버전입니다. README의 수치는 모두 이 저장소의 코드로 직접 측정한 값이고, 넓힌 측정 범위에서 새로 확인한 내용은 [아래](#확장-실험에서-추가로-확인한-것)에 정리했습니다.
 
 **Go · Kafka(goka, sarama) · MongoDB · libp2p · BLS · QUIC · Kubernetes(Lease, PDB) · Hyperledger Fabric · Caliper · AWS EC2 · Docker**
 
