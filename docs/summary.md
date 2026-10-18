@@ -345,7 +345,7 @@
 
 ## 8. 클라우드 1,000 TPS 실험 (재측정 §78, AWS 4 VM)
 
-그림과 자세한 설명은 [experiments/cloud-figs-v2/README.md](../experiments/cloud-figs-v2/README.md)에 있다. 첫 측정(§54~§56, `cloud-figs/`)은 측정 도구 부담(§68)이 섞여 Serializer에 불리했다.
+그림과 자세한 설명은 [experiments/01-contention-batch/README.md](../experiments/01-contention-batch/README.md)에 있다. 첫 측정(§54~§56, `cloud-figs/`)은 측정 도구 부담(§68)이 섞여 Serializer에 불리했다.
 
 **조건:** smallbank, 계좌 100, 1,000 TPS, Query 50%, 사용자 5명, 긴급 0, 정상 구간 25초 × 3회, Serializer는 ε .1/.75. 90회 모두 정상이었다.
 
@@ -407,7 +407,7 @@
 
 ## 10. ε의 비용과 이득 (§73~§77)
 
-[experiments/eps-tps/METRICS.md](../experiments/eps-tps/METRICS.md)에 지표 정의와 그림(P1~P5)이 있다. Fabric 비교가 아니라 정렬 시스템 자체의 동작을 보인다.
+[experiments/02-epsilon-realtime/METRICS.md](../experiments/02-epsilon-realtime/METRICS.md)에 지표 정의와 그림(P1~P5)이 있다. Fabric 비교가 아니라 정렬 시스템 자체의 동작을 보인다.
 
 **방법:** 실험 부하와 같은 모양의 합성 배치를 실제 정렬 코드(`scheduleEpsilon`)로 정렬해 시간을 재고, 도착 → 배치 → 정렬 흐름을 계산했다(시뮬레이션). 클라우드에서 몇 점을 실측해 맞는지 확인했다(§77).
 

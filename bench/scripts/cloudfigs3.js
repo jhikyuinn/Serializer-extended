@@ -5,7 +5,7 @@ const fs = require('fs'), path = require('path');
 // CLOUD_DIR·CLOUD_PREFIX 로 다른 묶음을 쓸 수 있다(§78 재측정: results/cloud2, cloud2)
 const R = process.env.CLOUD_DIR || path.join(__dirname, '../zipfbench/results/cloud');
 const PFX = process.env.CLOUD_PREFIX || 'cloud';
-const OUT = process.argv[2] || path.join(__dirname, '../../experiments/cloud-figs');
+const OUT = process.argv[2] || path.join(__dirname, '../../experiments/01-contention-batch/figures');
 const m = (a) => a.reduce((x, y) => x + y, 0) / a.length;
 const sd = (a) => a.length < 2 ? 0 : Math.sqrt(a.reduce((x, y) => x + (y - m(a)) ** 2, 0) / (a.length - 1));
 const SS = ['0', '0.5', '1.0', '1.5', '2.0'], BS = [100, 500, 1000], SYS = ['A1', 'BE'];
@@ -73,7 +73,7 @@ const W = 1080, X0 = 95, gx = 340, pw = 270;
       body += T(P.xs(i), P.ym(D[b][s].BE.q[0]) - 10, `${D[b][s].BE.q[0].toFixed(0)}%`, `text-anchor="middle" font-size="11" font-weight="bold" fill="${C.BE}"`);
       body += T(P.xs(i), D[b][s].A1.q[0] < 8 ? P.ym(D[b][s].A1.q[0]) - 9 : P.ym(D[b][s].A1.q[0]) + 18, `${D[b][s].A1.q[0].toFixed(0)}%`, `text-anchor="middle" font-size="11" font-weight="bold" fill="#555"`); }
   });
-  body += key(340, 30, [['Fabric (같은 소스, A1)', C.A1, 'line'], ['Serializer (ε .1 / .75)', C.BE, 'line']]);
+  body += key(340, 30, [['Fabric (같은 소스, A1)', C.A1, 'line'], ['Serializer (일반 ε 0.75, 긴급 0)', C.BE, 'line']]);
   body += foot(W, H, COND + ' · 막대는 ± 표준편차');
   fs.writeFileSync(path.join(OUT, 'fig4-query.svg'), svg(W, H, body));
 }
@@ -125,7 +125,7 @@ const W = 1080, X0 = 95, gx = 340, pw = 270;
     const rF = D[b][s].A1.u_User5[0] / D[b][s].A1.u_User1[0], rS = D[b][s].BE.u_User5[0] / D[b][s].BE.u_User1[0];
     body += T(X0 + j * gx + pw / 2, 398, `U5 / U1 성공 비: Fabric ${rF.toFixed(2)} → Serializer ${rS.toFixed(2)}`, 'text-anchor="middle" font-size="11" fill="#111"');
   });
-  body += key(340, 30, [['Fabric (같은 소스, A1)', C.A1], ['Serializer (ε .1 / .75)', C.BE]]);
+  body += key(340, 30, [['Fabric (같은 소스, A1)', C.A1], ['Serializer (일반 ε 0.75, 긴급 0)', C.BE]]);
   body += foot(W, H, COND.replace('계좌 100,', '계좌 100, s 1.0,') + ' · 숫자는 사용자별 Serializer 증가율');
   fs.writeFileSync(path.join(OUT, 'fig6-per-user.svg'), svg(W, H, body));
 }

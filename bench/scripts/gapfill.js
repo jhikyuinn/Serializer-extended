@@ -27,7 +27,7 @@ function runs(dirs) {
   return out;
 }
 const f = (rs, k, d = 1) => rs.length ? `${mean(rs.map((r) => r[k])).toFixed(d)}${rs.length > 1 ? ` ± ${sd(rs.map((r) => r[k])).toFixed(d)}` : ''}` : '-';
-const dir = (n, sys = 'BE') => path.join(R, n, sys, 'u0');
+const dir = (n, sys = 'BE', u = 'u0') => path.join(R, n, sys, u);
 
 console.log('### A. 경계 TPS (custom, 배치 1000, 긴급 끔) — 성공/s · 커밋 지연 ms (회수)');
 console.log('| TPS | ε 0 | ε 0.5 | ε 1 |\n|---|---|---|---|');
@@ -42,7 +42,7 @@ for (const t of [1000, 1500, 2000, 2500, 3000]) {
 }
 console.log('\n### B. 긴급 ε (custom, 배치 1000, 긴급 1, 1000 TPS, ε_low 0.75)');
 console.log('| ε_urgent | 긴급 tx 성공률 | 긴급 커밋 지연 | 전체 성공/s | 전체 성공률 | 정렬 ms |\n|---|---|---|---|---|---|');
-for (const eu of ['0.1', '1']) { const rs = runs([dir(`gapB-eu${eu}`)]); console.log(`| ${eu} | ${f(rs, 'urg')}% | ${f(rs, 'urgLat', 0)} ms | ${f(rs, 'sp', 0)} | ${f(rs, 'rate')}% | ${f(rs, 'sch', 2)} |`); }
+for (const eu of ['0.1', '1']) { const rs = runs([dir(`gapB-eu${eu}`, 'BE', 'u1')]); console.log(`| ${eu} | ${f(rs, 'urg')}% | ${f(rs, 'urgLat', 0)} ms | ${f(rs, 'sp', 0)} | ${f(rs, 'rate')}% | ${f(rs, 'sch', 2)} |`); }
 console.log('\n### C. 고부하 반복 (smallbank s 1.0, BE)');
 console.log('| TPS | 배치 | 회 | 보낸 TPS | 성공/s | 커밋 지연 | 시간 초과 |\n|---|---|---|---|---|---|---|');
 for (const [t, b, extra] of [[3000, 100], [3000, 1000], [4000, 1000, 'ht30-t4000-b1000'], [4000, 5000, 'b5000-BE']]) {

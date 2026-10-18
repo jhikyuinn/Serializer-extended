@@ -2,23 +2,30 @@
 
 [← README](../README.md)
 
-새 실험은 한 줄씩 위에 추가합니다. 자세한 조건과 그림은 각 실험의 README에, 근거는 [실험 노트](../docs/lab-notebook.md)의 § 번호에 있습니다.
+실험마다 폴더 하나에 결과와 그림(`figures/`), 요약 데이터(`data/`), 실행·집계 스크립트(`scripts/`)가 있습니다. 근거는 [실험 노트](../docs/lab-notebook.md)의 § 번호에 있습니다.
 
-| 날짜 | 실험 | 질문 | 핵심 결과 | 자세히 |
+| 폴더 | 날짜 | 질문 | 핵심 결과 | 노트 |
 |---|---|---|---|---|
-| 계획 | 공정성·재정렬 알고리즘 비교 (클라우드) | 사용자 간 공정성과 Fabric++·HTFabric 대비 성능은 | (실행 전) | [fairness-algos/PLAN.md](fairness-algos/PLAN.md), §79 |
-| 2026-10-18 | 클라우드 1,000 TPS 재측정 | 측정 도구 부담을 고친 뒤 배치·혼잡도별 결과는 | s 1.0에서 ×1.31 / ×2.10 / ×2.98(배치 100 / 500 / 1000), 최대 ×7.93. 커밋 지연은 모든 조건에서 Serializer가 짧음(−11~−187 ms) | [cloud-figs-v2/README.md](cloud-figs-v2/README.md), §78 |
-| 2026-10-18 | 고부하 2,000~5,000 TPS | 어디까지 처리하고 무엇이 먼저 포화되는가 | 배치 100은 약 2,000, 배치 1000은 약 3,000 TPS까지 정상. 4,000 TPS·배치 5000에서 성공 643/s(Fabric 14/s). 병목은 피어 CPU | [docs/results.md](../docs/results.md), §69~§71, §80 |
-| 2026-10-18 | ε 비용과 이득 (시뮬레이션 + 클라우드) | ε를 키우면 무엇을 얻고 무엇을 잃는가 | custom·배치 1000에서 ε 1이 성공 +51%. 배치 10000에서 ε ≤ 0.5는 20k TPS까지 1 s 마감 유지. 피어 한계 근처에서는 큰 ε가 해로움 | [eps-tps/METRICS.md](eps-tps/METRICS.md), §73~§77 |
-| 2026-10-18 | 측정 도구 진단 | Serializer만 1,000 TPS를 다 보내지 못하는 이유는 | Caliper 워커의 SDK 리스너 부담. 수정 후 1,004 TPS, Fabric 수치는 그대로 | [docs/case-studies.md](../docs/case-studies.md), §68 |
-| 2026-10-17~18 | 클라우드 1,000 TPS (첫 측정) | 배치 크기·혼잡도에 따라 이득과 지연 비용이 어떻게 바뀌는가 | 측정 도구 부담이 섞여 Serializer에 불리하게 나옴. 재측정(§78)으로 대체 | [cloud-figs/README.md](cloud-figs/README.md), §54~§64 |
-| 2026-10-17 | 배치 크기 (로컬) | 배치를 키우면 Fabric과 Serializer가 어떻게 달라지는가 | Fabric 성공률 36% → 16%, Serializer 약 50% 유지. 성공 처리량 차이 1.4배 → 3.4배 | [docs/summary.md](../docs/summary.md) §6, §50 |
-| 2026-10-17 | 검증 노드 장애 복구(MTTR) | s-node 장애 후 모든 w-node가 다시 합의하기까지 얼마나 걸리는가 | 중앙값 11.8 s → 5.4 s, 잘못된 전환 0회. Lease 1 s는 기각 | [mttr/](mttr/), [docs/results.md](../docs/results.md#검증-노드-장애-복구-mttr), §48~§49 |
-| 2026-10-16 | 비교 시스템 4종 (로컬) | 같은 부하에서 Fabric, Fabric++, HTFabric, Serializer를 비교하면 | smallbank 성공 126.0/s로 가장 높음(Fabric 대비 +33%). 공정성은 Fabric++가 가장 좋음 | [docs/results.md](../docs/results.md#비교-시스템-로컬-smallbank), §40 |
-| 2026-10-16 | 커밋 경로 계측 | 커밋 지연이 HTFabric보다 40~80 ms 긴 이유는 | 같은 producer 연결의 abort 기록 때문. 분리 후 626 → 546 ms | [docs/case-studies.md](../docs/case-studies.md), §37~§38 |
+| [01-contention-batch](01-contention-batch/README.md) | 2026-10-17~18 | 혼잡도(Zipf s 0~2)와 배치(100/500/1000)에 따라 Fabric 대비 이득과 지연이 어떻게 바뀌는가 (AWS, 1,000 TPS, 3회) | 모든 조건에서 성공 ×1.13~7.93. s 1.0에서 ×1.31 / ×2.10 / ×2.98. 커밋 지연도 모든 조건에서 더 짧음(−11~−187 ms) | §54~§57, §78 |
+| [02-epsilon-realtime](02-epsilon-realtime/README.md) | 2026-10-18 | ε와 배치에 따라 정렬 비용, 실시간성, 이득은 어떻게 바뀌는가 (시뮬레이션 + 클라우드) | 작은 배치·여유 부하에서는 ε 1이 성공 +51%. 배치 10000에서 ε ≤ 0.5는 20k TPS까지 1 s 마감 유지. 피어 한계 근처(3,000 TPS)에서는 작은 ε | §73~§77, §81 |
+| [03-snode-mttr](03-snode-mttr/README.md) | 2026-10-17, 10-19 | s-node 장애 후 모든 w-node가 다시 합의하기까지 얼마나 걸리는가 | 중앙값 11.8 s → 5.4 s, 잘못된 전환 0회. 10-19 재측정 4.5~5.8 s. Lease 1 s는 기각 | §48~§49, §87 |
+| [04-fairness-algos](04-fairness-algos/README.md) | 2026-10-18 | 사용자 공정성과 Fabric++·HTFabric 대비 성능은 (AWS, 3회) | smallbank 성공 503/s(Fabric +32%, Fabric++ +11%, HTFabric +6%). 공정성은 Fabric++ > Serializer > HTFabric > Fabric. 긴급 tx +10%p. 블록 안 위치 분석 포함 | §79, §83~§85 |
+| [05-diagnostics](05-diagnostics/README.md) | 2026-10-18 | Serializer만 1,000 TPS를 다 보내지 못한 이유와 고부하 상한은 | Caliper SDK 리스너 부담을 찾아 고침(Fabric 수치는 그대로). 이 하드웨어의 상한은 피어(약 3,000 TPS) | §59, §67~§71, §80 |
+| [06-consensus-sim](06-consensus-sim/README.md) | 2026-10-19 | s-node pod 수와 pod 장애 확률에 따라 합의 성공률은 (MTTR 실측으로 보정한 시뮬레이션) | pod 장애 15%에서 pod 1개 79.5% → 3개 99.1% → 5개 100%. 비잔틴 w-node 3/10이 있으면 약 75%에서 포화 | §87 |
+| [07-extra-advantages](07-extra-advantages/README.md) | 2026-10-18~19 | 실패 통보 시간, 성공 tx당 자원, 한 사용자만 인기 계좌에 몰릴 때 | 실패를 알기까지 153 ms(Fabric 226). 성공 tx당 피어 CPU −23%, 원장 −43%. 쏠린 사용자는 어느 시스템에서도 보호되지 않음(α 효과 없음) | §86 |
+
+로컬 단일 PC에서 한 초기 실험(비교 시스템 4종, 커밋 경로 계측, 배치 크기)은 [docs/results.md](../docs/results.md)와 [docs/case-studies.md](../docs/case-studies.md)에 정리했습니다(§37~§40, §50).
+
+## 공통 환경
+
+- **클라우드:** AWS 서울, VM 4대(Fabric / Caliper 클라이언트 / Kafka+프로세서 / s-node·w-node). 배포는 [deploy/cloud](../deploy/cloud/README.md), 세팅 상세는 [01-contention-batch/SETUP.md](01-contention-batch/SETUP.md)에 있습니다.
+- **부하:** smallbank(계좌 100, Query 50%)와 custom(Fabric++ 논문의 custom: 키 10,000, 인기 키 1%, 읽기 4·쓰기 4), 사용자 5명. 사용자 지연은 보내기 전에 기다리는 흉내입니다(실제 망 지연 아님).
+- **비교 대상:** 같은 소스로 빌드한 Fabric 오더러(A1), 같은 프로세서 자리에 구현한 Fabric++·HTFabric. 설명은 [bench/README.md](../bench/README.md)에 있습니다.
+- **원자료:** 실행마다의 로그와 tx 기록은 크기 때문에 저장소에 넣지 않았습니다(`bench/zipfbench/results/`). 각 폴더의 `data/`가 그림에 쓴 요약값입니다.
+- **스크립트:** 각 폴더의 `scripts/`는 그 실험에 쓴 사본입니다. 원본은 [bench/scripts](../bench/scripts/)에 있습니다. `cloud-*.sh`는 Fabric VM에서 실행합니다.
 
 ## 새 실험을 추가할 때
 
-1. 스크립트·데이터·그림을 `experiments/<이름>/`에 두고, 그 폴더의 `README.md`에 조건과 결과를 적습니다.
-2. 위 표 맨 위에 한 줄을 추가합니다.
+1. 스크립트·데이터·그림을 `experiments/<번호>-<이름>/`에 두고, 그 폴더의 `README.md`에 조건과 결과를 적습니다.
+2. 위 표에 한 줄을 추가합니다.
 3. 대표 결과가 바뀔 때만 [README](../README.md)의 "핵심 결과" 표를 고칩니다.

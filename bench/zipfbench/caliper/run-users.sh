@@ -40,6 +40,7 @@ cdk image inspect "$IMAGE" >/dev/null 2>&1 || { [ -z "$REMOTE" ] && docker build
 sed -e "s/@TPS@/${TPS:-250}/g" \
     -e "s/@DURATION@/${DURATION:-30}/g" \
     -e "s/@ZIPF_S@/${ZIPF_S:-1.15}/g" \
+    -e "s/@USER_ZIPF@/${USER_ZIPF:-\{\}}/g" \
     -e "s/@PRW@/${PRW:-0.5}/g" \
     -e "s/@ACCOUNT_COUNT@/${ACCOUNT_COUNT:-100}/g" \
     -e "s/@URGENT_RATIO@/${URGENT_RATIO:-0}/g" \

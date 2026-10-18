@@ -1,0 +1,6 @@
+config,type,trial,t0,takeover_ms,mttr_ms,applied,victim
+old,stop,1,1792205498688,6942,11417,10,snode-5bbc5c49b6-hklm5
+old,stop,2,1792205527554,5630,11787,10,snode-5bbc5c49b6-kvcxl
+old,stop,3,1792205555846,7134,11752,10,snode-5bbc5c49b6-9tbxf
+old,stop,4,1792205583799,5580,12679,10,snode-5bbc5c49b6-ckswx
+old,stop,5,1792205613981,6257,12478,10,snode-5bbc5c49b6-94xgd

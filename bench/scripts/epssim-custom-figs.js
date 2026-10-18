@@ -2,10 +2,10 @@
 //   node epssim-custom-figs.js [입력] [출력 폴더]
 // 혼잡 = 인기 키 확률 hr/hw (0.2/0.1 기본, 0.4/0.2, 0.6/0.3). 경로 비용 10 ms + 0.02 ms × 배치.
 const fs = require('fs'), path = require('path');
-const IN = process.argv[2] || path.join(__dirname, '../../Serializer/kafka/processor/epssim-custom.out');
-const OUT = process.argv[3] || path.join(__dirname, '../../experiments/eps-tps');
+const IN = process.argv[2] || path.join(__dirname, '../../kafka/processor/epssim-custom.out');
+const OUT = process.argv[3] || path.join(__dirname, '../../experiments/02-epsilon-realtime/figures');
 const g = (l, k) => { const m = l.match(new RegExp(`\\b${k}=([^ ]+)`)); return m ? m[1] : undefined; };
-const EPS = [['0.00', '0.00', '0'], ['0.25', '0.25', '0.25'], ['0.50', '0.50', '0.5'], ['0.10', '0.75', '논문'], ['0.75', '0.75', '0.75'], ['1.00', '1.00', '1']];
+const EPS = [['0.00', '0.00', '0'], ['0.25', '0.25', '0.25'], ['0.50', '0.50', '0.5'], ['0.10', '0.75', '0.1/0.75'], ['0.75', '0.75', '0.75'], ['1.00', '1.00', '1']];
 const HS = [['0.20', '0.10', '기본 0.2/0.1'], ['0.40', '0.20', '중간 0.4/0.2'], ['0.60', '0.30', '높음 0.6/0.3']];
 const key = (u, h, b, e) => `${u}|${h}|${b}|${e[0]}|${e[1]}`;
 const B = {}, T = {};

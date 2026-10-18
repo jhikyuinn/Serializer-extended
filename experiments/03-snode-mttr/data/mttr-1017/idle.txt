@@ -1,0 +1,18 @@
+idle check from 2026-10-17T02:38:23Z
+active changes (should be 0): 0
+lease lost: 0
+pod restarts:
+snode-58d869d994-qp9wb   1/1   Running   0     10m
+snode-58d869d994-t22cm   1/1   Running   0     10m
+snode-58d869d994-v4mvr   1/1   Running   0     10m
+mt1 committee applies during idle: 0
+mt2 committee applies during idle: 0
+mt3 committee applies during idle: 0
+mt4 committee applies during idle: 0
+mt5 committee applies during idle: 0
+mt6 committee applies during idle: 0
+mt7 committee applies during idle: 0
+mt8 committee applies during idle: 0
+mt9 committee applies during idle: 0
+mt10 committee applies during idle: 0
+ALL-DONE 11:48

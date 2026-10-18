@@ -8,7 +8,7 @@
 # 환경변수
 #   RUN_ID        결과 폴더 이름 (results/<RUN_ID>). 같은 RUN_ID 로 다시 돌리면 끝난 실행은 건너뛴다.
 #   SYSTEMS       A2 FPP B (HTF, BE, A1 도 가능. bench.sh 와 같은 이름. BE = Serializer 논문의 ε-ordering)
-#   EPS_URGENT 0.1  EPS_LOW 0.75   BE 의 ε (논문 Fig 16 의 값)
+#   EPS_URGENT 1  EPS_LOW 0.75   BE 의 ε (논문 설정: 긴급 1, 일반 0.75. 원 논문 Fig 16의 "0.1"은 긴급 tx 비율, 실험 노트 §83)
 #   ABORT_NOTIFY  true  클라이언트가 abort 토픽을 읽어 버려진 트랜잭션을 바로 끝낸다 (false 면 커밋 대기 시간까지 기다림)
 #   URGENT_LIST   0 1   User3 의 쓰기 중 긴급으로 보내는 비율. 프로세서를 쓰지 않는 A1·A2 는 0 만 돈다
 #                       (긴급 여부를 보는 것은 Serializer 뿐이지만, 같은 부하에서의 비교를 위해 FPP·HTF 는 둘 다 돈다)
@@ -34,7 +34,7 @@ export TPS="${TPS:-250}" DURATION="${DURATION:-30}" ZIPF_S="${ZIPF_S:-1.15}" PRW
 INIT_VALUE="${INIT_VALUE:-1000000}"
 USERS="User1,User2,User3,User4,User5"
 VIPS="User3"
-EPS_URGENT="${EPS_URGENT:-0.1}" EPS_LOW="${EPS_LOW:-0.75}"
+EPS_URGENT="${EPS_URGENT:-1}" EPS_LOW="${EPS_LOW:-0.75}"
 ABORT_NOTIFY="${ABORT_NOTIFY:-true}"
 export WORKERS="${WORKERS:-5}"
 export MODE="${MODE:-smallbank}" ITEM_COUNT="${ITEM_COUNT:-10000}" RW="${RW:-4}" HR="${HR:-0.2}" HW="${HW:-0.1}" HOT_SHARE="${HOT_SHARE:-0.01}" QUERY_SHARE="${QUERY_SHARE:-0}"

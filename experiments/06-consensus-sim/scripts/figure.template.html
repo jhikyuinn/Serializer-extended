@@ -1,0 +1,230 @@
+<title>Figure 5.7 합의 성공률</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+/* 배치: 한 단 문서. 제목과 조건 → 나란한 두 그래프(좁으면 위아래) → 수치 표 → 계산 방법 */
+:root {
+  --bg: #fcfcfb; --panel: #ffffff; --fg: #0b0b0b; --fg-2: #52514e; --fg-3: #85837c;
+  --rule: #e4e2dc; --grid: #eeece7;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
+  --font: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a19; --panel: #212120; --fg: #f0efec; --fg-2: #c3c2b7; --fg-3: #8f8e85;
+    --rule: #363531; --grid: #2b2a28;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1a19; --panel: #212120; --fg: #f0efec; --fg-2: #c3c2b7; --fg-3: #8f8e85;
+  --rule: #363531; --grid: #2b2a28;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 15px; line-height: 1.6; word-break: keep-all; }
+.page { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 56px; display: flex; flex-direction: column; gap: 28px; }
+h1 { font-size: 26px; font-weight: 600; line-height: 1.3; margin: 0; text-wrap: balance; }
+h2 { font-size: 16px; font-weight: 600; margin: 0; }
+p { margin: 0; }
+.lede { color: var(--fg-2); max-width: 68ch; }
+.tag { display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: .04em; color: var(--fg-2); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 10px; }
+header { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--fg-2); align-items: center; }
+.legend span.k { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 18px; height: 2px; border-radius: 1px; display: inline-block; }
+.charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+figure { margin: 0; background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 14px 10px; min-width: 0; position: relative; }
+figcaption { display: flex; flex-direction: column; gap: 2px; padding-inline: 4px; margin-bottom: 6px; }
+figcaption small { color: var(--fg-2); font-size: 13px; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { font-family: var(--font); font-variant-numeric: tabular-nums; }
+.tip { position: absolute; pointer-events: none; background: var(--fg); color: var(--bg); font-size: 12.5px; line-height: 1.45; padding: 7px 10px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -100%); font-variant-numeric: tabular-nums; z-index: 2; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { text-align: right; padding: 7px 10px; border-bottom: 1px solid var(--rule); }
+th { font-weight: 500; color: var(--fg-2); font-size: 13px; }
+th:first-child, td:first-child { text-align: left; }
+td .range { color: var(--fg-3); font-size: 12px; margin-left: 4px; }
+tr.group td { font-weight: 600; padding-top: 16px; border-bottom-color: var(--fg-3); }
+section { display: flex; flex-direction: column; gap: 10px; }
+ul { margin: 0; padding-left: 20px; color: var(--fg-2); max-width: 74ch; }
+li + li { margin-top: 4px; }
+.sw { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+</style>
+
+<div class="page">
+  <header>
+    <span class="tag">시뮬레이션 · 실측값으로 보정</span>
+    <h1>Figure 5.7 — Replica 수와 pod 장애 확률에 따른 FBFT 합의 성공률</h1>
+    <p class="lede">s-node pod를 1개에서 5개로 늘리며, 라운드마다 각 pod가 1·5·10·15% 확률로 멈추는 상황을 계산했습니다. 설정마다 500라운드이고, 기록이 올라온 뒤 10초 안에 블록이 기록되면 성공입니다. w-node는 10개이며 그중 3개가 Byzantine입니다.</p>
+  </header>
+
+  <div class="legend" id="legend" aria-label="pod별 장애 확률"></div>
+
+  <section>
+    <h2>pod 장애만 본 성공률</h2>
+    <p class="lede">Byzantine w-node가 없을 때입니다. 왼쪽은 지금처럼 pod 하나만 일하는 구조, 오른쪽은 모든 pod가 동시에 일하며 요청을 돌아가며 받는 구조입니다. 두 그래프의 세로축은 같습니다.</p>
+    <div class="charts">
+      <figure id="fig-b">
+        <figcaption><h2>현재 구조</h2><small>pod 하나만 일하고 나머지는 대기 (active-standby)</small></figcaption>
+      </figure>
+      <figure id="fig-d">
+        <figcaption><h2>동시에 일하는 구조 <span class="tag">가정</span></h2><small>모든 pod가 일하고 등록 정보를 함께 가짐 (active-active)</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>전체 성공률</h2>
+    <p class="lede">Byzantine 3개를 포함해 Byzantine 리더와 pod 장애가 모두 작용할 때입니다.</p>
+    <div class="charts">
+      <figure id="fig-a">
+        <figcaption><h2>현재 구조</h2><small>active-standby</small></figcaption>
+      </figure>
+      <figure id="fig-c">
+        <figcaption><h2>동시에 일하는 구조 <span class="tag">가정</span></h2><small>active-active</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>수치</h2>
+    <p class="lede">평균 성공률(%). 괄호는 500라운드 실험을 한 번 했을 때 나올 수 있는 범위(5%~95%)입니다.</p>
+    <div class="tablewrap"><table id="table"></table></div>
+  </section>
+
+  <section>
+    <h2>시험한 방안 비교</h2>
+    <p class="lede">장애 확률 15%에서의 평균 성공률(%). Lease를 3초로 줄이면 인계가 6.9~9.5초로 짧아지고(실측), 기한을 20초로 늘리면 서명 위조 리더와 인계가 기한 안에 들어옵니다.</p>
+    <div class="tablewrap"><table id="variants"></table></div>
+  </section>
+
+  <section>
+    <h2>읽는 법</h2>
+    <ul>
+      <li>replica가 1개에서 2개, 3개로 늘 때 성공률이 오르고, 3개부터는 거의 같습니다. 장애 확률이 높을수록 오르는 폭이 큽니다.</li>
+      <li>현재 구조에서는 네 곡선이 한 값으로 모이지 않습니다. 넘겨받은 pod가 곧바로 또 멈추면 인계가 연달아 일어나 기한을 넘기는데, 이 경우는 대기 pod가 몇 개든 장애 확률의 제곱만큼 남습니다(15%에서 약 2.2%).</li>
+      <li>동시에 일하는 구조에서는 인계가 없어, 실패하는 것은 모든 pod가 함께 멈춘 경우뿐입니다. pod 장애만 보면 replica 5개에서 네 곡선이 모두 100%에 닿습니다. 전체 성공률은 간격이 줄지만 완전히 같아지지는 않습니다.</li>
+      <li>전체 성공률이 68% 근처에서 멈추는 것은 Byzantine 리더 때문입니다. 리더의 30%가 Byzantine이고, 그 라운드는 대부분 10초 안에 복구되지 않습니다. replica 수로는 줄일 수 없는 부분입니다.</li>
+      <li>전체 성공률은 실험 한 번의 흔들림이 ±6%p 정도라, 500라운드 한 번으로는 장애 1%와 5% 선이 구분되지 않을 수 있습니다. 위쪽 두 그래프가 pod 장애의 영향만 따로 보여 줍니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>계산 방법</h2>
+    <ul>
+      <li>이 값은 실제 스택에서 500라운드를 돈 결과가 아닙니다. 실제 스택의 동작 순서를 그대로 따라가되, 걸리는 시간은 시험 실행 120라운드와 인계 시험에서 잰 값을 넣었습니다. 설정마다 500라운드 실험을 <span id="runs"></span>번 반복해 평균을 냈습니다.</li>
+      <li>라운드 간격 10초. 멈춘 pod는 30초(3라운드) 동안 멈춰 있고, 그동안에는 다시 뽑지 않습니다.</li>
+      <li>잰 값: 정상 합의 0.40초, 커미티 구성 3.2초, 서명 위조 리더 복구 8.9초 또는 10.5초, 지연 리더 복구 20~33초, 활성 pod를 멈춘 뒤 새 커미티까지 9.5~11.6초(인계 시험 8번, 중앙값 11.5초), pod가 하나뿐일 때 풀린 뒤 3.65초.</li>
+      <li>동시에 일하는 구조는 만들어 본 것이 아니라 가정입니다. 모든 pod가 w-node 등록 정보를 함께 갖고 있고, 멈춘 pod에 닿은 요청은 1.2초 뒤 다른 pod로 다시 간다고 잡았습니다. 지금 시스템에는 등록 정보의 공유가 없습니다.</li>
+      <li id="check"></li>
+    </ul>
+  </section>
+</div>
+
+<script>
+const DATA = /*DATA*/;
+const SERIES = [
+  { p: 1, color: 'var(--s1)' }, { p: 5, color: 'var(--s2)' },
+  { p: 10, color: 'var(--s3)' }, { p: 15, color: 'var(--s4)' },
+];
+const NS = 'http://www.w3.org/2000/svg';
+const el = (name, attrs, parent) => {
+  const e = document.createElementNS(NS, name);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+};
+
+document.getElementById('legend').innerHTML = '<span>pod별 장애 확률</span>' +
+  SERIES.map((s) => `<span class="k"><i style="background:${s.color}"></i>${s.p}%</span>`).join('');
+
+function chart(figId, rows, yMin, yMax, yStep) {
+  const fig = document.getElementById(figId);
+  const W = 480, H = 330, m = { l: 44, r: 52, t: 12, b: 42 };
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img' }, fig);
+  const x = (n) => m.l + (n - 1) * (W - m.l - m.r) / 4;
+  const y = (v) => m.t + (yMax - v) * (H - m.t - m.b) / (yMax - yMin);
+
+  for (let v = yMin; v <= yMax + 1e-9; v += yStep) {
+    el('line', { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: 'var(--grid)', 'stroke-width': 1 }, svg);
+    el('text', { x: m.l - 8, y: y(v) + 4, 'text-anchor': 'end', 'font-size': 12, fill: 'var(--fg-3)' }, svg).textContent = v + '%';
+  }
+  el('line', { x1: m.l, x2: W - m.r, y1: y(yMin), y2: y(yMin), stroke: 'var(--rule)', 'stroke-width': 1 }, svg);
+  for (let n = 1; n <= 5; n++) {
+    el('text', { x: x(n), y: H - m.b + 18, 'text-anchor': 'middle', 'font-size': 12, fill: 'var(--fg-3)' }, svg).textContent = n;
+  }
+  el('text', { x: (m.l + W - m.r) / 2, y: H - 6, 'text-anchor': 'middle', 'font-size': 12, fill: 'var(--fg-2)' }, svg).textContent = 's-node replica 수';
+
+  const tip = document.createElement('div');
+  tip.className = 'tip'; tip.hidden = true; fig.appendChild(tip);
+
+  const ends = [];
+  for (const s of SERIES) {
+    const pts = rows.filter((r) => r.failProb === s.p).sort((a, b) => a.replicas - b.replicas);
+    el('path', { d: pts.map((r, i) => `${i ? 'L' : 'M'}${x(r.replicas)},${y(r.mean)}`).join(''),
+      fill: 'none', stroke: s.color, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
+    for (const r of pts) {
+      el('circle', { cx: x(r.replicas), cy: y(r.mean), r: 4.5, fill: s.color, stroke: 'var(--panel)', 'stroke-width': 2 }, svg);
+    }
+    ends.push({ s, yy: y(pts[4].mean) });
+  }
+  // 오른쪽 끝 이름표: 겹치지 않게 14px 간격으로 벌린다
+  ends.sort((a, b) => a.yy - b.yy);
+  for (let i = 1; i < ends.length; i++) ends[i].ly = Math.max(ends[i].yy, (ends[i - 1].ly ?? ends[i - 1].yy) + 14);
+  ends[0].ly = ends[0].yy;
+  const over = ends[ends.length - 1].ly - (H - m.b);
+  if (over > 0) ends.forEach((e) => { e.ly -= over; });
+  for (const e of ends) {
+    el('circle', { cx: W - m.r + 12, cy: e.ly, r: 3.5, fill: e.s.color }, svg);
+    el('text', { x: W - m.r + 20, y: e.ly + 4, 'font-size': 12, fill: 'var(--fg-2)' }, svg).textContent = e.s.p + '%';
+  }
+  // 넓은 감지 영역 (점보다 크게)
+  for (const s of SERIES) {
+    for (const r of rows.filter((q) => q.failProb === s.p)) {
+      const hit = el('circle', { cx: x(r.replicas), cy: y(r.mean), r: 13, fill: 'transparent', tabindex: 0 }, svg);
+      const show = () => {
+        tip.innerHTML = `<span class="sw" style="background:${s.color}"></span>장애 ${s.p}% · replica ${r.replicas}개<br>` +
+          `평균 ${r.mean.toFixed(1)}% (${r.p5.toFixed(1)}~${r.p95.toFixed(1)}%)`;
+        const box = svg.getBoundingClientRect(), f = fig.getBoundingClientRect();
+        tip.style.left = Math.min(Math.max(box.left - f.left + x(r.replicas) * box.width / W, 90), f.width - 90) + 'px';
+        tip.style.top = (box.top - f.top + y(r.mean) * box.height / H - 12) + 'px';
+        tip.hidden = false;
+      };
+      hit.addEventListener('pointerenter', show);
+      hit.addEventListener('focus', show);
+      hit.addEventListener('pointerleave', () => { tip.hidden = true; });
+      hit.addEventListener('blur', () => { tip.hidden = true; });
+    }
+  }
+}
+
+chart('fig-b', DATA.withoutByzantine, 75, 100, 5);
+chart('fig-d', DATA.aaWithoutByzantine, 75, 100, 5);
+chart('fig-a', DATA.withByzantine, 45, 75, 5);
+chart('fig-c', DATA.aaWithByzantine, 45, 75, 5);
+
+const cell = (r) => `<td>${r.mean.toFixed(1)}<span class="range">(${r.p5.toFixed(1)}~${r.p95.toFixed(1)})</span></td>`;
+const block = (title, rows) => `<tr class="group"><td colspan="6">${title}</td></tr>` +
+  SERIES.map((s) => `<tr><td><span class="sw" style="background:${s.color}"></span>장애 ${s.p}%</td>` +
+    rows.filter((r) => r.failProb === s.p).sort((a, b) => a.replicas - b.replicas).map(cell).join('') + '</tr>').join('');
+document.getElementById('table').innerHTML =
+  '<thead><tr><th>pod별 장애 확률</th>' + [1, 2, 3, 4, 5].map((n) => `<th>replica ${n}개</th>`).join('') + '</tr></thead><tbody>' +
+  block('pod 장애만 본 성공률 · 현재 구조', DATA.withoutByzantine) +
+  block('pod 장애만 본 성공률 · 동시에 일하는 구조 (가정)', DATA.aaWithoutByzantine) +
+  block('전체 성공률 · 현재 구조', DATA.withByzantine) +
+  block('전체 성공률 · 동시에 일하는 구조 (가정)', DATA.aaWithByzantine) + '</tbody>';
+
+const vrow = (label, vals) => `<tr><td>${label}</td>` + vals.map((v) => `<td>${v.toFixed(1)}</td>`).join('') + '</tr>';
+document.getElementById('variants').innerHTML =
+  '<thead><tr><th>방안</th>' + [1, 2, 3, 4, 5].map((n) => `<th>replica ${n}개</th>`).join('') + '</tr></thead><tbody>' +
+  '<tr class="group"><td colspan="6">전체 성공률 (Byzantine 3개 포함)</td></tr>' +
+  DATA.variants.map((v) => vrow(v.name, v.overall)).join('') +
+  '<tr class="group"><td colspan="6">pod 장애만 본 성공률 (Byzantine 없음)</td></tr>' +
+  DATA.variants.map((v) => vrow(v.name, v.podOnly)).join('') + '</tbody>';
+
+document.getElementById('runs').textContent = DATA.runs.toLocaleString();
+document.getElementById('check').textContent = '시험 실행과의 비교(장애 15%, 30라운드씩, 실측의 오차 약 ±9%p): ' +
+  DATA.check.map((c) => `replica ${c.replicas}개·멈춤 ${c.downRounds}라운드 ${c.simulated.toFixed(1)}% / 실측 ${c.measured30Rounds}%`).join(', ') + '.';
+</script>

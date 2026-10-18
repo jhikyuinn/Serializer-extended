@@ -1,0 +1,32 @@
+00:54:45 CONFIG=new TRIALS=10 NODES=10
+00:55:51 new term #1 victim=snode-6d9c94b7fd-nsqsb takeover=832ms mttr=4128ms applied=10/10
+00:56:11 new term #2 victim=snode-6d9c94b7fd-w58mz takeover=538ms mttr=3824ms applied=10/10
+00:56:31 new term #3 victim=snode-6d9c94b7fd-ms5x8 takeover=564ms mttr=5647ms applied=10/10
+00:56:54 new term #4 victim=snode-6d9c94b7fd-f84x2 takeover=656ms mttr=5624ms applied=10/10
+00:57:13 new term #5 victim=snode-6d9c94b7fd-6wt72 takeover=668ms mttr=3965ms applied=10/10
+00:57:33 new term #6 victim=snode-6d9c94b7fd-275lr takeover=545ms mttr=6781ms applied=10/10
+00:57:54 new term #7 victim=snode-6d9c94b7fd-czbsp takeover=677ms mttr=7181ms applied=10/10
+00:58:12 new term #8 victim=snode-6d9c94b7fd-lwsg5 takeover=420ms mttr=3707ms applied=10/10
+00:58:31 new term #9 victim=snode-6d9c94b7fd-j8wfq takeover=630ms mttr=5454ms applied=10/10
+00:58:50 new term #10 victim=snode-6d9c94b7fd-xdcfd takeover=421ms mttr=3755ms applied=10/10
+00:59:09 new kill #1 victim=snode-6d9c94b7fd-kgh7f takeover=815ms mttr=4125ms applied=10/10
+00:59:32 new kill #2 victim=snode-6d9c94b7fd-sr4cz takeover=974ms mttr=4412ms applied=10/10
+00:59:55 new kill #3 victim=snode-6d9c94b7fd-h57kh takeover=1129ms mttr=4416ms applied=10/10
+01:00:18 new kill #4 victim=snode-6d9c94b7fd-nchcd takeover=1385ms mttr=4675ms applied=10/10
+01:00:40 new kill #5 victim=snode-6d9c94b7fd-rwfwc takeover=842ms mttr=4133ms applied=10/10
+01:01:03 new kill #6 victim=snode-6d9c94b7fd-h282b takeover=1014ms mttr=4298ms applied=10/10
+01:01:26 new kill #7 victim=snode-6d9c94b7fd-98qkc takeover=1277ms mttr=4567ms applied=10/10
+01:01:49 new kill #8 victim=snode-6d9c94b7fd-zmtn4 takeover=1438ms mttr=4734ms applied=10/10
+01:02:12 new kill #9 victim=snode-6d9c94b7fd-2cnbs takeover=1643ms mttr=4936ms applied=10/10
+01:02:35 new kill #10 victim=snode-6d9c94b7fd-p8fcj takeover=1072ms mttr=5162ms applied=10/10
+01:03:00 new stop #1 victim=snode-6d9c94b7fd-zj7tt takeover=2439ms mttr=5713ms applied=10/10
+01:03:25 new stop #2 victim=snode-6d9c94b7fd-q799q takeover=2735ms mttr=5999ms applied=10/10
+01:03:49 new stop #3 victim=snode-6d9c94b7fd-r5nhw takeover=2232ms mttr=5502ms applied=10/10
+01:04:14 new stop #4 victim=snode-6d9c94b7fd-rlkhd takeover=2433ms mttr=6541ms applied=10/10
+01:04:37 new stop #5 victim=snode-6d9c94b7fd-t2h6f takeover=2251ms mttr=5527ms applied=10/10
+01:05:02 new stop #6 victim=snode-6d9c94b7fd-gfm5g takeover=2811ms mttr=6084ms applied=10/10
+01:05:26 new stop #7 victim=snode-6d9c94b7fd-9dprr takeover=1955ms mttr=5222ms applied=10/10
+01:05:50 new stop #8 victim=snode-6d9c94b7fd-ddwqq takeover=2161ms mttr=5459ms applied=10/10
+01:06:15 new stop #9 victim=snode-6d9c94b7fd-glmfr takeover=2646ms mttr=5931ms applied=10/10
+01:06:39 new stop #10 victim=snode-6d9c94b7fd-g6bnx takeover=2558ms mttr=5829ms applied=10/10
+01:06:39 끝

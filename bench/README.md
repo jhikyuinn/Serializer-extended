@@ -27,4 +27,4 @@ node aggregate-users.js results/demo
 - 결과는 `zipfbench/results/<RUN_ID>/`에 쌓인다(저장소에는 넣지 않는다).
 - 프로세서는 `../../kafka`의 compose를 다시 띄워 바꾼다(`KAFKA_DIR`로 바꿀 수 있다).
 - 클라우드에서는 [deploy/cloud](../deploy/cloud/README.md)의 `run.sh`가 같은 스크립트를 부른다.
-- 그림 스크립트는 `zipfbench/results/cloud/`를 읽고 [experiments/cloud-figs](../experiments/cloud-figs/README.md)에 쓴다.
+- 그림 스크립트는 `zipfbench/results/cloud/`를 읽고 [experiments/01-contention-batch/archive-v1](../experiments/01-contention-batch/archive-v1/README.md)에 쓴다.

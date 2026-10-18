@@ -1,0 +1,28 @@
+11:20:50 CONFIG=old TRIALS=10 NODES=10
+11:21:57 old term #1 victim=snode-5bbc5c49b6-hj52g takeover=570ms mttr=5736ms applied=10/10
+11:22:15 old term #2 victim=snode-5bbc5c49b6-q7j8s takeover=379ms mttr=5072ms applied=10/10
+11:22:33 old term #3 victim=snode-5bbc5c49b6-psnh5 takeover=931ms mttr=5105ms applied=10/10
+11:22:51 old term #4 victim=snode-5bbc5c49b6-6gjk2 takeover=275ms mttr=5081ms applied=10/10
+11:23:09 old term #5 victim=snode-5bbc5c49b6-fsmnm takeover=461ms mttr=5263ms applied=10/10
+11:23:27 old term #6 victim=snode-5bbc5c49b6-9nfdc takeover=606ms mttr=5095ms applied=10/10
+11:23:48 old term #7 victim=snode-5bbc5c49b6-nktjr takeover=1201ms mttr=7949ms applied=10/10
+11:24:06 old term #8 victim=snode-5bbc5c49b6-94xs6 takeover=964ms mttr=5426ms applied=10/10
+11:24:25 old term #9 victim=snode-5bbc5c49b6-fhm2f takeover=719ms mttr=4850ms applied=10/10
+11:25:34 old term #10 victim=snode-5bbc5c49b6-78cz6 takeover=315ms mttr=timeoutms applied=9/10
+11:25:55 old kill #1 victim=snode-5bbc5c49b6-hdrjp takeover=1330ms mttr=7211ms applied=10/10
+11:26:20 old kill #2 victim=snode-5bbc5c49b6-hdrjp takeover=7184ms mttr=11676ms applied=10/10
+11:26:39 old kill #3 victim=snode-5bbc5c49b6-kxlvh takeover=1245ms mttr=6624ms applied=10/10
+11:27:02 old kill #4 victim=snode-5bbc5c49b6-kxlvh takeover=5867ms mttr=10386ms applied=10/10
+11:27:28 old kill #5 victim=snode-5bbc5c49b6-hdrjp takeover=7582ms mttr=12184ms applied=10/10
+11:27:57 old kill #6 victim=snode-5bbc5c49b6-6c555 takeover=2372ms mttr=7011ms applied=10/10
+11:28:21 old kill #7 victim=snode-5bbc5c49b6-6c555 takeover=5773ms mttr=10552ms applied=10/10
+11:28:45 old kill #8 victim=snode-5bbc5c49b6-kxlvh takeover=6779ms mttr=11223ms applied=10/10
+11:29:21 old kill #9 victim=snode-5bbc5c49b6-hdrjp takeover=5915ms mttr=10949ms applied=10/10
+11:30:22 old kill #10 victim=snode-5bbc5c49b6-kxlvh takeover=6865ms mttr=11275ms applied=10/10
+11:31:30 old stop #1 victim=snode-5bbc5c49b6-hdrjp takeover=7561ms mttr=11952ms applied=10/10
+11:31:57 old stop #2 victim=snode-5bbc5c49b6-kxlvh takeover=7558ms mttr=11814ms applied=10/10
+11:33:52 old stop #3 victim=snode-5bbc5c49b6-6c555 takeover=7249ms mttr=11582ms applied=10/10
+11:34:18 old stop #4 victim=snode-5bbc5c49b6-kxlvh takeover=6615ms mttr=11407ms applied=10/10
+11:34:48 old stop #5 victim=snode-5bbc5c49b6-hdrjp takeover=6032ms mttr=12479ms applied=10/10
+11:37:29 s-node 가 120초 안에 준비되지 않았다
+11:37:29 끝

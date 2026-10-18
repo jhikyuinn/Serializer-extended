@@ -2,12 +2,12 @@
 //   node epssim-figs.js [입력] [출력 폴더]
 // 경로 비용은 시뮬레이션과 같게 10 ms + 0.02 ms × 배치. 따라갈 수 있는 최대 TPS(capacity) = 배치 / (경로 비용 + 정렬 시간)
 const fs = require('fs'), path = require('path');
-const IN = process.argv[2] || path.join(__dirname, '../../Serializer/kafka/processor/epssim-grid.out');
-const OUT = process.argv[3] || path.join(__dirname, '../../experiments/eps-tps');
+const IN = process.argv[2] || path.join(__dirname, '../../kafka/processor/epssim-grid.out');
+const OUT = process.argv[3] || path.join(__dirname, '../../experiments/02-epsilon-realtime/figures');
 fs.mkdirSync(OUT, { recursive: true });
 const g = (l, k) => { const m = l.match(new RegExp(`\\b${k}=([^ ]+)`)); return m ? m[1] : undefined; };
 const lines = fs.readFileSync(IN, 'utf8').split('\n');
-const EPS = [['0.00', '0.00', '0'], ['0.25', '0.25', '0.25'], ['0.50', '0.50', '0.5'], ['0.10', '0.75', '논문'], ['0.75', '0.75', '0.75'], ['1.00', '1.00', '1']];
+const EPS = [['0.00', '0.00', '0'], ['0.25', '0.25', '0.25'], ['0.50', '0.50', '0.5'], ['0.10', '0.75', '0.1/0.75'], ['0.75', '0.75', '0.75'], ['1.00', '1.00', '1']];
 const key = (u, s, b, e) => `${u}|${s}|${b}|${e[0]}|${e[1]}`;
 const B = {}, T = {};
 for (const l of lines) {
@@ -60,7 +60,7 @@ function logAxis(x0, y0, w, h, lo, hi, ticks, ylabel, title) {
   s += Tx(x0 - 48, y0 - h / 2, ylabel, `text-anchor="middle" transform="rotate(-90 ${x0 - 48} ${y0 - h / 2})"`);
   s += Tx(x0 + w / 2, y0 - h - 10, title, 'text-anchor="middle" font-weight="bold" font-size="13"');
   const xs = xsE(x0, w); EPS.forEach((e, i) => { s += Tx(xs(i), y0 + 16, e[2], 'text-anchor="middle"'); });
-  s += Tx(x0 + w / 2, y0 + 33, 'ε (긴급 / 일반 같은 값, 논문 = 0.1 / 0.75)', 'text-anchor="middle" fill="#444" font-size="11"');
+  s += Tx(x0 + w / 2, y0 + 33, 'ε (긴급·일반 같은 값. 0.1/0.75 = 긴급 0.1·일반 0.75)', 'text-anchor="middle" fill="#444" font-size="11"');
   return { s, ym, xs };
 }
 const legendS = (x, y) => ['1.0', '1.5', '2.0'].map((s, i) => `<line x1="${x + i * 90}" y1="${y - 4}" x2="${x + i * 90 + 18}" y2="${y - 4}" stroke="${SC[s]}" stroke-width="2.5"/><circle cx="${x + i * 90 + 9}" cy="${y - 4}" r="3.5" fill="${SC[s]}"/>` + Tx(x + i * 90 + 22, y, `s ${s}`)).join('');

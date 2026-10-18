@@ -1,11 +1,14 @@
 // §76 ε 실험 논문용 그림 P1~P4. 입력: eps-tps/epssim-custom-data.json, epssim-data.json (epssim-*-figs.js 가 만든 것)
 //   node epssim-paper-figs.js [eps-tps 폴더]
 const fs = require('fs'), path = require('path');
-const DIR = process.argv[2] || path.join(__dirname, '../../experiments/eps-tps');
-const C = JSON.parse(fs.readFileSync(path.join(DIR, 'epssim-custom-data.json')));
-const S = JSON.parse(fs.readFileSync(path.join(DIR, 'epssim-data.json')));
+const DIR = process.argv[2] || path.join(__dirname, '../../experiments/02-epsilon-realtime');
+// 정리된 폴더(§82)는 data/ 와 figures/ 로 나뉘어 있다. 예전 평평한 폴더도 읽는다
+const DATA = fs.existsSync(path.join(DIR, 'data')) ? path.join(DIR, 'data') : DIR;
+const FIGD = fs.existsSync(path.join(DIR, 'figures')) ? path.join(DIR, 'figures') : DIR;
+const C = JSON.parse(fs.readFileSync(path.join(DATA, 'epssim-custom-data.json')));
+const S = JSON.parse(fs.readFileSync(path.join(DATA, 'epssim-data.json')));
 const EPS = [['0.00', '0.00', '0'], ['0.25', '0.25', '0.25'], ['0.50', '0.50', '0.5'], ['0.75', '0.75', '0.75'], ['1.00', '1.00', '1']];
-const EPSP = ['0.10', '0.75']; // 논문 값
+const EPSP = ['0.10', '0.75']; // 긴급 0.1·일반 0.75 조건(논문 설정은 긴급 1·일반 0.75, §83)
 const ck = (u, h, b, e) => `${u}|${h}|${b}|${e[0]}|${e[1]}`;
 const sk = (u, s, b, e) => `${u}|${s}|${b}|${e[0]}|${e[1]}`;
 const FONT = "font-family=\"'Malgun Gothic','Noto Sans KR','Apple SD Gothic Neo',sans-serif\"";
@@ -33,7 +36,7 @@ const line = (P, pts, col, dash) => `<polyline points="${pts.map(([i, v]) => `${
 const paperMark = (P, xi, v, col) => { const x = Number.isInteger(xi) ? P.xs(xi) : P.xs(Math.floor(xi)) + (xi % 1) * (P.xs(1) - P.xs(0)); return `<path d="M${x} ${P.ym(v) - 7} l6 7 l-6 7 l-6 -7z" fill="#fff" stroke="${col}" stroke-width="1.6"/>`; };
 const EC = EPS.map((e) => e[2]);
 const H0 = '0.20/0.10';
-const save = (name, W, H, body) => fs.writeFileSync(path.join(DIR, `${name}.svg`), svg(W, H, body));
+const save = (name, W, H, body) => fs.writeFileSync(path.join(FIGD, `${name}.svg`), svg(W, H, body));
 
 // ---- P1: 맞교환 (custom, 기본 혼잡, 긴급 끔) ----
 {
@@ -52,7 +55,7 @@ const save = (name, W, H, body) => fs.writeFileSync(path.join(DIR, `${name}.svg`
     b += paperMark(A, 3, pp.valid, BC[bs]) + paperMark(P, 3, pp.cap, BC[bs]);
   }
   b += key(250, 40, [['배치 1000', BC[1000]], ['배치 5000', BC[5000]], ['배치 10000', BC[10000]]]);
-  b += T(250, 62, '(b) 실선 = 평균 정렬 기준, 점선 = 최악 배치 기준 · (a) 옅은 점선 = 도착 순서 그대로 · ◇ = 논문 ε(0.1/0.75)', 'font-size="11" fill="#444"');
+  b += T(250, 62, '(b) 실선 = 평균 정렬 기준, 점선 = 최악 배치 기준 · (a) 옅은 점선 = 도착 순서 그대로 · ◇ = 일반 ε 0.75(긴급 끔이면 논문 설정 긴급 1·일반 0.75와 같다)', 'font-size="11" fill="#444"');
   b += T(W / 2, H - 12, 'custom 부하(키 10,000, 인기 키 100, 읽기 4·쓰기 4, 인기 키 확률 0.2/0.1), 긴급 끔 · 실제 정렬 시간 + 경로 비용 10 ms + 0.02 ms/tx', 'text-anchor="middle" fill="#555" font-size="11"');
   save('figP1-tradeoff', W, H, b);
 }
@@ -86,7 +89,7 @@ const save = (name, W, H, body) => fs.writeFileSync(path.join(DIR, `${name}.svg`
     b += paperMark(A, 0.4, pp.urg, BC[bs]); // ε_urgent 0.1 = 0 과 0.25 사이(0.4 칸)
   }
   b += key(250, 40, [['배치 1000', BC[1000]], ['배치 5000', BC[5000]], ['배치 10000', BC[10000]]]);
-  b += T(250, 62, '◇ = 논문 ε(긴급 0.1 / 일반 0.75): 가로 0.1 위치에 표시', 'font-size="11" fill="#444"');
+  b += T(250, 62, '◇ = 긴급 0.1·일반 0.75 조건(가로 0.1 위치). 논문 설정(긴급 1·일반 0.75)은 클라우드 §81-B', 'font-size="11" fill="#444"');
   b += T(W / 2, H - 12, 'custom 부하, 인기 키 확률 0.2/0.1, VIP(User3)의 쓰기 = 긴급(전체 쓰기의 약 20%)', 'text-anchor="middle" fill="#555" font-size="11"');
   save('figP3-urgent', W, H, b);
 }
@@ -154,5 +157,35 @@ console.log('ok');
     b += T(W / 2, H - 30, `custom 부하(인기 키 0.2/0.1), 긴급 끔, AWS 4 VM, 30초(배치 10000 은 60초, 1회). 배치 1000·3,000 TPS 의 ε 1: 블록당 유효 tx 1.8배로 피어 커밋이 밀려 지연 11.8 s, 성공 급감.`, 'text-anchor="middle" fill="#555" font-size="11"');
     b += T(W / 2, H - 12, `배치 10000·ε 1: 정렬 평균 ${s10.toFixed(0)} ms 가 지연에 더해져 배치 안 이득(+4%p)이 상쇄됨.`, 'text-anchor="middle" fill="#555" font-size="11"');
     save('figP5-cloud', W, H, b);
+  }
+}
+
+// ---- P6: 경계 TPS (§81 A + §77). custom, 배치 1000, 긴급 끔, ε 0 / 0.5 / 1, TPS 1000~3000, 3회 ----
+{
+  const RR = path.join(__dirname, '../zipfbench/results');
+  const one = (name) => { const base = path.join(RR, name, 'BE', 'u0'); if (!fs.existsSync(base)) return [];
+    return fs.readdirSync(base).map((r) => path.join(base, r)).filter((d) => fs.existsSync(path.join(d, 'meta.json'))).map((d) => {
+      const meta = JSON.parse(fs.readFileSync(path.join(d, 'meta.json'))), dur = meta.duration - (meta.warmupSec || 0), a = {};
+      for (const f of fs.readdirSync(d).filter((f) => f.startsWith('user-'))) for (const [k, x] of Object.entries(JSON.parse(fs.readFileSync(path.join(d, f))).tallySteady.all)) a[k] = (a[k] || 0) + x;
+      return { sp: a.success / dur, lat: a.latencySuccessSum / a.success }; }); };
+  const nm = (e, t) => (t === 1000 || t === 3000) ? `epsc-e${e}-t${t}-b1000` : `gapA-e${e}-t${t}`;
+  const TP = [1000, 1500, 2000, 2500, 3000], E = [['0', '#16a34a'], ['0.5', '#2563eb'], ['1', '#dc2626']];
+  const st = (rs, k) => { const v = rs.map((r) => r[k]), m = v.reduce((p, q) => p + q, 0) / v.length; return [m, v.length > 1 ? Math.sqrt(v.reduce((p, q) => p + (q - m) ** 2, 0) / (v.length - 1)) : 0]; };
+  if (one('gapA-e0-t2000').length) {
+    const W = 1040, H = 450; let b = '';
+    const cats = TP.map((t) => t.toLocaleString());
+    const A = axes(90, 360, 380, 270, 0, 800, [0, 200, 400, 600, 800], 'lin', '초당 성공 tx', '(a) 초당 성공 (3회 ± 표준편차)', (v) => v, cats, '보낸 TPS');
+    const P = axes(600, 360, 380, 270, 300, 30000, [300, 1000, 3000, 10000, 30000], 'log', '커밋 지연 (로그)', '(b) 커밋 지연', (v) => v >= 1000 ? `${v / 1000} s` : `${v} ms`, cats, '보낸 TPS');
+    b += A.s + P.s;
+    b += `<rect x="${A.xs(2) - 34}" y="${A.ym(800)}" width="68" height="${A.ym(0) - A.ym(800)}" fill="#fef3c7" opacity="0.5"/>` + T(A.xs(2), A.ym(800) + 14, '경계', 'text-anchor="middle" font-size="11" fill="#92400e"');
+    for (const [e, col] of E) {
+      const pts = TP.map((t, i) => [i, one(nm(e, t))]).filter(([, rs]) => rs.length);
+      b += line(A, pts.map(([i, rs]) => [i, st(rs, 'sp')[0]]), col) + line(P, pts.map(([i, rs]) => [i, st(rs, 'lat')[0]]), col);
+      for (const [i, rs] of pts) { const [m, s] = st(rs, 'sp'); b += `<line x1="${A.xs(i)}" y1="${A.ym(m + s)}" x2="${A.xs(i)}" y2="${A.ym(Math.max(0, m - s))}" stroke="${col}"/>`; }
+    }
+    b += key(330, 40, E.map(([e, col]) => [`ε ${e}`, col]));
+    b += T(W / 2, H - 30, 'custom 부하(인기 키 0.2/0.1), 배치 1,000, 긴급 끔, AWS 4 VM. 1,500 TPS 이하는 ε 1, 약 2,000 은 ε 0~0.5, 2,500 이상은 ε 0 이 가장 많이 살린다.', 'text-anchor="middle" fill="#555" font-size="11"');
+    b += T(W / 2, H - 12, 'ε 1 이 높은 TPS 에서 무너지는 이유: 더 많이 살린 tx 를 피어(16 vCPU, 2개)가 제때 커밋하지 못해 지연이 쌓이고 배치 사이 낡은 읽기가 늘어난다(§77).', 'text-anchor="middle" fill="#555" font-size="11"');
+    save('figP6-boundary', W, H, b);
   }
 }

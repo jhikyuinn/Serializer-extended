@@ -1,0 +1,32 @@
+12:21:20 CONFIG=l1 TRIALS=10 NODES=10
+12:22:27 l1 term #1 victim=snode-79d9585949-whlk5 takeover=302ms mttr=3596ms applied=10/10
+12:22:45 l1 term #2 victim=snode-79d9585949-4jznv takeover=319ms mttr=4359ms applied=10/10
+12:23:02 l1 term #3 victim=snode-79d9585949-qqplf takeover=284ms mttr=3577ms applied=10/10
+12:23:19 l1 term #4 victim=snode-79d9585949-lhm78 takeover=402ms mttr=3700ms applied=10/10
+12:23:36 l1 term #5 victim=snode-79d9585949-kz84b takeover=421ms mttr=4239ms applied=10/10
+12:23:53 l1 term #6 victim=snode-79d9585949-x7nkk takeover=535ms mttr=3823ms applied=10/10
+12:24:10 l1 term #7 victim=snode-79d9585949-swcbq takeover=350ms mttr=6558ms applied=10/10
+12:24:28 l1 term #8 victim=snode-79d9585949-f5qsn takeover=435ms mttr=7352ms applied=10/10
+12:24:45 l1 term #9 victim=snode-79d9585949-vxvgs takeover=287ms mttr=3579ms applied=10/10
+12:25:02 l1 term #10 victim=snode-79d9585949-4qt8w takeover=481ms mttr=4329ms applied=10/10
+12:25:20 l1 kill #1 victim=snode-79d9585949-gzvpx takeover=671ms mttr=3942ms applied=10/10
+12:25:40 l1 kill #2 victim=snode-79d9585949-jc9w6 takeover=257ms mttr=3528ms applied=10/10
+12:26:01 l1 kill #3 victim=snode-79d9585949-22k6c takeover=1310ms mttr=5299ms applied=10/10
+12:26:21 l1 kill #4 victim=snode-79d9585949-jxt62 takeover=784ms mttr=4081ms applied=10/10
+12:26:42 l1 kill #5 victim=snode-79d9585949-b7c7b takeover=934ms mttr=4235ms applied=10/10
+12:27:02 l1 kill #6 victim=snode-79d9585949-hf9hd takeover=1151ms mttr=4423ms applied=10/10
+12:27:24 l1 kill #7 victim=snode-79d9585949-8kxgd takeover=1121ms mttr=4390ms applied=10/10
+12:27:45 l1 kill #8 victim=snode-79d9585949-xf24w takeover=1326ms mttr=4572ms applied=10/10
+12:28:06 l1 kill #9 victim=snode-79d9585949-868s8 takeover=739ms mttr=4035ms applied=10/10
+12:28:27 l1 kill #10 victim=snode-79d9585949-trg8q takeover=1181ms mttr=4451ms applied=10/10
+12:28:47 l1 stop #1 victim=snode-79d9585949-dvt5g takeover=537ms mttr=3804ms applied=10/10
+12:29:08 l1 stop #2 victim=snode-79d9585949-tsm8h takeover=1034ms mttr=4307ms applied=10/10
+12:29:30 l1 stop #3 victim=snode-79d9585949-k9hsb takeover=997ms mttr=4281ms applied=10/10
+12:29:50 l1 stop #4 victim=snode-79d9585949-zgjdt takeover=592ms mttr=3870ms applied=10/10
+12:30:11 l1 stop #5 victim=snode-79d9585949-lbd2q takeover=1100ms mttr=4427ms applied=10/10
+12:30:31 l1 stop #6 victim=snode-79d9585949-zqnvj takeover=322ms mttr=3600ms applied=10/10
+12:30:51 l1 stop #7 victim=snode-79d9585949-nc2wt takeover=894ms mttr=4254ms applied=10/10
+12:31:14 l1 stop #8 victim=snode-79d9585949-2wdsh takeover=1357ms mttr=4621ms applied=10/10
+12:31:35 l1 stop #9 victim=snode-79d9585949-xfbp9 takeover=1070ms mttr=4343ms applied=10/10
+12:31:56 l1 stop #10 victim=snode-79d9585949-jcfp7 takeover=1398ms mttr=4673ms applied=10/10
+12:31:56 끝

@@ -1,0 +1,30 @@
+11:04:19 CONFIG=new TRIALS=10 NODES=10
+11:05:19 new term #1 victim=snode-58d869d994-8sg68 takeover=741ms mttr=7487ms applied=10/10
+11:05:36 new term #2 victim=snode-58d869d994-nnkqc takeover=284ms mttr=4592ms applied=10/10
+11:05:53 new term #3 victim=snode-58d869d994-j8n9c takeover=740ms mttr=4970ms applied=10/10
+11:06:10 new term #4 victim=snode-58d869d994-hps82 takeover=457ms mttr=3740ms applied=10/10
+11:06:27 new term #5 victim=snode-58d869d994-wnvj2 takeover=339ms mttr=6612ms applied=10/10
+11:06:44 new term #6 victim=snode-58d869d994-7lmcs takeover=281ms mttr=5869ms applied=10/10
+11:07:01 new term #7 victim=snode-58d869d994-5tfzm takeover=872ms mttr=5607ms applied=10/10
+11:07:18 new term #8 victim=snode-58d869d994-x7jxw takeover=423ms mttr=4239ms applied=10/10
+11:07:35 new term #9 victim=snode-58d869d994-7czt5 takeover=476ms mttr=5979ms applied=10/10
+11:07:53 new term #10 victim=snode-58d869d994-2pjdk takeover=932ms mttr=5605ms applied=10/10
+11:08:11 new kill #1 victim=snode-58d869d994-rcs5x takeover=1636ms mttr=4923ms applied=10/10
+11:08:29 new kill #2 victim=snode-58d869d994-rcs5x takeover=2067ms mttr=5350ms applied=10/10
+11:08:53 new kill #3 victim=snode-58d869d994-ksdxx takeover=926ms mttr=4570ms applied=10/10
+11:09:12 new kill #4 victim=snode-58d869d994-ksdxx takeover=2296ms mttr=5542ms applied=10/10
+11:09:33 new kill #5 victim=snode-58d869d994-rcs5x takeover=2478ms mttr=5750ms applied=10/10
+11:10:07 new kill #6 victim=snode-58d869d994-zbfbs takeover=1540ms mttr=4837ms applied=10/10
+11:10:26 new kill #7 victim=snode-58d869d994-zbfbs takeover=2010ms mttr=5285ms applied=10/10
+11:10:49 new kill #8 victim=snode-58d869d994-rcs5x takeover=2625ms mttr=5894ms applied=10/10
+11:11:50 new kill #9 victim=snode-58d869d994-ksdxx takeover=2277ms mttr=5536ms applied=10/10
+11:12:26 new kill #10 victim=snode-58d869d994-zbfbs takeover=2124ms mttr=5398ms applied=10/10
+11:13:02 new stop #1 victim=snode-58d869d994-rcs5x takeover=2035ms mttr=5308ms applied=10/10
+11:13:23 new stop #2 victim=snode-58d869d994-zbfbs takeover=2984ms mttr=6262ms applied=10/10
+11:14:46 new stop #3 victim=snode-58d869d994-ksdxx takeover=2713ms mttr=5989ms applied=10/10
+11:15:49 new stop #4 victim=snode-58d869d994-zbfbs takeover=2013ms mttr=5279ms applied=10/10
+11:16:09 new stop #5 victim=snode-58d869d994-ksdxx takeover=2118ms mttr=5387ms applied=10/10
+11:17:51 new stop #6 victim=snode-58d869d994-rcs5x takeover=2143ms mttr=5409ms applied=10/10
+11:18:09 new stop #7 victim=snode-58d869d994-ksdxx takeover=1752ms mttr=5021ms applied=10/10
+11:20:50 s-node 가 120초 안에 준비되지 않았다
+11:20:50 끝

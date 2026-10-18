@@ -1,0 +1,5 @@
+11:48:53 CONFIG=new TRIALS=3 NODES=10
+11:49:55 new stop #1 victim=snode-58d869d994-t22cm takeover=2224ms mttr=5499ms applied=10/10
+11:50:17 new stop #2 victim=snode-58d869d994-v4mvr takeover=2181ms mttr=5463ms applied=10/10
+11:50:39 new stop #3 victim=snode-58d869d994-zzmst takeover=3072ms mttr=6342ms applied=10/10
+11:50:39 끝

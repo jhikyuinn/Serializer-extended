@@ -1,0 +1,5 @@
+[12:52:26] RUN_ID=lease-busy SYSTEMS=[BE] URGENT=[0] REPS=1 TPS=350 DURATION=600 s=1.15 prw=0.5 eps=0.1/0.75 abortNotify=true
+[12:52:27] == BE urgent=0 rep=1
+| users | 103048 | 107099 | 350.0           | 2.63            | 0.10            | 0.46            | 344.2            |
+[13:03:52] 끝. 정리: node aggregate-users.js results/lease-busy
+[13:04:00] 프로세서를 serializer 로 되돌린다

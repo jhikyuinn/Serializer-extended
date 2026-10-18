@@ -1,0 +1,32 @@
+12:31:58 CONFIG=g1l1 TRIALS=10 NODES=10
+12:33:05 g1l1 term #1 victim=snode-dddbb69c8-9nnqz takeover=269ms mttr=3574ms applied=10/10
+12:33:21 g1l1 term #2 victim=snode-dddbb69c8-cvw5j takeover=295ms mttr=3624ms applied=10/10
+12:33:38 g1l1 term #3 victim=snode-dddbb69c8-x6ddf takeover=301ms mttr=5210ms applied=10/10
+12:33:54 g1l1 term #4 victim=snode-dddbb69c8-rr6kv takeover=401ms mttr=4886ms applied=10/10
+12:34:11 g1l1 term #5 victim=snode-dddbb69c8-hwm9f takeover=557ms mttr=6858ms applied=10/10
+12:34:28 g1l1 term #6 victim=snode-dddbb69c8-z27rr takeover=302ms mttr=5608ms applied=10/10
+12:34:44 g1l1 term #7 victim=snode-dddbb69c8-fvtz7 takeover=302ms mttr=3972ms applied=10/10
+12:35:01 g1l1 term #8 victim=snode-dddbb69c8-m4qqw takeover=516ms mttr=6509ms applied=10/10
+12:35:18 g1l1 term #9 victim=snode-dddbb69c8-2xkj4 takeover=288ms mttr=6389ms applied=10/10
+12:35:34 g1l1 term #10 victim=snode-dddbb69c8-8j7t8 takeover=269ms mttr=3980ms applied=10/10
+12:35:50 g1l1 kill #1 victim=snode-dddbb69c8-262xc takeover=736ms mttr=2773ms applied=10/10
+12:36:11 g1l1 kill #2 victim=snode-dddbb69c8-lk4wj takeover=197ms mttr=2676ms applied=10/10
+12:36:31 g1l1 kill #3 victim=snode-dddbb69c8-6566k takeover=1158ms mttr=3191ms applied=10/10
+12:36:52 g1l1 kill #4 victim=snode-dddbb69c8-9hhs7 takeover=1217ms mttr=3313ms applied=10/10
+12:37:13 g1l1 kill #5 victim=snode-dddbb69c8-vh6gr takeover=1097ms mttr=3329ms applied=10/10
+12:37:32 g1l1 kill #6 victim=snode-dddbb69c8-g2ct5 takeover=511ms mttr=2773ms applied=10/10
+12:37:51 g1l1 kill #7 victim=snode-dddbb69c8-4pz2h takeover=648ms mttr=2769ms applied=10/10
+12:38:11 g1l1 kill #8 victim=snode-dddbb69c8-9lrc8 takeover=789ms mttr=2835ms applied=10/10
+12:38:32 g1l1 kill #9 victim=snode-dddbb69c8-f5qvz takeover=942ms mttr=3191ms applied=10/10
+12:38:53 g1l1 kill #10 victim=snode-dddbb69c8-fqsl9 takeover=581ms mttr=2942ms applied=10/10
+12:39:13 g1l1 stop #1 victim=snode-dddbb69c8-szrrt takeover=1404ms mttr=3828ms applied=10/10
+12:39:34 g1l1 stop #2 victim=snode-dddbb69c8-tdnrp takeover=1066ms mttr=3349ms applied=10/10
+12:39:56 g1l1 stop #3 victim=snode-dddbb69c8-thv8m takeover=1260ms mttr=3654ms applied=10/10
+12:40:18 g1l1 stop #4 victim=snode-dddbb69c8-j48qn takeover=1160ms mttr=3560ms applied=10/10
+12:40:37 g1l1 stop #5 victim=snode-dddbb69c8-mjs5w takeover=291ms mttr=2589ms applied=10/10
+12:40:57 g1l1 stop #6 victim=snode-dddbb69c8-pt57b takeover=1038ms mttr=3484ms applied=10/10
+12:41:17 g1l1 stop #7 victim=snode-dddbb69c8-grqd8 takeover=1074ms mttr=3489ms applied=10/10
+12:41:37 g1l1 stop #8 victim=snode-dddbb69c8-bf89d takeover=1103ms mttr=3570ms applied=10/10
+12:41:56 g1l1 stop #9 victim=snode-dddbb69c8-m4b8m takeover=380ms mttr=3034ms applied=10/10
+12:42:18 g1l1 stop #10 victim=snode-dddbb69c8-65nvn takeover=818ms mttr=3205ms applied=10/10
+12:42:18 끝

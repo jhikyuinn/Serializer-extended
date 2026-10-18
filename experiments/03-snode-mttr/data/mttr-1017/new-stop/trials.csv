@@ -1,0 +1,4 @@
+config,type,trial,t0,takeover_ms,mttr_ms,applied,victim
+new,stop,1,1792205385707,2224,5499,10,snode-58d869d994-t22cm
+new,stop,2,1792205407384,2181,5463,10,snode-58d869d994-v4mvr
+new,stop,3,1792205429263,3072,6342,10,snode-58d869d994-zzmst

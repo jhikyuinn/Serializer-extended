@@ -2,11 +2,11 @@
 
 [← README](../README.md) · 모든 수치는 이 저장소의 코드로 직접 측정한 값이고, 근거는 [실험 노트](lab-notebook.md)의 § 번호에 있습니다.
 
-> 클라우드 1,000 TPS 결과는 측정 도구(Caliper SDK)의 부담을 고친 뒤 다시 잰 값입니다(§68, §78). 그 전 측정([experiments/cloud-figs](../experiments/cloud-figs/README.md))은 Serializer 쪽에 부담이 섞여 불리하게 나왔습니다.
+> 클라우드 1,000 TPS 결과는 측정 도구(Caliper SDK)의 부담을 고친 뒤 다시 잰 값입니다(§68, §78). 그 전 측정([experiments/01-contention-batch/archive-v1](../experiments/01-contention-batch/archive-v1/README.md))은 Serializer 쪽에 부담이 섞여 불리하게 나왔습니다.
 
 ## 배치 크기: Fabric은 무너지고 Serializer는 버틴다
 
-![배치 효과](../experiments/cloud-figs-v2/fig-a-batch.png)
+![배치 효과](../experiments/01-contention-batch/figures/fig-a-batch.png)
 
 AWS VM 4대, 1,000 TPS, smallbank, Zipf s 1.0, 3회 평균 (§78)
 
@@ -21,7 +21,7 @@ AWS VM 4대, 1,000 TPS, smallbank, Zipf s 1.0, 3회 평균 (§78)
 
 ## 혼잡도: 이득은 실제 충돌 정도에 따라 정해진다
 
-![혼잡도 효과](../experiments/cloud-figs-v2/fig-b-contention.png)
+![혼잡도 효과](../experiments/01-contention-batch/figures/fig-b-contention.png)
 
 - 가로축은 Zipf s가 아니라 **기준 Fabric의 실패율**이다. s와 배치가 달라도 한 축에 놓을 수 있다.
 - 측정한 범위(Fabric 실패율 45~94%)의 모든 지점에서 앞선다. 배율은 ×1.13에서 ×7.93까지다.
@@ -56,9 +56,9 @@ AWS VM 4대, 1,000 TPS, smallbank, Zipf s 1.0, 3회 평균 (§78)
 
 ## ε: 더 살리는 것과 실시간성의 맞교환 (§73~§77)
 
-ε는 충돌 그래프로 정렬할 tx의 비율이다. 키우면 더 많이 살리지만 정렬 비용이 초선형으로 는다. 자세한 지표와 그림은 [experiments/eps-tps/METRICS.md](../experiments/eps-tps/METRICS.md)에 있다.
+ε는 충돌 그래프로 정렬할 tx의 비율이다. 키우면 더 많이 살리지만 정렬 비용이 초선형으로 는다. 자세한 지표와 그림은 [experiments/02-epsilon-realtime/METRICS.md](../experiments/02-epsilon-realtime/METRICS.md)에 있다.
 
-![ε 맞교환](../experiments/eps-tps/figP1-tradeoff.png)
+![ε 맞교환](../experiments/02-epsilon-realtime/figures/figP1-tradeoff.png)
 
 - **배치가 작으면 큰 ε가 이득이다.** custom 부하, 배치 1000에서 ε 1은 배치 안에서 79.8%를 살린다(ε 0은 44.5%). 클라우드 1,000 TPS에서 실제 성공도 +51%였다(469 대 311/s).
 - **배치가 크면 작은 ε가 실시간성을 지킨다.** 배치 10000에서 ε 0.5 이하는 20k TPS까지 1 s 마감을 어기지 않는다(시뮬레이션). ε 1은 10k TPS에서 배치의 67%가 마감을 넘는다.
@@ -77,6 +77,30 @@ AWS VM 4대, 1,000 TPS, smallbank, Zipf s 1.0, 3회 평균 (§78)
 
 Fabric++와 HTFabric은 같은 프로세서 자리에 논문대로 구현해 같은 부하로 비교했습니다. 전체 표와 보조 부하(custom) 결과는 [summary.md](summary.md) §5에 있습니다.
 
+## 비교 시스템과 사용자 공정성 (클라우드, §84~§85)
+
+AWS VM 4대, 1,000 TPS, 배치 100, Zipf s 1.0, 3회. 자세한 내용은 [experiments/04-fairness-algos](../experiments/04-fairness-algos/README.md)에 있습니다.
+
+![성능](../experiments/04-fairness-algos/figures/fig1-performance.png)
+
+| 긴급 끔 | Fabric | Fabric++ | HTFabric | **Serializer** (일반 ε 0.75) |
+|---|---|---|---|---|
+| smallbank 성공/s | 382 | 452 | 474 | **503** |
+| smallbank Query 성공률 | 39% | 55% | 56% | **65%** |
+| custom 성공/s (일반 ε 1이면 740) | 674 | 726 | 736 | 702 |
+| smallbank 사용자 공정성 (Jain) | 0.946 | **0.994** | 0.973 | 0.988 |
+
+- smallbank 처리량은 Serializer가 가장 높습니다(Fabric 대비 +32%, Fabric++ +11%, HTFabric +6%). 긴급 tx 성공률도 +10%p 높습니다.
+- 공정성은 Fabric++가 가장 좋습니다. 블록 안 위치를 분석해 보니, Fabric++는 가까운 사용자의 tx를 정렬 단계에서 더 많이 버려 결과가 평평해집니다. Serializer는 사용자마다 블록에 넣는 수가 같습니다.
+
+## 추가 이점: 실패 통보, 자원, 쏠린 사용자 (클라우드, §86)
+
+자세한 내용은 [experiments/07-extra-advantages](../experiments/07-extra-advantages/README.md)에 있습니다.
+
+- **실패를 더 빨리 안다.** 실패를 알기까지 평균 153 ms로 Fabric(226 ms)보다 짧습니다(smallbank, 배치 100). 실패의 78%를 프로세서가 미리 통보하기 때문입니다.
+- **성공 tx당 자원이 적다.** smallbank에서 성공 tx당 피어 CPU 7.54 ms(Fabric 9.76), 원장 5.96 KB(Fabric 10.39)입니다. 원장에 쌓이는 무효 tx는 33.7%(Fabric 61.9%)입니다.
+- **한 사용자만 인기 계좌에 몰리면 그 사용자는 어느 시스템에서도 보호되지 않습니다**(쓰기 성공 7~9%). α를 바꿔도 같습니다. 대부분 같은 배치의 앞선 쓰기를 읽어 버려지는데, 이 검사에는 α가 쓰이지 않기 때문입니다.
+
 ## 검증 노드 장애 복구 (MTTR)
 
 MTTR은 장애가 난 때부터 **모든 w-node가 새 커미티를 받아 합의를 다시 할 수 있을 때까지**로 정의했습니다.
@@ -87,6 +111,18 @@ MTTR은 장애가 난 때부터 **모든 w-node가 새 커미티를 받아 합�
 | 멈춤 (SIGSTOP) | 11.8 s | **5.4 s** (5.0~6.3) | 3.5~4.3 s |
 | 정상 종료 | 5.1 s, 1회 복구 실패 | 5.6 s, 10/10 | 4.0~5.1 s |
 
+2026-10-19에 현재 설정으로 다시 측정한 중앙값은 정상 종료 4.79 s, SIGKILL 4.49 s, SIGSTOP 5.77 s입니다(유형마다 10회, [experiments/03-snode-mttr](../experiments/03-snode-mttr/README.md)).
+
+### 합의 성공률: s-node pod 수 × pod 장애 확률 (§87)
+
+이 실측값으로 보정한 시뮬레이션에서 합의 성공률을 계산했습니다(w-node 10개 중 비잔틴 3개, 500라운드, 마감 10 s, 설정마다 200회). 자세한 내용은 [experiments/06-consensus-sim](../experiments/06-consensus-sim/README.md)에 있습니다.
+
+![합의 성공률](../experiments/06-consensus-sim/figures/fig-consensus.png)
+
+- pod 장애만 있을 때(15%): pod 1개 79.5%, 3개 99.1%, 5개 100%입니다.
+- 비잔틴 w-node가 있으면 약 75%에서 포화합니다. 원 실험의 결론과 같습니다.
+- 현재 설계는 이전 설계보다 비잔틴 포함 조건에서 10~11%p 높습니다. 커미티를 만드는 시간이 짧아졌기 때문입니다.
+
 ## 비용과 한계
 
 결과가 불리한 경우도 그대로 적었습니다.
@@ -94,8 +130,9 @@ MTTR은 장애가 난 때부터 **모든 w-node가 새 커미티를 받아 합�
 - **피어 처리 한계:** 이 구성(Fabric VM 16 vCPU)에서는 배치 100에서 약 2,000 TPS, 배치 1000에서 약 3,000 TPS를 넘으면 무너진다. Fabric도 4,000 TPS에서 무너졌다(2,000~3,000 TPS의 Fabric은 재지 않았다).
 - **큰 ε의 비용:** 정렬 시간뿐 아니라, 더 많이 살린 tx를 피어가 커밋하는 부담도 있다. 고부하에서는 작은 ε가 낫다.
 - **부하에 따라 다른 이득:** smallbank(계좌 100, 키 200개)에서는 ε를 키워도 살리는 tx가 늘지 않는다. 이 부하에서 이득은 주로 읽기 전용을 앞에 두고 충돌할 tx를 블록에서 빼는 데서 나온다. 재정렬로 살릴 여지가 큰 custom 부하에서는 ε의 효과가 크다.
-- **보조 부하(custom)에서는 원 실험의 ε 값(0.1 / 0.75)으로 HTFabric에 진다**(로컬, 87.3 대 107.9/s). ε을 1/1로 두면 111.5/s로 비슷해진다.
-- **공정성(사용자 간 편차)은 로컬 비교에서 Fabric++가 가장 좋다.**
+- **보조 부하(custom)에서는 원 실험의 일반 ε 0.75로 HTFabric에 진다**(로컬 87.3 대 107.9/s, 클라우드 702 대 736/s). 일반 ε을 1로 두면 비슷해진다(로컬 111.5/s, 클라우드 740/s).
+- **공정성(사용자 간 편차)은 로컬·클라우드 비교 모두 Fabric++가 가장 좋다.** Serializer가 그다음이다.
+- **인기 키에 몰리는 사용자 보호:** 한 사용자만 인기 계좌에 몰리면 α로도 보호되지 않는다(§86). 보호하려면 설계 변경이 필요하다.
 - **측정 범위:** 비교 시스템과의 비교는 단일 PC(상한 약 400 TPS)에서 했다. HTFabric은 정렬(WARD)만 비교했고 피어 쪽 재실행(TSP)은 뺐다. 고부하 결과는 1회 측정이다.
 
 ## 확장 실험에서 추가로 확인한 것
@@ -106,7 +143,7 @@ MTTR은 장애가 난 때부터 **모든 w-node가 새 커미티를 받아 합�
 |---|---|---|
 | 이득이 나타나는 혼잡도 | s > 1.15 구간에서 앞섬 | s 0~2 전체에서 앞섬. 로컬 균등 분포(s 0)에서도 +9~11%, 클라우드 s 0에서 ×1.13~2.49 |
 | 외부 정렬의 추가 지연 | 약 +50 ms | 클라우드 재측정에서는 오히려 Fabric보다 짧음(−11~−187 ms). 무효 tx를 뺀 블록이 가볍기 때문 |
-| 검증 노드 복구 시간 | 350 ms (시뮬레이션 설정값) | 실제 구조에서 "모든 w-node가 다시 합의할 수 있을 때까지"를 측정해 5.4 s (활성 pod 전환만은 0.5~2.2 s) |
-| ε 설정 | 0.1 / 0.75 | 부하·배치에 따라 고른다. 배치가 작고 부하가 여유로우면 ε 1(성공 +51%), 배치가 크거나 피어 한계에 가까우면 작은 ε |
+| 검증 노드 복구 시간 | 350 ms (시뮬레이션 설정값) | 실제 구조에서 "모든 w-node가 다시 합의할 수 있을 때까지"를 측정해 4.5~5.8 s (활성 pod 전환만은 0.6~2.4 s). 이 값으로 다시 계산한 합의 성공률도 원 실험과 같은 경향(pod 3개 이상에서 포화, 비잔틴 포함 약 75%) |
+| ε 설정 | 긴급 1 / 일반 0.75 (긴급 tx 비율 10%) | 부하·배치에 따라 고른다. 배치가 작고 부하가 여유로우면 ε 1(성공 +51%), 배치가 크거나 피어 한계에 가까우면 작은 ε |
 
 비교 논문을 구현하면서 찾은 문제도 있습니다. HTFabric 의사코드의 in/out-degree가 정의와 반대로 되어 있었고, Fabric++의 고리 열거는 2,000건 배치에 80초가 걸려 Johnson 알고리즘으로 바꿨습니다(결과는 같음).

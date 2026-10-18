@@ -2020,7 +2020,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 | `w-node/wp2p/wp2p.go` | s-node 확인(ping) 주기와 응답 대기를 3초에서 **1초**로(`SnodeCheckInterval`). 재접속 한 번의 대기를 5초에서 **1초**로(`SnodeDialTimeout`). 재접속 전에 s-node peer의 **주소록을 설정 주소만 남기고 지우고, libp2p dial backoff를 지운다** |
 | `w-node/transceiver/node/main.go` | 플래그 `-snodeping`(1s), `-snodedial`(1s), `-regretry`(0.2s, 예전 1s), `-regtimeout`(1s, 예전 5s) |
 | `w-node/run_local.sh` | `NAME_PREFIX`. 사용자의 `wnode1..4`(원장 보관)를 건드리지 않고 측정용 `mt1..10`을 띄운다 |
-| `experiments/mttr/mttr.sh`, `run-all.sh` (신규) | 측정 도구 |
+| `experiments/03-snode-mttr/scripts/mttr.sh`, `run-all.sh` (신규) | 측정 도구 |
 
 - 수정 전 파일: `watchdog/bak-1017/`.
 - 이미지
@@ -2066,7 +2066,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 
 **사용자 판단:** 무상태 커미티(④)는 악의적인 w-node가 목록을 조작할 수 있다. 목록 검증(항목 검증, 목록 합의, 응답 서명)을 따로 만들어야 하므로 지금은 하지 않는다. 설정만 바꾸는 ①②를 잰다.
 
-**측정** (`fig57-data/mttr-1017b/`, §48과 같은 방법, 장애 유형마다 10회. 스크립트 `experiments/mttr/run-12.sh`. `mttr.sh`에 `SNODE_ENV`(추가 환경 변수)를 더했다)
+**측정** (`fig57-data/mttr-1017b/`, §48과 같은 방법, 장애 유형마다 10회. 스크립트 `experiments/03-snode-mttr/scripts/run-12.sh`. `mttr.sh`에 `SNODE_ENV`(추가 환경 변수)를 더했다)
 
 | 장애 | §48 기본 (Lease 2s, 유예 3s) | ① 유예 1s | ② Lease 1s (갱신 0.75s, 재시도 0.25s) | ①+② |
 |---|---|---|---|---|
@@ -2304,7 +2304,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 - s 1.0은 미리 정할 근거(YCSB 0.99)가 있다. 배치별 최적 s는 결과를 보고 고른 값이 된다.
 - 높은 s의 큰 이득은 버리지 않는다. Fabric 실패율을 가로축으로 한 곡선(s 0~2 전체)에 끝점으로 보인다.
 
-**그림:** `watchdog/experiments/cloud-figs/`의 `README.md`, `fig-a-batch.svg/png`, `fig-b-contention.svg/png`, `fig-data.json`.
+**그림:** `experiments/01-contention-batch/archive-v1/`의 `README.md`, `fig-a-batch.svg/png`, `fig-b-contention.svg/png`, `fig-data.json`.
 - 생성 스크립트는 `HLF/bench-scripts/cloudfigs.js`다.
 - A: s 1.0 고정, 배치 100/500/1000. 성공 처리량 ×1.21 / ×1.78 / ×2.54, 커밋 지연 차이 +29 / +151 / +401 ms(모든 tx 기준 +6 / +68 / +261 ms).
 - B: 가로축은 Fabric 실패율이다. (a) 처리량 배율(로그 축), (b) 커밋 지연 차이(3회 합성 표준편차 막대). §55 저충돌 점은 빈 점(1회분)으로 넣었다.
@@ -2320,7 +2320,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 - 그림 2: x s, y 초당 성공 tx
 - 그림 3: 역전 지점이 없으니 배치마다 최적 s가 잘 보이게
 
-**파일:** `watchdog/experiments/cloud-figs/fig1-block-time`, `fig2-throughput`, `fig3-best-s` (.svg/.png). 설명은 같은 폴더 `README.md` 뒷부분에 있다.
+**파일:** `experiments/01-contention-batch/archive-v1/fig1-block-time`, `fig2-throughput`, `fig3-best-s` (.svg/.png). 설명은 같은 폴더 `README.md` 뒷부분에 있다.
 - 스크립트는 `HLF/bench-scripts/cloudfigs2.js`와 `blocktime.js`다.
 
 **블록당 처리 시간의 정의 (내가 정함):** 배치 확정부터 피어 커밋 완료까지. 정렬 왕복, 블록 쓰기·전달, 피어 검증·커밋으로 나눈다. 블록 간격도 함께 그렸다.
@@ -2386,7 +2386,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 
 **사용자 요청:** 지금까지의 결과로 Serializer의 장점을 그래프로 뽑을 수 있는지 검토.
 
-**파일:** `watchdog/experiments/cloud-figs/fig4-query`, `fig5-block-waste`, `fig6-per-user`. 설명과 검토표는 README 마지막 절에 있다. 스크립트는 `HLF/bench-scripts/cloudfigs3.js`다.
+**파일:** `experiments/01-contention-batch/archive-v1/fig4-query`, `fig5-block-waste`, `fig6-per-user`. 설명과 검토표는 README 마지막 절에 있다. 스크립트는 `HLF/bench-scripts/cloudfigs3.js`다.
 
 **강한 장점** (클라우드, 3회)
 - 성공 처리량: 그림 2·A·B에 이미 있다.
@@ -2473,7 +2473,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 
 **사용자 요청:** ε에 따라 보내는 TPS를 키울 때 실시간으로 잘 동작하는지 보고 싶다. 바로 실험하지 말고 세팅과 보일 것을 정리해 달라.
 
-**계획:** `watchdog/experiments/eps-tps/PLAN.md`
+**계획:** `experiments/02-epsilon-realtime/PLAN.md`
 - **고정:** s 1.0, 배치 100, 계좌 100, Query 50%, User3 긴급 1, 60초(앞 5초 제외), 3회
 - **변수:** TPS 250~1500(6점) × Fabric / ε (0,0), (0.1,0.75), (1,1). 72회, 약 2.2시간
 - **판정 기준:** 받은 TPS ≥ 95%, 초 단위 지연에 추세 없음, 시간 초과 0, 긴급 지연 ≤ 일반
@@ -2712,7 +2712,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 **방법**
 - `kafka/processor/eps_cost_test.go`(`EPS_COST=1`일 때만 돈다)로 실험 부하와 같은 모양의 합성 배치를 만들어 `scheduleEpsilon`을 잰다.
   - 부하: smallbank 6종, 계좌 100, Zipf s, 쓰기 50%, 사용자 5명, User3의 쓰기는 긴급(`COST_URGENT`)
-- golang:1.24 컨테이너에서 `-mod=vendor`로 빌드했다. 격자는 `epscost-grid.sh`로 돌리고, 조건마다 120 s 제한을 둔다. 결과는 `watchdog/experiments/eps-tps/epscost-grid.out`이다.
+- golang:1.24 컨테이너에서 `-mod=vendor`로 빌드했다. 격자는 `epscost-grid.sh`로 돌리고, 조건마다 120 s 제한을 둔다. 결과는 `experiments/02-epsilon-realtime/data/epscost-grid.out`이다.
 - 검증: 긴급 없음, s 1.0, 배치 5000에서 43 ms(최대 118)였다. 클라우드 실측 29 ms(최대 88, §71, 긴급 0)와 같은 크기다.
 - 재는 것: 배치당 정렬 시간(5회 중앙값[최대], 배치 10000은 3회)과 배치 안에서 살린 tx 수. 비교로 도착 순서 그대로(Fabric)일 때의 유효 수도 잰다.
 
@@ -2751,7 +2751,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 - 이 실험은 Fabric 비교가 아니라 정렬 시스템의 동작과 ε 효과를 보이는 것이다. 그래서 높은 혼잡을 써도 된다(사용자 지적).
 - 로컬 시뮬레이션으로 진행했다.
 
-**설계와 결과:** `watchdog/experiments/eps-tps/SIM.md`, 그림 `figE1-cost`, `figE2-benefit`, `figE3-timeline`
+**설계와 결과:** `experiments/02-epsilon-realtime/SIM.md`, 그림 `figE1-cost`, `figE2-benefit`, `figE3-timeline`
 
 **요약**
 - ε는 정렬 비용을 0.5 ms부터 2.3 s(최대 5.2 s)까지 조절한다(배치 10000, s 2.0).
@@ -2767,7 +2767,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 **사용자 요청:** custom 부하로도 하자.
 
 **조건:** 키 10,000(인기 100), 읽기 4·쓰기 4, 혼잡 hr/hw 0.2/0.1·0.4/0.2·0.6/0.3, 배치 1000/5000/10000, ε 6개, 긴급 끔/켬. 108조건 모두 끝났다.
-- 결과와 해석은 `watchdog/experiments/eps-tps/SIM.md`의 custom 절과 `figC1-tradeoff`에 있다.
+- 결과와 해석은 `experiments/02-epsilon-realtime/SIM.md`의 custom 절과 `figC1-tradeoff`에 있다.
 
 **요약**
 - **맞교환이 보인다.**
@@ -2781,7 +2781,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 
 **사용자 요청:** 결과에 맞게 성능 지표와 그래프를 표현해 달라.
 
-**결과물:** `watchdog/experiments/eps-tps/METRICS.md`(지표 정의, 그림 읽는 법, 결론 문장 예시, 한계)
+**결과물:** `experiments/02-epsilon-realtime/METRICS.md`(지표 정의, 그림 읽는 법, 결론 문장 예시, 한계)
 - 그림 `figP1-tradeoff`(이득 대 처리 한도), `figP2-realtime`(TPS별 정렬 지연과 1 s 마감 위반), `figP3-urgent`(긴급 생존과 비용), `figP4-contention`(혼잡별 정렬 시간, smallbank·custom)
 - 스크립트: `HLF/bench-scripts/epssim-paper-figs.js`
 
@@ -2830,7 +2830,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 ## 79. 공정성과 재정렬 알고리즘 비교 실험 계획 초안 (2026-10-18)
 
 **사용자 요청:** 사용자 공정성 실험이자 다른 재정렬 알고리즘과 비교하는 실험을 정리한다.
-- 계획: `watchdog/experiments/fairness-algos/PLAN.md`
+- 계획: `experiments/04-fairness-algos/PLAN.md`
 - 비교 대상: A1, FPP, HTF, BE(논문 ε), BE(ε 1)
 - 부하: smallbank / custom, 긴급 0·1. BE의 α는 0/1/3
 - 지표: 성능, Jain, 최소/최대 비, abort 쏠림, 연속 abort
@@ -2844,7 +2844,7 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
 
 **결정 필요:** netem 실제 망 지연, BE ε 1 포함 여부, 사용자별 계좌 분포
 
-**§78 결과 (18:11 완료, 90회 모두 정상)** — `watchdog/experiments/cloud-figs-v2/README.md`, 그림은 같은 폴더(어제와 같은 이름)
+**§78 결과 (18:11 완료, 90회 모두 정상)** — `experiments/01-contention-batch/README.md`, 그림은 같은 폴더(어제와 같은 이름)
 - **Serializer가 1,000 TPS를 다 받는다**(999~1,001). Fabric 수치는 어제와 1~2% 안으로 같다.
 - **성공 배율이 커졌다.** s 1.0에서 ×1.31 / ×2.10 / ×2.98, 최대 ×7.93이다.
 - **커밋 지연은 모든 조건에서 Serializer가 짧다.** 배치 100에서 −11~−18 ms, 500에서 −46~−82, 1000에서 −130~−187 ms다. 블록 간격도 같아졌다.
@@ -2874,3 +2874,168 @@ B만 1000건, 250 TPS로 돌리며 `docker logs -t`로 측정했다. 배치는 1
   3. 보증 정책을 피어 1개로(OR). 보증 부하가 절반이 되지만 의미가 바뀐다.
   4. 이벤트 구독 부담 줄이기: filtered block 이벤트를 쓰거나, 구독을 org2로 나눈다.
 - 측정 실수: 처음에 docker stats 흐름 모드가 timeout으로 끝나지 않아 멈췄다. pkill 패턴이 ssh 명령 자신과 맞아 연결이 두 번 끊겼다. 첫 BE 결과 폴더가 남아 있어 건너뛰기도 했다. 모두 정리하고 다시 잰 값이 위 표다.
+
+## 82. experiments 폴더 정리 (GitHub 업로드 준비, 2026-10-18)
+
+**사용자 요청:** experiments 폴더를 GitHub에 올리도록 정리.
+
+**새 구조:** `experiments/README.md`(목차)
+- `01-contention-batch/`: 예전 `cloud-figs-v2`가 본문이다. 예전 `cloud-figs`는 `archive-v1/`로 옮겼고, `EXPERIMENT_SETUP.md`는 `SETUP.md`가 됐다.
+- `02-epsilon-realtime/`: 예전 `eps-tps`
+- `03-snode-mttr/`: 예전 `mttr` 스크립트에 `fig57-data/mttr-1017{,b}` 사본을 더했다(`R` 환경 변수로 경로를 바꿀 수 있다).
+- `04-fairness-algos/`: 계획
+- `05-diagnostics/`: §59, §67~§71, §80 진단
+- 각 폴더는 `figures/ data/ scripts/ README.md`로 나눴다. `scripts/`는 `HLF/bench-scripts`의 사본이다.
+
+**위 절들의 옛 경로**(`experiments/01-contention-batch/archive-v1`, `cloud-figs-v2`, `eps-tps`, `mttr`)는 이 표대로 바뀌었다.
+
+**`.gitignore`:** `kafka/processor/epscost.test`(37 MB)와 격자 출력 `*.out`을 뺐다.
+
+**커밋과 푸시는 하지 않았다.** 사용자 확인이 필요하다. 저장소 전체에 커밋되지 않은 변경이 많다.
+
+## 81. 2번 실험 빈칸 채우기 결과 (2026-10-18 18:54~20:17 KST, 43회 모두 정상)
+
+**사용자 요청:** 2번(배치·ε 실시간성) 실험의 빈칸을 채운다.
+- 스크립트 `HLF/bench-scripts/cloud-gapfill.sh`, 요약 `gapfill.js`, 결과 `results/gapA/B/C-*`
+- 정리는 `experiments/02-epsilon-realtime/METRICS.md`의 "빈칸 보충" 절, 그림 `figP6-boundary`, `data/gapfill-summary.md`
+
+**A. 경계 TPS** (custom, 배치 1000, 3회, 초당 성공)
+- ε 0: 1,500 → 440, 2,000 → 550, 2,500 → 610
+- ε 0.5: 479 / 547 / 566
+- ε 1: 564 / 484 ± 150 / 180
+- → 1,500 이하는 ε 1, 약 2,000은 ε 0~0.5, 2,500 이상은 ε 0이다.
+
+**B. 긴급 ε** (1,000 TPS, ε_low 0.75)
+- 긴급 tx 성공률: ε_urgent 0.1은 47.5%, 1은 61.7%다.
+- 지연(866 대 896 ms), 전체 성공(376 대 381/s), 정렬(0.7 ms)은 같다.
+- 시뮬레이션보다 폭이 작다. 배치 사이의 낡은 읽기가 더해지기 때문이다.
+
+**C. 고부하 반복** (smallbank s 1.0, 3회)
+- 3,000 TPS: 배치 100은 31/s·7.9 s로 무너졌다. 배치 1000은 899/s·683 ms로 정상이었다.
+- 4,000 TPS: 배치 1000은 77/s, 배치 5000은 435 ± 209/s·6.2 s로 불안정했다.
+
+**그 밖에 고친 것**
+- `gapfill.js`가 긴급 실행을 `u1`에서 읽게 했다.
+- `epssim-paper-figs.js`가 정리된 폴더(`data/`, `figures/`)를 읽고 쓰게 했다.
+
+## 83. 논문 ε 설정 정정과 실험 4 세팅 확정 (2026-10-18)
+
+**사용자 정정:** 논문 설정은 **긴급 ε 1, 일반 ε 0.75**다. "0.1"은 긴급 tx 비율(10%)이다.
+- 원고에는 두 곳이 다르게 적혀 있다.
+  - 그림 14 실험: "e_urgent fixed at 1 … ratio of urgent TXs … 10%"
+  - 그림 16 실험: "e_urgent and e_low were set to 0.1 and 0.75". **원고에서 고쳐야 할 문장이다.**
+- 지금까지 "논문 ε 0.1/0.75"로 쓴 것은 이 그림 16 문장을 따른 것이었다.
+
+**영향**
+- **01(긴급 0)과 02의 긴급 끔 결과:** 긴급 ε가 쓰이지 않으므로 논문 설정과 결과가 같다. 표기만 고쳤다.
+- **02 P3, §74·§75의 긴급 켬 "논문" 점:** 논문 설정이 아니다(긴급 0.1 조건). 문서와 그림 설명을 고쳤다.
+- **§81-B:** 긴급 1이 논문 설정이다(긴급 tx 성공률 61.7%). 0.1은 47.5%였다.
+- **§40 등 로컬 긴급 켬 실험(0.1/0.75):** 논문 설정이 아니었다.
+- 우리 긴급 설정(User3의 쓰기 전부)은 전체의 약 10%라서 논문의 긴급 비율과 같다.
+
+**고친 것**
+- 그림 스크립트의 범례와 축: "Serializer (일반 ε 0.75, 긴급 0)", "0.1/0.75"로 바꿨다.
+- 01·02 그림 10개를 다시 만들었다(데이터는 그대로다).
+- METRICS·SIM·README 표기를 고쳤다.
+- `zipfbench/userbench.sh`의 기본 EPS_URGENT를 0.1에서 1로 바꿨다(로컬과 클라우드).
+
+**실험 4 세팅 확정** (`experiments/04-fairness-algos/PLAN.md`)
+- 흉내 지연 그대로, 계좌 분포는 같게 둔다.
+- Serializer는 긴급 1 × 일반 0.5 / 0.75 / 1이다. A1·FPP·HTF와 함께 6시스템이다.
+- 90회, 약 2시간 10분이다.
+
+## 84. 실험 4 시작: 공정성 + 재정렬 알고리즘 비교 (2026-10-18 20:38 KST~)
+
+**준비**
+- 프로세서 compose에 `-alpha ${PROCESSOR_ALPHA:-1}`을 넣었다. `users.js`에 tx별 기록(`tx-*.json`)을 넣었다.
+- 사전 점검(`fsmoke-*`): FPP·HTF 정상, α 0이 적용됐다.
+
+**본 실험:** `HLF/bench-scripts/cloud-fair.sh`, 78회
+- 6시스템 × 부하 2 × 긴급 2(A1은 끔만) × 3바퀴 = 66회
+- α 0/3 × 부하 2 × 3바퀴 = 12회
+- 요약은 `fair.js`, 정리 폴더는 `experiments/04-fairness-algos/`(README, scripts)다.
+
+**§84 결과 (22:34 완료, 78회 모두 정상)** — `experiments/04-fairness-algos/README.md`, 그림 `fig1-performance`·`fig2-fairness`·`fig3-urgent-alpha`, 요약 `data/fair-summary.md`
+- **smallbank(긴급 끔) 성공/s:** Fabric 382, FPP 452, HTF 474, S 502~503(ε_low 무관)
+- **Query 성공률:** S 65%, FPP·HTF 55~56%, Fabric 39%
+- **custom 성공/s:** S ε_low 1이 740으로 HTF 736과 같다. 논문 0.75는 702, 0.5는 673이다.
+- **공정성 Jain(smallbank):** FPP 0.994, S 0.987~0.989, HTF 0.973, Fabric 0.946
+  - Fabric은 U1(54%)에 편중된다. S는 U1을 41%로 낮춰 격차를 줄인다.
+  - custom은 모두 ≥ 0.992다.
+- **긴급 tx 성공률:** S 45~47%, FPP·HTF 36%(smallbank). custom은 S 74~76%, 다른 둘은 71~72%다. VIP를 뺀 Jain은 0.986~0.988이다.
+- **α 0/1/3:** 공정성에 효과가 없다. 사용자와 계좌가 무관한 부하라서 그렇다고 본다.
+- **abort 쏠림·연속 실패:** 시스템 간 차이가 뚜렷하지 않다.
+
+## 85. tx별 블록 안 위치: U1이 유리한 이유와 Fabric++가 공정한 이유 (2026-10-18 22:45~23:00)
+
+**방법**
+- smallbank s 1.0, 1,000 TPS, 배치 100, 긴급 0. A1·FPP·BE(1/0.75)를 1회씩 돌렸다.
+- 실행 직후 **피어**에서 블록을 모두 꺼냈다. 오더러 블록에는 유효 표시가 없다.
+- 이 Fabric은 kvrwset 패키지가 바뀌어 `configtxlator`로 블록을 풀 수 없다. 그래서 필요한 필드만 wire format으로 읽는다(`HLF/bench-scripts/blockpos-extract.py`).
+- 실행 스크립트는 `cloud-blockpos.sh`, 분석은 `blockpos.js`, 결과는 `results/blockpos/blockpos-*.csv`다.
+
+**결과 (정상 구간 블록)**
+- **Fabric(A1):** 블록 안 위치와 유효율이 무관하다. 앞 → 뒤 구간이 38 / 36 / 37 / 37 / 39%다. 그런데 같은 구간 안에서도 사용자별 차이가 그대로다(앞 1/5에서 U1 54.5%, U5 26.8%).
+  - 같은 블록 안에서 tx 생성 시각(프로포절 타임스탬프)을 블록 최솟값과 비교하면 U1 +189, U2~U4 +83~108, U5 +62 ms다. U1의 tx가 가장 "젊다".
+  - → **U1이 유리한 것은 블록 안 위치가 아니라 tx 나이 때문이다.** 보증 뒤 순서가 정해지기까지 시간이 짧아 이전 블록에 의해 낡을 확률이 낮다(배치 사이의 낡은 읽기).
+  - 왜 사용자마다 나이가 다른지(흉내 지연은 보증 전에 걸린다)는 아직 확인하지 못했다.
+- **FPP:** 블록에 넣은 tx 수가 U1 2,540 대 U2~U5 2,841~3,012다. **U1의 tx를 정렬 단계에서 더 많이 버린다.** 블록 안 유효율은 위치가 뒤일수록 낮다(89 → 62%).
+- **BE:** 블록에 넣은 수가 사용자마다 같다(3,151~3,185). 그래서 나이에서 오는 차이(블록 안 유효율 U1 84%, U5 58%)가 그대로 남는다. 블록 앞쪽은 읽기 전용 tx라 쓰기가 없다.
+- → **Fabric++가 공정해 보이는 것은 U1의 tx를 더 많이 미리 버려 결과를 평평하게 만들기 때문이다.** Serializer는 사용자를 고르게 넣는다. 그 결과 Serializer의 처리량이 더 높다(§84).
+
+## 86. 추가 실험 3·2·1: 실패 통보 시간, 성공 tx당 자원, 사용자별 접근 치우침 (2026-10-18 23:47 ~ 10-19 00:42 KST)
+
+**실험 3: 실패를 알게 되는 시간** (기존 데이터 재분석: §84 `fair-*`, §78 `cloud2-*`)
+- 배치 100, smallbank, 1,000 TPS에서 실패를 알게 되기까지 평균: Fabric 215 ms, FPP 169, HTF 208, S(논문) 172 ms다.
+- S와 FPP는 실패의 51~59%를 미리 통보한다(약 130 ms).
+- 배치 1000에서는 Fabric 941 ms, S 728 ms(미리 통보 589)다. S의 피어 무효는 1,336 ms로 오히려 늦다.
+- (10-19 정리) 배치 100 값을 `experiments/07-extra-advantages/scripts/exp3.js`로 다시 계산하면 smallbank Fabric 226, FPP 161, HTF 206, S 153 ms이고, 미리 통보 비율은 S 78%, FPP 79%다. custom은 234 / 216 / 227 / 197 ms다. 위 값은 처음 손으로 계산한 것이며 결론은 같다. 앞으로는 스크립트 값을 쓴다.
+
+**실험 2: 성공 tx당 자원** (`HLF/bench-scripts/cloud-exp21.sh` 앞부분, `exp21.js`, 2회)
+- 실행 동안 cgroup CPU 누적과 org1 피어 블록 파일 크기를 2초마다 기록했다(`results/res-samples/`).
+- smallbank 결과
+
+| | 성공/s | 피어 CPU ms / 성공 | 원장 KB / 성공 | 원장의 무효 tx | 오더러 CPU ms / 성공 |
+|---|---|---|---|---|---|
+| Fabric | 384 | 9.76 | 10.39 | 61.9% | 1.41 |
+| FPP | 454 | 7.55 | 5.95 | 33.6% | 1.31 |
+| HTF | 474 | 8.39 | 8.39 | 52.9% | 1.54 |
+| S | 500 | 7.54 | 5.96 | 33.7% | 1.58 |
+
+- custom은 차이가 작다. 무효는 Fabric 33%, 나머지 25~26%다. S 원장 5.80 KB, Fabric 6.47 KB다.
+
+**실험 1: User2만 Zipf s 2.5** (나머지 1.0, smallbank, 3회, `skew-*`)
+- 성공/s: Fabric 339, FPP 425, HTF 429, S 477~481
+- User2 쓰기 성공률: Fabric 6.9%, FPP 7.7%, HTF 9.2%, S α 0 / 1 / 3이 7.4 / 8.3 / 7.1%다. 나머지 4명은 37~40%다.
+- **α 효과는 없다.** S와 FPP에서 User2 실패의 85~87%는 프로세서가 미리 abort한 것이다. 그런데 대부분 상태 S 검사(같은 배치에서 앞에 놓인 tx가 쓴 키를 읽음)에서 버려진다. 이 검사는 α를 보지 않는다(α는 고리 제거의 희생자 선택에만 쓰인다).
+- 인기 키 하나에는 배치당 사실상 한 명만 쓸 수 있다. 그래서 그 키에 몰리는 사용자는 구조적으로 불리하다.
+- 보호하려면 상태 S 탈락에도 사용자 점수를 반영하거나, 인기 키 승자를 돌아가며 정해야 한다. 설계 변경이므로 사용자 결정이 필요하다.
+
+## 87. MTTR 재측정 + 합의 성공률 시뮬레이션 (원고 그림 15) (2026-10-19 00:54~ KST)
+
+**MTTR 재측정**
+- 조건: 로컬 kind, `watchdog/s-node:mttr-1017g`, s-node 3 pod, w-node 10개, 장애 유형마다 10회.
+- 기록: `experiments/03-snode-mttr/data/mttr-1019/`.
+
+| 장애 | 인계 중앙 (범위) | MTTR 중앙 (범위) |
+|---|---|---|
+| pod 삭제 | 0.60 s (0.42~0.83) | 4.79 s (3.71~7.18) |
+| SIGKILL | 1.10 s (0.82~1.64) | 4.49 s (4.13~5.16) |
+| SIGSTOP | 2.44 s (1.96~2.81) | 5.77 s (5.22~6.54) |
+
+- §49와 같은 수준이다. 원고의 "MTTR 350 ms"는 이 구조에서 나오지 않으니 고쳐야 한다.
+
+**합의 성공률 시뮬레이션** (`experiments/06-consensus-sim/`)
+- 10-13 시뮬레이터에 §48 설계를 반영했다.
+  - 인계: SIGSTOP 실측 범위
+  - 인계 뒤 유예 3 s, 그 다음 커미티 0.35 s
+  - 정상 커미티: 0.35 s
+  - 재접속: 1~2 s
+- 시뮬레이터 안의 멈춤 → 새 커미티 시간(5.3~6.2 s)은 실측 MTTR과 맞는다.
+- 실행 조건: 200회 × 500라운드, 마감 10 s, 비잔틴 3/10.
+- 평균 성공률 %, replica 1..5:
+  - 지금 설계, 비잔틴 포함, 장애 15%: 57.3 / 70.9 / 75.4 / 76.2 / 76.4. 약 75%에서 포화하며, 원고의 "75%를 넘지 못한다"와 맞는다.
+  - 예전 설계, 같은 조건: 51.9 / 62.1 / 64.5 / 65.0 / 65.2.
+  - 지금 설계, pod 장애만 15%: 79.5 / 95.7 / 99.1 / 99.8 / 100.0. 예전 설계는 97.8에서 포화한다.
+- 정상 커미티를 1.0 s로 바꿔도 차이는 1%p 안이다.
+- 남은 한계: 비잔틴 리더 시간은 10-13 파일럿 값이다. 실제 스택 검증을 하려면 `worktree-wnode-byzantine` 기능을 지금 w-node에 합쳐야 한다.

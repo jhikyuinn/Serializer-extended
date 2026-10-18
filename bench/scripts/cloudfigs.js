@@ -4,7 +4,7 @@ const fs = require('fs'), path = require('path');
 // CLOUD_DIR·CLOUD_PREFIX 로 다른 묶음을 쓸 수 있다(§78 재측정: results/cloud2, cloud2)
 const R = process.env.CLOUD_DIR || path.join(__dirname, '../zipfbench/results/cloud');
 const PFX = process.env.CLOUD_PREFIX || 'cloud';
-const OUT = process.argv[2] || path.join(__dirname, '../../experiments/cloud-figs');
+const OUT = process.argv[2] || path.join(__dirname, '../../experiments/01-contention-batch/figures');
 fs.mkdirSync(OUT, { recursive: true });
 const m = (a) => a.reduce((x, y) => x + y, 0) / a.length;
 const sd = (a) => a.length < 2 ? 0 : Math.sqrt(a.reduce((x, y) => x + (y - m(a)) ** 2, 0) / (a.length - 1));
@@ -99,7 +99,7 @@ const legend = (x, y, items) => items.map(([lab, col, kind], i) => {
       body += T(cx, y0 + 34, `모든 tx ${p.dAll >= 0 ? '+' : ''}${p.dAll.toFixed(0)} ms`, 'text-anchor="middle" fill="#666" font-size="11"');
     });
   }
-  body += legend(200, 30, [['Fabric (같은 소스, A1)', C.F]]) + legend(400, 30, [['Serializer (ε .1 / .75)', C.S]]) + legend(600, 30, [['모든 tx 결과까지 지연', '', 'diamond']]);
+  body += legend(200, 30, [['Fabric (같은 소스, A1)', C.F]]) + legend(400, 30, [['Serializer (일반 ε 0.75, 긴급 0)', C.S]]) + legend(600, 30, [['모든 tx 결과까지 지연', '', 'diamond']]);
   body += T(W / 2, H - 14, 'smallbank, 계좌 100, Zipf s = 1.0, 1,000 TPS, Query 50%, 사용자 5명, 긴급 0 · AWS 4 VM · 30초(앞 5초 제외) × 3회 평균 ± 표준편차', 'text-anchor="middle" fill="#555" font-size="11"');
   fs.writeFileSync(path.join(OUT, 'fig-a-batch.svg'), svg(W, H, body));
 }

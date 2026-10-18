@@ -6,7 +6,7 @@ const { blockTimes } = require('./blocktime');
 // CLOUD_DIR·CLOUD_PREFIX 로 다른 묶음을 쓸 수 있다(§78 재측정: results/cloud2, cloud2)
 const R = process.env.CLOUD_DIR || path.join(__dirname, '../zipfbench/results/cloud');
 const PFX = process.env.CLOUD_PREFIX || 'cloud';
-const OUT = process.argv[2] || path.join(__dirname, '../../experiments/cloud-figs');
+const OUT = process.argv[2] || path.join(__dirname, '../../experiments/01-contention-batch/figures');
 const m = (a) => a.reduce((x, y) => x + y, 0) / a.length;
 const sd = (a) => a.length < 2 ? 0 : Math.sqrt(a.reduce((x, y) => x + (y - m(a)) ** 2, 0) / (a.length - 1));
 const SS = ['0', '0.5', '1.0', '1.5', '2.0'], BS = [100, 500, 1000], SYS = ['A1', 'BE'];
@@ -113,7 +113,7 @@ const COND = 'smallbank, 계좌 100, 1,000 TPS, Query 50%, 사용자 5명, 긴�
     }
     SS.forEach((s, i) => { body += T(P.xs(i), P.ym(D[b][s].BE.sp[0]) - 10, `×${D[b][s].ratio.toFixed(2)}`, `text-anchor="middle" font-size="10.5" font-weight="bold" fill="${C.BE}"`); });
   });
-  body += key(340, 30, [['Fabric (같은 소스, A1)', C.A1, 'line'], ['Serializer (ε .1 / .75)', C.BE, 'line']]);
+  body += key(340, 30, [['Fabric (같은 소스, A1)', C.A1, 'line'], ['Serializer (일반 ε 0.75, 긴급 0)', C.BE, 'line']]);
   body += foot(W, H, COND + ' · 막대는 ± 표준편차 · 숫자는 Serializer / Fabric 배율');
   fs.writeFileSync(path.join(OUT, 'fig2-throughput.svg'), svg(W, H, body));
 }

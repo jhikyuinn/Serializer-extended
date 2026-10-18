@@ -23,6 +23,7 @@ test:
           urgentRatio: @URGENT_RATIO@
           accountCount: @ACCOUNT_COUNT@
           zipfS: @ZIPF_S@
+          userZipfS: @USER_ZIPF@
           prw: @PRW@
           amount: 1
           seed: @SEED@

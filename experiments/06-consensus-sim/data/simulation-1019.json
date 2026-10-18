@@ -1,0 +1,1188 @@
+{
+ "mttr": {
+  "stop": [
+   {
+    "type": "stop",
+    "takeover": 2.439,
+    "mttr": 5.713
+   },
+   {
+    "type": "stop",
+    "takeover": 2.735,
+    "mttr": 5.999
+   },
+   {
+    "type": "stop",
+    "takeover": 2.232,
+    "mttr": 5.502
+   },
+   {
+    "type": "stop",
+    "takeover": 2.433,
+    "mttr": 6.541
+   },
+   {
+    "type": "stop",
+    "takeover": 2.251,
+    "mttr": 5.527
+   },
+   {
+    "type": "stop",
+    "takeover": 2.811,
+    "mttr": 6.084
+   },
+   {
+    "type": "stop",
+    "takeover": 1.955,
+    "mttr": 5.222
+   },
+   {
+    "type": "stop",
+    "takeover": 2.161,
+    "mttr": 5.459
+   },
+   {
+    "type": "stop",
+    "takeover": 2.646,
+    "mttr": 5.931
+   },
+   {
+    "type": "stop",
+    "takeover": 2.558,
+    "mttr": 5.829
+   }
+  ],
+  "all": [
+   {
+    "type": "term",
+    "takeover": 0.832,
+    "mttr": 4.128
+   },
+   {
+    "type": "term",
+    "takeover": 0.538,
+    "mttr": 3.824
+   },
+   {
+    "type": "term",
+    "takeover": 0.564,
+    "mttr": 5.647
+   },
+   {
+    "type": "term",
+    "takeover": 0.656,
+    "mttr": 5.624
+   },
+   {
+    "type": "term",
+    "takeover": 0.668,
+    "mttr": 3.965
+   },
+   {
+    "type": "term",
+    "takeover": 0.545,
+    "mttr": 6.781
+   },
+   {
+    "type": "term",
+    "takeover": 0.677,
+    "mttr": 7.181
+   },
+   {
+    "type": "term",
+    "takeover": 0.42,
+    "mttr": 3.707
+   },
+   {
+    "type": "term",
+    "takeover": 0.63,
+    "mttr": 5.454
+   },
+   {
+    "type": "term",
+    "takeover": 0.421,
+    "mttr": 3.755
+   },
+   {
+    "type": "kill",
+    "takeover": 0.815,
+    "mttr": 4.125
+   },
+   {
+    "type": "kill",
+    "takeover": 0.974,
+    "mttr": 4.412
+   },
+   {
+    "type": "kill",
+    "takeover": 1.129,
+    "mttr": 4.416
+   },
+   {
+    "type": "kill",
+    "takeover": 1.385,
+    "mttr": 4.675
+   },
+   {
+    "type": "kill",
+    "takeover": 0.842,
+    "mttr": 4.133
+   },
+   {
+    "type": "kill",
+    "takeover": 1.014,
+    "mttr": 4.298
+   },
+   {
+    "type": "kill",
+    "takeover": 1.277,
+    "mttr": 4.567
+   },
+   {
+    "type": "kill",
+    "takeover": 1.438,
+    "mttr": 4.734
+   },
+   {
+    "type": "kill",
+    "takeover": 1.643,
+    "mttr": 4.936
+   },
+   {
+    "type": "kill",
+    "takeover": 1.072,
+    "mttr": 5.162
+   },
+   {
+    "type": "stop",
+    "takeover": 2.439,
+    "mttr": 5.713
+   },
+   {
+    "type": "stop",
+    "takeover": 2.735,
+    "mttr": 5.999
+   },
+   {
+    "type": "stop",
+    "takeover": 2.232,
+    "mttr": 5.502
+   },
+   {
+    "type": "stop",
+    "takeover": 2.433,
+    "mttr": 6.541
+   },
+   {
+    "type": "stop",
+    "takeover": 2.251,
+    "mttr": 5.527
+   },
+   {
+    "type": "stop",
+    "takeover": 2.811,
+    "mttr": 6.084
+   },
+   {
+    "type": "stop",
+    "takeover": 1.955,
+    "mttr": 5.222
+   },
+   {
+    "type": "stop",
+    "takeover": 2.161,
+    "mttr": 5.459
+   },
+   {
+    "type": "stop",
+    "takeover": 2.646,
+    "mttr": 5.931
+   },
+   {
+    "type": "stop",
+    "takeover": 2.558,
+    "mttr": 5.829
+   }
+  ]
+ },
+ "runs": 200,
+ "configs": [
+  {
+   "name": "예전 설계 (10-13 보정: Lease 6 s, 커미티 3.2 s, 재접속 8~15 s)",
+   "cfg": {
+    "rounds": 500,
+    "warmup": 5,
+    "period": 10,
+    "deadline": 10,
+    "downRounds": 3,
+    "nodes": 10,
+    "byzantine": 3,
+    "consensus": 0.4,
+    "committee": 3.2,
+    "signTimeout": 5,
+    "signSlowProb": 0.45,
+    "signSlowExtra": 1.6,
+    "delay": 30,
+    "stallPeriod": 10,
+    "stallChecks": 2,
+    "lease": [
+     6,
+     7.4
+    ],
+    "failoverReady": 0.3,
+    "regAfterFailover": [
+     0,
+     0.7
+    ],
+    "regAfterResume": [
+     0,
+     0.5
+    ],
+    "reconnect": [
+     8,
+     15
+    ],
+    "restart": 5,
+    "activeActive": false,
+    "aaRetry": 1.2,
+    "dt": 0.05
+   },
+   "withByzantine": [
+    {
+     "replicas": 1,
+     "failProb": 1,
+     "mean": 66.64499999999998,
+     "p5": 59.8,
+     "p95": 72.8
+    },
+    {
+     "replicas": 2,
+     "failProb": 1,
+     "mean": 67.71400000000001,
+     "p5": 61.2,
+     "p95": 73.6
+    },
+    {
+     "replicas": 3,
+     "failProb": 1,
+     "mean": 67.846,
+     "p5": 60.6,
+     "p95": 74
+    },
+    {
+     "replicas": 4,
+     "failProb": 1,
+     "mean": 67.19199999999996,
+     "p5": 61,
+     "p95": 73
+    },
+    {
+     "replicas": 5,
+     "failProb": 1,
+     "mean": 67.88299999999995,
+     "p5": 60.4,
+     "p95": 73.8
+    },
+    {
+     "replicas": 1,
+     "failProb": 5,
+     "mean": 60.98900000000004,
+     "p5": 54.4,
+     "p95": 66.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 5,
+     "mean": 66.84999999999998,
+     "p5": 60.4,
+     "p95": 72.6
+    },
+    {
+     "replicas": 3,
+     "failProb": 5,
+     "mean": 67.143,
+     "p5": 59.8,
+     "p95": 73.2
+    },
+    {
+     "replicas": 4,
+     "failProb": 5,
+     "mean": 67.34500000000003,
+     "p5": 59.4,
+     "p95": 74.2
+    },
+    {
+     "replicas": 5,
+     "failProb": 5,
+     "mean": 67.30100000000002,
+     "p5": 61,
+     "p95": 73
+    },
+    {
+     "replicas": 1,
+     "failProb": 10,
+     "mean": 56.11200000000001,
+     "p5": 50.2,
+     "p95": 61.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 10,
+     "mean": 64.60599999999997,
+     "p5": 58.4,
+     "p95": 70.8
+    },
+    {
+     "replicas": 3,
+     "failProb": 10,
+     "mean": 66.11600000000003,
+     "p5": 60.2,
+     "p95": 71.8
+    },
+    {
+     "replicas": 4,
+     "failProb": 10,
+     "mean": 66.23099999999998,
+     "p5": 60,
+     "p95": 72.4
+    },
+    {
+     "replicas": 5,
+     "failProb": 10,
+     "mean": 66.22900000000003,
+     "p5": 59.4,
+     "p95": 71.8
+    },
+    {
+     "replicas": 1,
+     "failProb": 15,
+     "mean": 51.88100000000003,
+     "p5": 46.4,
+     "p95": 57.2
+    },
+    {
+     "replicas": 2,
+     "failProb": 15,
+     "mean": 62.05499999999999,
+     "p5": 56,
+     "p95": 67.8
+    },
+    {
+     "replicas": 3,
+     "failProb": 15,
+     "mean": 64.504,
+     "p5": 58.2,
+     "p95": 71
+    },
+    {
+     "replicas": 4,
+     "failProb": 15,
+     "mean": 64.95299999999999,
+     "p5": 58.2,
+     "p95": 70.2
+    },
+    {
+     "replicas": 5,
+     "failProb": 15,
+     "mean": 65.18600000000004,
+     "p5": 58.6,
+     "p95": 71.6
+    }
+   ],
+   "withoutByzantine": [
+    {
+     "replicas": 1,
+     "failProb": 1,
+     "mean": 98.00099999999989,
+     "p5": 96.4,
+     "p95": 99.2
+    },
+    {
+     "replicas": 2,
+     "failProb": 1,
+     "mean": 99.975,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 3,
+     "failProb": 1,
+     "mean": 99.988,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 1,
+     "mean": 99.986,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 1,
+     "mean": 99.98700000000001,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 5,
+     "mean": 91.3949999999999,
+     "p5": 88.8,
+     "p95": 94
+    },
+    {
+     "replicas": 2,
+     "failProb": 5,
+     "mean": 99.039,
+     "p5": 98,
+     "p95": 100
+    },
+    {
+     "replicas": 3,
+     "failProb": 5,
+     "mean": 99.74199999999988,
+     "p5": 99.2,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 5,
+     "mean": 99.76799999999982,
+     "p5": 99.4,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 5,
+     "mean": 99.7849999999999,
+     "p5": 99.4,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 10,
+     "mean": 84.721,
+     "p5": 81.6,
+     "p95": 87.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 10,
+     "mean": 96.86099999999995,
+     "p5": 95,
+     "p95": 98.6
+    },
+    {
+     "replicas": 3,
+     "failProb": 10,
+     "mean": 98.73199999999999,
+     "p5": 97.6,
+     "p95": 99.6
+    },
+    {
+     "replicas": 4,
+     "failProb": 10,
+     "mean": 99.05499999999991,
+     "p5": 98.2,
+     "p95": 99.8
+    },
+    {
+     "replicas": 5,
+     "failProb": 10,
+     "mean": 99.08299999999987,
+     "p5": 98.2,
+     "p95": 99.8
+    },
+    {
+     "replicas": 1,
+     "failProb": 15,
+     "mean": 79.52799999999998,
+     "p5": 76.4,
+     "p95": 82.8
+    },
+    {
+     "replicas": 2,
+     "failProb": 15,
+     "mean": 94.32100000000004,
+     "p5": 92,
+     "p95": 96.4
+    },
+    {
+     "replicas": 3,
+     "failProb": 15,
+     "mean": 97.3040000000001,
+     "p5": 95.8,
+     "p95": 98.8
+    },
+    {
+     "replicas": 4,
+     "failProb": 15,
+     "mean": 97.78699999999988,
+     "p5": 96.4,
+     "p95": 98.8
+    },
+    {
+     "replicas": 5,
+     "failProb": 15,
+     "mean": 97.84899999999989,
+     "p5": 96.8,
+     "p95": 99
+    }
+   ]
+  },
+  {
+   "name": "지금 설계 (§48: Lease 2 s, 즉시 커미티 0.35 s, 유예 3 s, 재접속 1~2 s)",
+   "cfg": {
+    "rounds": 500,
+    "warmup": 5,
+    "period": 10,
+    "deadline": 10,
+    "downRounds": 3,
+    "nodes": 10,
+    "byzantine": 3,
+    "consensus": 0.4,
+    "committee": 0.35,
+    "signTimeout": 5,
+    "signSlowProb": 0.45,
+    "signSlowExtra": 1.6,
+    "delay": 30,
+    "stallPeriod": 10,
+    "stallChecks": 2,
+    "lease": [
+     1.655,
+     2.511
+    ],
+    "failoverReady": 0.3,
+    "regAfterFailover": [
+     0,
+     0.3
+    ],
+    "regAfterResume": [
+     0,
+     0.3
+    ],
+    "reconnect": [
+     1,
+     2
+    ],
+    "restart": 5,
+    "activeActive": false,
+    "aaRetry": 1.2,
+    "dt": 0.05,
+    "grace": 3
+   },
+   "withByzantine": [
+    {
+     "replicas": 1,
+     "failProb": 1,
+     "mean": 72.34999999999995,
+     "p5": 66.2,
+     "p95": 77.4
+    },
+    {
+     "replicas": 2,
+     "failProb": 1,
+     "mean": 73.82000000000002,
+     "p5": 68,
+     "p95": 79.4
+    },
+    {
+     "replicas": 3,
+     "failProb": 1,
+     "mean": 74.08500000000001,
+     "p5": 67.2,
+     "p95": 78.6
+    },
+    {
+     "replicas": 4,
+     "failProb": 1,
+     "mean": 73.59299999999998,
+     "p5": 66.6,
+     "p95": 78.6
+    },
+    {
+     "replicas": 5,
+     "failProb": 1,
+     "mean": 73.95300000000005,
+     "p5": 67.4,
+     "p95": 79
+    },
+    {
+     "replicas": 1,
+     "failProb": 5,
+     "mean": 66.953,
+     "p5": 60.6,
+     "p95": 72.4
+    },
+    {
+     "replicas": 2,
+     "failProb": 5,
+     "mean": 73.455,
+     "p5": 66.4,
+     "p95": 78.4
+    },
+    {
+     "replicas": 3,
+     "failProb": 5,
+     "mean": 74.19900000000001,
+     "p5": 66.4,
+     "p95": 79.6
+    },
+    {
+     "replicas": 4,
+     "failProb": 5,
+     "mean": 74.56499999999997,
+     "p5": 67,
+     "p95": 79.4
+    },
+    {
+     "replicas": 5,
+     "failProb": 5,
+     "mean": 74.671,
+     "p5": 68.6,
+     "p95": 79.2
+    },
+    {
+     "replicas": 1,
+     "failProb": 10,
+     "mean": 61.869999999999976,
+     "p5": 56.8,
+     "p95": 66.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 10,
+     "mean": 72.96,
+     "p5": 67.4,
+     "p95": 77.6
+    },
+    {
+     "replicas": 3,
+     "failProb": 10,
+     "mean": 75.04500000000006,
+     "p5": 67.4,
+     "p95": 79.6
+    },
+    {
+     "replicas": 4,
+     "failProb": 10,
+     "mean": 75.381,
+     "p5": 69.4,
+     "p95": 79.8
+    },
+    {
+     "replicas": 5,
+     "failProb": 10,
+     "mean": 75.65300000000002,
+     "p5": 69.4,
+     "p95": 80
+    },
+    {
+     "replicas": 1,
+     "failProb": 15,
+     "mean": 57.320000000000036,
+     "p5": 52.2,
+     "p95": 61.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 15,
+     "mean": 70.85900000000002,
+     "p5": 65.8,
+     "p95": 75.6
+    },
+    {
+     "replicas": 3,
+     "failProb": 15,
+     "mean": 75.41899999999998,
+     "p5": 69.2,
+     "p95": 80.6
+    },
+    {
+     "replicas": 4,
+     "failProb": 15,
+     "mean": 76.207,
+     "p5": 70.6,
+     "p95": 81
+    },
+    {
+     "replicas": 5,
+     "failProb": 15,
+     "mean": 76.36499999999997,
+     "p5": 69.6,
+     "p95": 81.2
+    }
+   ],
+   "withoutByzantine": [
+    {
+     "replicas": 1,
+     "failProb": 1,
+     "mean": 98.00099999999989,
+     "p5": 96.4,
+     "p95": 99.2
+    },
+    {
+     "replicas": 2,
+     "failProb": 1,
+     "mean": 99.96600000000001,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 3,
+     "failProb": 1,
+     "mean": 99.999,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 1,
+     "mean": 99.999,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 1,
+     "mean": 100,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 5,
+     "mean": 91.3839999999999,
+     "p5": 88.8,
+     "p95": 94
+    },
+    {
+     "replicas": 2,
+     "failProb": 5,
+     "mean": 99.25,
+     "p5": 98.4,
+     "p95": 99.8
+    },
+    {
+     "replicas": 3,
+     "failProb": 5,
+     "mean": 99.93200000000003,
+     "p5": 99.6,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 5,
+     "mean": 99.99,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 5,
+     "mean": 100,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 10,
+     "mean": 84.63700000000003,
+     "p5": 81.6,
+     "p95": 88
+    },
+    {
+     "replicas": 2,
+     "failProb": 10,
+     "mean": 97.47999999999996,
+     "p5": 96.2,
+     "p95": 99
+    },
+    {
+     "replicas": 3,
+     "failProb": 10,
+     "mean": 99.62899999999989,
+     "p5": 99.2,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 10,
+     "mean": 99.94000000000001,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 10,
+     "mean": 99.99,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 15,
+     "mean": 79.52799999999998,
+     "p5": 76.4,
+     "p95": 82.8
+    },
+    {
+     "replicas": 2,
+     "failProb": 15,
+     "mean": 95.70700000000005,
+     "p5": 94.2,
+     "p95": 97.4
+    },
+    {
+     "replicas": 3,
+     "failProb": 15,
+     "mean": 99.08699999999986,
+     "p5": 98.2,
+     "p95": 99.8
+    },
+    {
+     "replicas": 4,
+     "failProb": 15,
+     "mean": 99.82199999999993,
+     "p5": 99.4,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 15,
+     "mean": 99.95500000000001,
+     "p5": 99.8,
+     "p95": 100
+    }
+   ]
+  },
+  {
+   "name": "지금 설계, 정상 커미티 1.0 s (민감도)",
+   "cfg": {
+    "rounds": 500,
+    "warmup": 5,
+    "period": 10,
+    "deadline": 10,
+    "downRounds": 3,
+    "nodes": 10,
+    "byzantine": 3,
+    "consensus": 0.4,
+    "committee": 1,
+    "signTimeout": 5,
+    "signSlowProb": 0.45,
+    "signSlowExtra": 1.6,
+    "delay": 30,
+    "stallPeriod": 10,
+    "stallChecks": 2,
+    "lease": [
+     1.655,
+     2.511
+    ],
+    "failoverReady": 0.3,
+    "regAfterFailover": [
+     0,
+     0.3
+    ],
+    "regAfterResume": [
+     0,
+     0.3
+    ],
+    "reconnect": [
+     1,
+     2
+    ],
+    "restart": 5,
+    "activeActive": false,
+    "aaRetry": 1.2,
+    "dt": 0.05,
+    "grace": 3
+   },
+   "withByzantine": [
+    {
+     "replicas": 1,
+     "failProb": 1,
+     "mean": 71.39099999999996,
+     "p5": 65.2,
+     "p95": 76.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 1,
+     "mean": 73.072,
+     "p5": 66.2,
+     "p95": 78.4
+    },
+    {
+     "replicas": 3,
+     "failProb": 1,
+     "mean": 73.52699999999999,
+     "p5": 66.8,
+     "p95": 78.8
+    },
+    {
+     "replicas": 4,
+     "failProb": 1,
+     "mean": 73.01000000000006,
+     "p5": 66,
+     "p95": 78.2
+    },
+    {
+     "replicas": 5,
+     "failProb": 1,
+     "mean": 73.40500000000003,
+     "p5": 65.6,
+     "p95": 78.2
+    },
+    {
+     "replicas": 1,
+     "failProb": 5,
+     "mean": 66.411,
+     "p5": 60.8,
+     "p95": 71.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 5,
+     "mean": 72.78400000000002,
+     "p5": 65.6,
+     "p95": 78
+    },
+    {
+     "replicas": 3,
+     "failProb": 5,
+     "mean": 73.64100000000003,
+     "p5": 66.4,
+     "p95": 79
+    },
+    {
+     "replicas": 4,
+     "failProb": 5,
+     "mean": 74.07000000000002,
+     "p5": 68,
+     "p95": 78.8
+    },
+    {
+     "replicas": 5,
+     "failProb": 5,
+     "mean": 73.79099999999995,
+     "p5": 67.2,
+     "p95": 78.8
+    },
+    {
+     "replicas": 1,
+     "failProb": 10,
+     "mean": 60.92799999999999,
+     "p5": 53.6,
+     "p95": 65.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 10,
+     "mean": 71.97100000000002,
+     "p5": 66.4,
+     "p95": 76.6
+    },
+    {
+     "replicas": 3,
+     "failProb": 10,
+     "mean": 74.08600000000006,
+     "p5": 68.6,
+     "p95": 79
+    },
+    {
+     "replicas": 4,
+     "failProb": 10,
+     "mean": 74.49900000000001,
+     "p5": 67.6,
+     "p95": 79.2
+    },
+    {
+     "replicas": 5,
+     "failProb": 10,
+     "mean": 74.84100000000001,
+     "p5": 68.8,
+     "p95": 79.4
+    },
+    {
+     "replicas": 1,
+     "failProb": 15,
+     "mean": 56.34300000000003,
+     "p5": 50.8,
+     "p95": 62.2
+    },
+    {
+     "replicas": 2,
+     "failProb": 15,
+     "mean": 69.87,
+     "p5": 63.6,
+     "p95": 75.4
+    },
+    {
+     "replicas": 3,
+     "failProb": 15,
+     "mean": 74.556,
+     "p5": 68.6,
+     "p95": 79.6
+    },
+    {
+     "replicas": 4,
+     "failProb": 15,
+     "mean": 75.00299999999999,
+     "p5": 68.2,
+     "p95": 80.8
+    },
+    {
+     "replicas": 5,
+     "failProb": 15,
+     "mean": 75.70299999999996,
+     "p5": 70.2,
+     "p95": 80
+    }
+   ],
+   "withoutByzantine": [
+    {
+     "replicas": 1,
+     "failProb": 1,
+     "mean": 98.00099999999989,
+     "p5": 96.4,
+     "p95": 99.2
+    },
+    {
+     "replicas": 2,
+     "failProb": 1,
+     "mean": 99.965,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 3,
+     "failProb": 1,
+     "mean": 99.999,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 1,
+     "mean": 99.999,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 1,
+     "mean": 100,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 5,
+     "mean": 91.3949999999999,
+     "p5": 88.8,
+     "p95": 94
+    },
+    {
+     "replicas": 2,
+     "failProb": 5,
+     "mean": 99.20699999999992,
+     "p5": 98.4,
+     "p95": 99.8
+    },
+    {
+     "replicas": 3,
+     "failProb": 5,
+     "mean": 99.92900000000003,
+     "p5": 99.6,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 5,
+     "mean": 99.99,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 5,
+     "mean": 100,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 10,
+     "mean": 84.721,
+     "p5": 81.6,
+     "p95": 87.6
+    },
+    {
+     "replicas": 2,
+     "failProb": 10,
+     "mean": 97.45200000000001,
+     "p5": 96.2,
+     "p95": 98.8
+    },
+    {
+     "replicas": 3,
+     "failProb": 10,
+     "mean": 99.63199999999988,
+     "p5": 99,
+     "p95": 100
+    },
+    {
+     "replicas": 4,
+     "failProb": 10,
+     "mean": 99.94400000000002,
+     "p5": 99.8,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 10,
+     "mean": 99.99,
+     "p5": 100,
+     "p95": 100
+    },
+    {
+     "replicas": 1,
+     "failProb": 15,
+     "mean": 79.52799999999998,
+     "p5": 76.4,
+     "p95": 82.8
+    },
+    {
+     "replicas": 2,
+     "failProb": 15,
+     "mean": 95.45,
+     "p5": 93.8,
+     "p95": 97.2
+    },
+    {
+     "replicas": 3,
+     "failProb": 15,
+     "mean": 99.12299999999993,
+     "p5": 98.2,
+     "p95": 99.8
+    },
+    {
+     "replicas": 4,
+     "failProb": 15,
+     "mean": 99.81099999999991,
+     "p5": 99.4,
+     "p95": 100
+    },
+    {
+     "replicas": 5,
+     "failProb": 15,
+     "mean": 99.96100000000003,
+     "p5": 99.8,
+     "p95": 100
+    }
+   ]
+  }
+ ]
+}

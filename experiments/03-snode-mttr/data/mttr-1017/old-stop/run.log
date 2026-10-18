@@ -1,0 +1,7 @@
+11:50:40 CONFIG=old TRIALS=5 NODES=10
+11:51:54 old stop #1 victim=snode-5bbc5c49b6-hklm5 takeover=6942ms mttr=11417ms applied=10/10
+11:52:23 old stop #2 victim=snode-5bbc5c49b6-kvcxl takeover=5630ms mttr=11787ms applied=10/10
+11:52:51 old stop #3 victim=snode-5bbc5c49b6-9tbxf takeover=7134ms mttr=11752ms applied=10/10
+11:53:20 old stop #4 victim=snode-5bbc5c49b6-ckswx takeover=5580ms mttr=12679ms applied=10/10
+11:53:50 old stop #5 victim=snode-5bbc5c49b6-94xgd takeover=6257ms mttr=12478ms applied=10/10
+11:53:51 끝

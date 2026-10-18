@@ -101,7 +101,10 @@ class UsersWorkload extends WorkloadModuleBase {
                 };
             } catch (e) { console.error(`SDK 계측 실패: ${e.message}`); }
         }
-        this.cdf =buildCdf(this.accountCount, a.zipfS === undefined ? 1.15 : Number(a.zipfS));
+        // userZipfS: 사용자별 Zipf s 를 따로 줄 수 있다(§86, 예: {"User2": 2.5} 이면 User2 만 인기 계좌에 몰린다)
+        const userS = a.userZipfS && a.userZipfS[this.user] !== undefined ? Number(a.userZipfS[this.user]) : undefined;
+        this.zipfS = userS !== undefined ? userS : (a.zipfS === undefined ? 1.15 : Number(a.zipfS));
+        this.cdf = buildCdf(this.accountCount, this.zipfS);
         this.mode = a.mode || 'smallbank';
         this.itemCount = Number(a.itemCount || 10000);
         this.rw = Number(a.rw || 4);
@@ -220,6 +223,9 @@ class UsersWorkload extends WorkloadModuleBase {
     // outcome: 'success' | 'notified' | 'failed' (failed 는 걸린 시간으로 빠른/느린 실패를 나눈다)
     record(kind, outcome, ms, sentAt) {
         const sec = this.t0 === null || sentAt === undefined ? 0 : Math.floor((sentAt - this.t0) / 1000);
+        // tx 별 기록(§84, 연속 abort 를 세려고): [보낸 시각(ms, t0 기준), 종류 q/u/n, 결과 s/a(통보)/f(피어 무효)/t(시간 초과), 지연 ms]
+        (this.txlog || (this.txlog = [])).push([sentAt === undefined || this.t0 === null ? 0 : sentAt - this.t0, kind[0],
+            outcome === 'success' ? 's' : outcome === 'notified' ? 'a' : ms >= this.slowMs ? 't' : 'f', Math.round(ms)]);
         const p = this.series[sec] || (this.series[sec] = { sent: 0, success: 0, failNotified: 0, failFast: 0, failSlow: 0, latencySuccessSum: 0 });
         p.sent++;
         if (outcome === 'success') { p.success++; p.latencySuccessSum += ms; }
@@ -308,6 +314,11 @@ class UsersWorkload extends WorkloadModuleBase {
             series: this.series
         };
         if (this.sdkStats) out.sdkStats = { ...this.sdkStats, services: [...this.sdkStats.services] };
+        if (this.txlog) {
+            try {
+                fs.writeFileSync(path.join(this.outDir, `tx-${this.user}-w${this.workerIndex}.json`), JSON.stringify(this.txlog));
+            } catch (e) { console.error(`tx 기록을 쓰지 못했다: ${e.message}`); }
+        }
         try {
             fs.writeFileSync(path.join(this.outDir, `user-${this.user}-w${this.workerIndex}.json`), JSON.stringify(out, null, 2));
         } catch (e) {
