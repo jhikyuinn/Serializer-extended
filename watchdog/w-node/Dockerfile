@@ -36,14 +36,13 @@
 
 # CMD ["/entrypoint.sh"]
 
-# WDN + MP2BTP
+# WDN (QUIC). 다중 경로 전송(MP2BTP)은 외부 라이브러리라 공개 저장소에서 뺐다.
 # # Stage 1: Dependencies만 설치 (캐시용)
 FROM golang:1.23-bookworm AS deps
 
 WORKDIR /app
 
 COPY go.mod go.sum ./
-COPY mp2btp-mainnew ./mp2btp-mainnew
 
 ENV GOPROXY=https://proxy.golang.org,direct
 ENV GOSUMDB=sum.golang.org
@@ -72,22 +71,13 @@ WORKDIR /app
 
 # # deps 스테이지에서 다운받은 모듈 복사
 COPY --from=deps /go/pkg /go/pkg
-COPY --from=deps /app/mp2btp-mainnew ./mp2btp-mainnew
 
 COPY go.mod go.sum ./
 
 COPY . .
 
-COPY transceiver/node/fectun ./transceiver/node/fectun
-COPY transceiver/node/raptor_sim ./transceiver/node/raptor_sim
-RUN chmod +x ./transceiver/node/fectun
-RUN chmod +x ./transceiver/node/raptor_sim 
-
-# 두 가지 전송 방식을 모두 빌드한다. 어느 것을 쓸지는 entrypoint.sh 가 WNODE_TRANSPORT 로 고른다.
-#   wnode-quic   : w-node 간 합의 메시지를 QUIC으로 주고받는다 (main.go)
-#   wnode-mp2btp : 다중 경로 QUIC(MP2BTP)으로 주고받는다 (main_integrated.go, 수정 중)
-RUN go build -o wnode-quic   -mod=readonly ./transceiver/node/main.go
-RUN go build -o wnode-mp2btp -mod=readonly ./transceiver/node/main_integrated.go
+# w-node 간 합의 메시지를 QUIC으로 주고받는다 (main.go)
+RUN go build -o wnode-quic -mod=readonly ./transceiver/node/main.go
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh

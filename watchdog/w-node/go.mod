@@ -6,7 +6,6 @@ toolchain go1.23.9
 
 require (
 	github.com/BurntSushi/toml v1.3.2
-	github.com/MCNL-HGU/mp2btp v0.0.0
 	github.com/confluentinc/confluent-kafka-go/v2 v2.3.0
 	github.com/docbull/inlab-fabric-modules v0.0.0-20210415074300-d0809dab5b33
 	github.com/gogo/protobuf v1.3.2
@@ -143,4 +142,3 @@ replace github.com/Shopify/sarama => github.com/IBM/sarama v1.45.1
 
 replace github.com/herumi/bls-eth-go-binary/bls => ./bls-eth-go-binary/bls
 
-replace github.com/MCNL-HGU/mp2btp => ./mp2btp-mainnew

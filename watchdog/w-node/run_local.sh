@@ -3,7 +3,7 @@
 #   ./run_local.sh [노드 수] [채널] [w-node에 넘길 추가 인자...]
 #
 # 환경 변수
-#   TRANSPORT=quic|mp2btp   w-node 간 합의 메시지 전송 방식 (기본 quic)
+#   TRANSPORT=quic          w-node 간 합의 메시지 전송 방식 (공개본은 quic만. 다중 경로 MP2BTP는 비공개)
 #   NAME_PREFIX=wnode       컨테이너 이름 앞부분 (기존 wnode1.. 를 건드리지 않으려면 바꾼다)
 #
 # 예) 합의 메시지에 채우는 블록 크기를 1MB로:  ./run_local.sh 3 mychannel -padding 1000000
@@ -20,8 +20,7 @@ shift $(( $# > 2 ? 2 : $# ))
 TRANSPORT="${TRANSPORT:-quic}"
 IMAGE="${IMAGE:-watchdog/w-node:latest}"
 NAME_PREFIX="${NAME_PREFIX:-wnode}"
-# MP2BTP가 다중 경로(NUM_MULTIPATH = 2)로 설정돼 있어 노드마다 네트워크가 두 개 필요하다.
-# QUIC은 하나면 되지만 같은 구성으로 띄워 둔다.
+# 비공개 MP2BTP(다중 경로)와 같은 구성을 쓰려고 노드마다 네트워크를 두 개 붙인다. QUIC은 하나면 된다.
 NET_A="${NET_A:-wdn1}"
 NET_B="${NET_B:-wdn2}"
 HOST="${HOST:-host.docker.internal}"
