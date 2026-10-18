@@ -1,0 +1,30 @@
+# Kafka 프로세서와 프로세서가 쓰는 MongoDB.
+# docker compose -f docker-compose.yml -f docker-compose.processor.yml up -d
+services:
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+      # processor가 mongo의 네트워크를 같이 쓰므로 포트는 여기서 연다
+      - "8082:8082/udp"
+
+  processor:
+    build: .
+    image: weave-kafka/processor:latest
+    # 프로세서 코드가 MongoDB를 localhost:27017로 찾는다
+    network_mode: "service:mongo"
+    # 정렬 알고리즘: serializer(기본) | fabricpp | htfabric | epsilon. 예: PROCESSOR_ALGO=fabricpp docker compose ... up -d processor
+    # epsilon 의 ε 값: PROCESSOR_EPS_URGENT, PROCESSOR_EPS_LOW (기본 1, 1)
+    # Kafka 브로커: 기본은 도커 내부망(kafka_default). host.docker.internal 포트 전달은 일부 전송이 약 45 ms 늦다(NOTES §45).
+    #   예전처럼: PROCESSOR_BROKERS=host.docker.internal:9091,host.docker.internal:9092,host.docker.internal:9093
+    # abort 기록 보내는 방식(§38 실험): PROCESSOR_ABORT_MODE separate(기본) | inline(예전 방식) | delayed, PROCESSOR_ABORT_DELAY (예: 100ms)
+    command: ["-broker", "host.docker.internal", "-bind", ":8082", "-algo", "${PROCESSOR_ALGO:-serializer}",
+              "-eps-urgent", "${PROCESSOR_EPS_URGENT:-1}", "-eps-low", "${PROCESSOR_EPS_LOW:-1}",
+              "-abort-mode", "${PROCESSOR_ABORT_MODE:-separate}", "-abort-delay", "${PROCESSOR_ABORT_DELAY:-0s}",
+              "-brokers", "${PROCESSOR_BROKERS:-kafka1:9090,kafka2:9090,kafka3:9090}"]
+    restart: on-failure
+    depends_on:
+      - mongo
+      - kafka1
+      - kafka2
+      - kafka3

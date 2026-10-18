@@ -1,0 +1,44 @@
+# Serializer 논문 Figure 16·Table I 실험 라운드 (사용자 5명). run-users.sh 가 @...@ 자리를 채워 benchconfig.yaml 로 쓴다.
+# 계좌·사용자 초기화(init)는 이 라운드 전에 network.sh invoke 로 따로 한다.
+test:
+  name: userbench
+  description: 사용자 5명, 사용자별 네트워크 지연, VIP 의 긴급 트랜잭션 (urgentRatio=@URGENT_RATIO@)
+  workers:
+    number: @WORKERS@
+  rounds:
+    - label: users
+      description: smallbank 6종, prw=@PRW@, 계좌 Zipf(s=@ZIPF_S@)
+      txDuration: @DURATION@
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: @TPS@
+      workload:
+        module: workload/users.js
+        arguments:
+          contractId: smallbank
+          users: [User1, User2, User3, User4, User5]
+          latenciesMs: [@LATENCIES@]
+          urgentUser: User3
+          urgentRatio: @URGENT_RATIO@
+          accountCount: @ACCOUNT_COUNT@
+          zipfS: @ZIPF_S@
+          prw: @PRW@
+          amount: 1
+          seed: @SEED@
+          timeoutSec: @TIMEOUT_SEC@
+          outDir: /out
+          abortNotify: @ABORT_NOTIFY@
+          mode: @MODE@
+          itemCount: @ITEM_COUNT@
+          rw: @RW@
+          hr: @HR@
+          hw: @HW@
+          hotShare: @HOT_SHARE@
+          queryShare: @QUERY_SHARE@
+          kafkaBrokers: [@KAFKA_BROKERS@]
+          warmupSec: @WARMUP_SEC@
+
+
+# 자원 모니터는 쓰지 않는다: docker 모니터는 이 환경에서 아무것도 남기지 않았고, CPU 만 쓴다.
+# 컨테이너 CPU 는 필요하면 docker stats 로 따로 잰다 (NOTES §27).

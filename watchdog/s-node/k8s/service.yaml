@@ -1,0 +1,27 @@
+# w-node가 접속하는 단일 주소. 항상 활성 s-node pod 하나로만 연결된다.
+# 모든 pod가 같은 libp2p 키를 쓰므로 활성 pod가 바뀌어도 peer ID는 같다.
+apiVersion: v1
+kind: Service
+metadata:
+  name: snode
+  labels:
+    app: snode
+spec:
+  type: LoadBalancer
+  # LoadBalancer를 쓸 수 없는 환경이면 위 type을 ClusterIP로 바꾸고
+  # 노드의 IP를 직접 지정한다.
+  # externalIPs:
+  #   - <노드 IP>
+  selector:
+    app: snode
+    snode-role: active
+  ports:
+    - name: grpc
+      port: 16220
+      targetPort: grpc
+    - name: nat
+      port: 11730
+      targetPort: nat
+    - name: libp2p
+      port: 4001
+      targetPort: libp2p

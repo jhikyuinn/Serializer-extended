@@ -1,0 +1,10 @@
+# 노드 drain 같은 자발적 중단에서도 한 번에 하나씩만 내려가게 한다
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: snode
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: snode

@@ -1,0 +1,24 @@
+# local secrets / per-machine settings
+.env
+deploy/cloud/cluster.env
+*.pem
+!**/testdata/**/*.pem
+
+# upstream Fabric checkout (see fabric-patch/README.md)
+/fabric/
+
+# build and benchmark outputs
+deploy/cloud/images/
+bench/zipfbench/results/
+bench/zipfbench/network/organizations/
+bench/zipfbench/network/channel-artifacts/
+bench/zipfbench/network/configtx-run/
+bench/zipfbench/caliper/organizations/
+watchdog/s-node/vendor/
+watchdog/w-node/vendor/
+kafka/vendor/
+node_modules/
+*.o
+*.bak*
+.DS_Store
+.claude/

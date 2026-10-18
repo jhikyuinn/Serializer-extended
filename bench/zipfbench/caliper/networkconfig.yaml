@@ -1,0 +1,26 @@
+# Caliper 네트워크 설정. 인증서 경로는 작업 폴더 기준이며,
+# run.sh 가 ../network/organizations 를 organizations 로 붙여 준다.
+name: zipfbench
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  - channelName: mychannel
+    contracts:
+      - id: zipf
+
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: User1
+          clientPrivateKey:
+            path: organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/keystore/priv_sk
+          clientSignedCert:
+            path: organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp/signcerts/User1@org1.example.com-cert.pem
+    connectionProfile:
+      path: connection-org1.yaml
+      # 앵커 피어가 없으므로 탐색을 쓰지 않고 연결 프로파일의 피어와 오더러를 쓴다
+      discover: false

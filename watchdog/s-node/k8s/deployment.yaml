@@ -1,0 +1,90 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snode
+  labels:
+    app: snode
+spec:
+  # 유지할 s-node 수. 이 중 하나만 활성이고 나머지는 대기한다.
+  # kustomization.yaml의 replicas에서 바꾼다.
+  replicas: 3
+  selector:
+    matchLabels:
+      app: snode
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: snode
+        # Lease를 잡은 pod가 스스로 active로 바꾼다
+        snode-role: standby
+    spec:
+      serviceAccountName: snode
+      terminationGracePeriodSeconds: 30
+      # 한 노드 장애로 s-node가 모두 죽지 않도록 가능한 한 서로 다른 노드에 배치
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: snode
+      containers:
+        - name: snode
+          # §48 설정(Lease 2s/1.5s/0.5s, 커미티 즉시 생성·유예 3초·늦은 노드 합치기)이 든 이미지. 같은 태그로
+          # 다시 빌드하면 노드가 예전 이미지를 계속 쓰므로 태그로 배포한다(NOTES §12)
+          image: watchdog/s-node:mttr-1017g
+          imagePullPolicy: IfNotPresent
+          args:
+            - -kafkaprocessor=$(KAFKA_PROCESSOR_ADDR)
+            - -brokers=$(KAFKA_BROKERS)
+            - -replication=$(KAFKA_REPLICATION)
+          envFrom:
+            - configMapRef:
+                name: snode-config
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          ports:
+            - name: grpc
+              containerPort: 16220
+            - name: nat
+              containerPort: 11730
+            - name: libp2p
+              containerPort: 4001
+            - name: status
+              containerPort: 8080
+          # Kafka에서 키를 읽을 때까지 기다린다
+          startupProbe:
+            httpGet:
+              path: /readyz
+              port: status
+            periodSeconds: 2
+            failureThreshold: 60
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: status
+            periodSeconds: 3
+            failureThreshold: 2
+          livenessProbe:
+            tcpSocket:
+              port: grpc
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              memory: 512Mi

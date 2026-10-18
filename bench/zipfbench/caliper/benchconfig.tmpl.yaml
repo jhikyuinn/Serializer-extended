@@ -1,0 +1,46 @@
+# Zipf transfer 라운드. run.sh 가 @...@ 자리를 채워 benchconfig.yaml 로 쓴다.
+# 키 초기화(init)는 이 라운드 전에 network.sh invoke 로 따로 하므로 결과에 들어가지 않는다.
+test:
+  name: zipfbench
+  description: Zipf(s=@ZIPF_S@) 키 접근에서의 transfer
+  workers:
+    number: @WORKERS@
+  rounds:
+    - label: transfer
+      description: keyA, keyB 를 Zipf(s=@ZIPF_S@) 로 고른 transfer
+      txNumber: @TX_NUMBER@
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: @TPS@
+      workload:
+        module: workload/zipf.js
+        arguments:
+          contractId: zipf
+          keyCount: @KEY_COUNT@
+          zipfS: @ZIPF_S@
+          amount: 1
+          seed: @SEED@
+
+monitors:
+  resource:
+    - module: docker
+      options:
+        interval: 5
+        containers:
+          - zipfbench-orderer.example.com-1
+          - zipfbench-peer0.org1.example.com-1
+          - zipfbench-peer0.org2.example.com-1
+          - zipfbench-cc
+          - kafka-processor-1
+    - module: prometheus
+      options:
+        url: "http://prometheus:9090"
+        metrics:
+          include: [peer0, orderer]
+          queries:
+            - name: Avg block processing time (s)
+              query: sum by (instance) (increase(ledger_block_processing_time_sum{channel="mychannel"}[5m])) / sum by (instance) (increase(ledger_block_processing_time_count{channel="mychannel"}[5m]))
+              step: 1
+              label: instance
+              statistic: avg

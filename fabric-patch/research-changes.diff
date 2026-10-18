@@ -1,0 +1,369 @@
+diff --git a/fabric/orderer/consensus/etcdraft/chain.go b/fabric/orderer/consensus/etcdraft/chain.go
+old mode 100755
+new mode 100644
+index edcd5a3..c05d639
+--- a/fabric/orderer/consensus/etcdraft/chain.go
++++ b/fabric/orderer/consensus/etcdraft/chain.go
+@@ -11,6 +11,7 @@ import (
+ 	"encoding/json"
+ 	"encoding/pem"
+ 	"fmt"
++	"os"
+ 	"sync"
+ 	"sync/atomic"
+ 	"time"
+@@ -32,6 +33,7 @@ import (
+ 	"github.com/hyperledger/fabric/protoutil"
+ 	"github.com/hyperledger/fabric/weaveutils/consumer"
+ 	"github.com/hyperledger/fabric/weaveutils/producer"
++	"github.com/hyperledger/fabric/weaveutils/txmeta"
+ 	"github.com/lovoo/goka"
+ 	"github.com/pkg/errors"
+ 	"go.etcd.io/etcd/raft/v3"
+@@ -46,7 +48,22 @@ var tmc *goka.TopicManagerConfig
+ var kafkaProducer *kafka.Producer
+ var kafkacommitConsumer *kafka.Consumer
+ var kafkaabortConsumer *kafka.Consumer
+-var resultcommitChan = make(chan []*common.Envelope)
++// commitResult 는 프로세서가 mychannel-commit 에 보낸 정렬 결과다.
++// 새 형식: {"id": 배치 ID, "order": [배치 안 인덱스...]} — 오더러가 가진 배치에서 순서만 받는다.
++// 예전 형식: 정렬된 Envelope 배열 (Envs).
++type commitResult struct {
++	ID    string
++	Order []int
++	Envs  []*common.Envelope
++}
++
++var resultcommitChan = make(chan commitResult)
++
++// 이 프로세스가 보낸 배치의 ID. 시작 시각을 앞에 붙여 재시작 전 배치의 결과와 섞이지 않게 한다.
++var (
++	batchIDPrefix = fmt.Sprintf("%x", time.Now().UnixNano())
++	batchSeq      uint64
++)
+ 
+ func init() {
+ 	tmc = goka.NewTopicManagerConfig()
+@@ -574,9 +591,11 @@ func (c *Chain) Submit(req *orderer.SubmitRequest, sender uint64) error {
+ 	}
+ 
+ 	leadC := make(chan uint64, 1)
++	tSubmit := time.Now()
+ 	select {
+ 	case c.submitC <- &submit{req, leadC}:
+ 		lead := <-leadC
++		prof.submitted(time.Since(tSubmit)) // 계측: run loop 가 받아 주기까지 기다린 시간
+ 		if lead == raft.None {
+ 			c.Metrics.ProposalFailures.Add(1)
+ 			return errors.Errorf("no Raft leader")
+@@ -728,8 +747,10 @@ func (c *Chain) run() {
+ 	}
+ 
+ 	for {
++		selStart, selPaused := time.Now(), submitC == nil // 계측(profile.go): select 에서 기다린 시간
+ 		select {
+ 		case s := <-submitC:
++			prof.waited(selStart, selPaused)
+ 			if s == nil {
+ 				// polled by `WaitReady`
+ 				continue
+@@ -745,7 +766,10 @@ func (c *Chain) run() {
+ 				continue
+ 			}
+ 
++			atomic.AddInt64(&prof.recv, 1)
++			tOrd := time.Now()
+ 			batches, pending, err := c.ordered(s.req)
++			prof.add(&prof.orderedNs, time.Since(tOrd))
+ 			if err != nil {
+ 				c.logger.Errorf("Failed to order message: %s", err)
+ 				continue
+@@ -763,7 +787,9 @@ func (c *Chain) run() {
+ 				stopTimer()
+ 			}
+ 
++			tProp := time.Now()
+ 			c.propose(propC, bc, batches...)
++			prof.add(&prof.proposeNs, time.Since(tProp))
+ 
+ 			if c.configInflight {
+ 				c.logger.Info("Received config transaction, pause accepting transaction till it is committed")
+@@ -775,6 +801,7 @@ func (c *Chain) run() {
+ 			}
+ 
+ 		case app := <-c.applyC:
++			prof.waited(selStart, selPaused)
+ 			if app.soft != nil {
+ 				newLeader := atomic.LoadUint64(&app.soft.Lead) // etcdraft requires atomic access
+ 				if newLeader != soft.Lead {
+@@ -864,6 +891,7 @@ func (c *Chain) run() {
+ 			}
+ 
+ 		case <-timer.C():
++			prof.waited(selStart, selPaused)
+ 			ticking = false
+ 
+ 			batch := c.support.BlockCutter().Cut()
+@@ -874,9 +902,12 @@ func (c *Chain) run() {
+ 
+ 			c.logger.Debugf("Batch timer expired, creating block")
+ 
++			tProp := time.Now()
+ 			c.propose(propC, bc, batch) // we are certain this is normal block, no need to block
++			prof.add(&prof.proposeNs, time.Since(tProp))
+ 
+ 		case sn := <-c.snapC:
++			prof.waited(selStart, selPaused)
+ 			if sn.Metadata.Index != 0 {
+ 				if sn.Metadata.Index <= c.appliedIndex {
+ 					c.logger.Debugf("Skip snapshot taken at index %d, because it is behind current applied index %d", sn.Metadata.Index, c.appliedIndex)
+@@ -895,6 +926,7 @@ func (c *Chain) run() {
+ 			}
+ 
+ 		case <-c.doneC:
++			prof.waited(selStart, selPaused)
+ 			stopTimer()
+ 			cancelProp()
+ 
+@@ -1057,6 +1089,8 @@ func (c *Chain) ordered(msg *orderer.SubmitRequest) (batches [][]*common.Envelop
+ var (
+ 	deliveryChan = make(chan kafka.Event, 10000)
+ 	once         sync.Once
++	// incoming 으로 보내는 형식: meta(기본, tx 별 메타데이터) | envelope(예전 방식)
++	incomingFormat = os.Getenv("KAFKA_INCOMING_FORMAT")
+ )
+ 
+ func initKafkaDeliveryHandler() {
+@@ -1076,22 +1110,48 @@ func initKafkaDeliveryHandler() {
+ }
+ 
+ // pushKafka sends an common.Envelope to the kafka partition (i.e., topic).
+-func (c *Chain)pushKafka(batch [][]byte) {
++// 돌려주는 ID 는 프로세서가 정렬 결과에 그대로 실어 보낸다. propose 는 이 ID 의 결과만 받는다.
++func (c *Chain)pushKafka(batch []*common.Envelope) (string, pushTiming) {
+ 	initKafkaDeliveryHandler()
++	var tm pushTiming // 계측(profile.go)
++	t0 := time.Now()
+ 
++	id := fmt.Sprintf("%s-%d", batchIDPrefix, atomic.AddUint64(&batchSeq, 1))
++	// 기본은 tx 별 메타데이터만 보낸다(Serializer NOTES §46). 프로세서가 정렬에 쓰는 것은 이것뿐이고,
++	// 결과는 순서(인덱스)로 돌아오므로 envelope 은 오더러가 가진 batch 에서 고른다.
++	// KAFKA_INCOMING_FORMAT=envelope 이면 예전처럼 envelope 전체를 보낸다(비교·되돌리기용).
+ 	payload := struct {
+-        Timestamp int64    `json:"timestamp"`
+-        Batch     [][]byte `json:"batch"`
+-    }{
+-        Timestamp: time.Now().UnixMilli(),
+-        Batch:     batch,
+-    }
++		ID        string          `json:"id"`
++		Timestamp int64           `json:"timestamp"`
++		Batch     [][]byte        `json:"batch,omitempty"`
++		Txs       []txmeta.TxMeta `json:"txs,omitempty"`
++	}{
++		ID:        id,
++		Timestamp: time.Now().UnixMilli(),
++	}
++	if incomingFormat == "envelope" {
++		for _, env := range batch {
++			data, err := proto.Marshal(env)
++			if err != nil {
++				fmt.Printf("Failed to marshal envelope: %v", err)
++			}
++			payload.Batch = append(payload.Batch, data)
++		}
++	} else {
++		payload.Txs = make([]txmeta.TxMeta, len(batch))
++		for i, env := range batch {
++			payload.Txs[i] = txmeta.Extract(i, env)
++		}
++	}
++	tm.extract = time.Since(t0)
++	t0 = time.Now()
+ 
+     value, err := json.Marshal(payload)
+     if err != nil {
+         fmt.Printf("Failed to marshal payload: %v\n", err)
+-        return
++        return id, tm
+     }
++	tm.marshal = time.Since(t0)
+ 
+ 	topic := c.channelID+"-incoming"
+ 	// Push message to Kafka with key by specifying topic
+@@ -1100,13 +1160,16 @@ func (c *Chain)pushKafka(batch [][]byte) {
+ 		Value:          value,
+ 	}
+ 
++	t0 = time.Now()
+ 	err = kafkaProducer.Produce(msg, deliveryChan)
++	tm.produce = time.Since(t0)
+ 	if err != nil {
+ 		fmt.Printf("Failed to produce message: %s\n", err)
+ 	}
++	return id, tm
+ }
+ 
+-func txcommitListener(resultcommitChan chan<- []*common.Envelope) {
++func txcommitListener(resultcommitChan chan<- commitResult) {
+ 	fmt.Println("Now listening to Commit Transaction ...")
+ 
+ 	err := kafkacommitConsumer.SubscribeTopics([]string{"mychannel-commit"}, nil)
+@@ -1118,14 +1181,20 @@ func txcommitListener(resultcommitChan chan<- []*common.Envelope) {
+ 	for {
+ 		msg, err := kafkacommitConsumer.ReadMessage(-1)
+ 		if err == nil {
+-			var kafkadata []*common.Envelope
+-
+-			err = json.Unmarshal(msg.Value, &kafkadata)
+-			if err != nil {
+-				fmt.Println("Kafka error: ",err)
++			// 새 형식(객체)을 먼저 보고, 아니면 예전 형식(Envelope 배열)으로 읽는다
++			var res commitResult
++			var compact struct {
++				ID    string `json:"id"`
++				Order []int  `json:"order"`
++			}
++			if len(msg.Value) > 0 && msg.Value[0] == '{' && json.Unmarshal(msg.Value, &compact) == nil {
++				res = commitResult{ID: compact.ID, Order: compact.Order}
++			} else if err := json.Unmarshal(msg.Value, &res.Envs); err != nil {
++				fmt.Println("Kafka error: ", err)
+ 			}
+-			fmt.Println("[COMMITDATA]", kafkadata)
+-			resultcommitChan <- kafkadata
++			// 메시지 전체를 찍으면 배치가 클 때 수백 KB 를 출력하느라 블록 생성이 늦어진다
++			fmt.Printf("[COMMITDATA] id=%s order=%d envs=%d bytes=%d\n", res.ID, len(res.Order), len(res.Envs), len(msg.Value))
++			resultcommitChan <- res
+ 		}
+ 	}
+ }
+@@ -1212,21 +1281,36 @@ func txcommitListener(resultcommitChan chan<- []*common.Envelope) {
+ 
+ func (c *Chain) propose(ch chan<- *common.Block, bc *blockCreator, batches ...[]*common.Envelope) {
+ 	for _, batch := range batches {
+-		var serializedBatch [][]byte
+-		for _, env := range batch {
+-			data, err := proto.Marshal(env)
+-			if err != nil {
+-				fmt.Printf("Failed to marshal envelope: %v", err)
++		cut := time.Now()
++		id, tm := c.pushKafka(batch)
++		tWait := time.Now()
++
++		// 보낸 배치의 결과만 받는다. 다른 ID(이전 실행이나 다른 오더러가 남긴 결과)는 버린다.
++		// ID 가 없는 예전 형식은 그대로 받는다.
++		var res commitResult
++		for {
++			res = <-resultcommitChan
++			if res.ID == "" || res.ID == id {
++				break
++			}
++			c.logger.Warnf("Ignoring commit result for batch %s (waiting for %s)", res.ID, id)
++		}
++		wait := time.Since(tWait)
++		tCreate := time.Now()
++		data := res.Envs
++		if res.ID != "" {
++			data = make([]*common.Envelope, 0, len(res.Order))
++			for _, i := range res.Order {
++				if i >= 0 && i < len(batch) {
++					data = append(data, batch[i])
++				}
+ 			}
+-			serializedBatch = append(serializedBatch, data)
+ 		}
+ 
+-		c.pushKafka(serializedBatch)
+-
+-		select {
+-		case data := <-resultcommitChan:
++		{
+ 			b := bc.createNextBlock(data)
+ 			c.logger.Infof("Created block [%d], there are %d blocks in flight", b.Header.Number, c.blockInflight)
++			prof.batch(id, len(batch), cut, tm, wait, time.Since(tCreate))
+ 
+ 			select {
+ 			case ch <- b:
+diff --git a/fabric/weaveutils/consumer/consumer.go b/fabric/weaveutils/consumer/consumer.go
+old mode 100755
+new mode 100644
+index 5bc1d1e..58ab1d2
+--- a/fabric/weaveutils/consumer/consumer.go
++++ b/fabric/weaveutils/consumer/consumer.go
+@@ -2,6 +2,7 @@ package consumer
+ 
+ import (
+ 	"fmt"
++	"os"
+ 
+ 	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
+ )
+@@ -13,14 +14,20 @@ import (
+ //	kafkabroker3 = "kafka-host:9093"
+ //
+ // )
++// 로컬 실행: Kafka는 이 PC에서 돌고, 컨테이너와 호스트 양쪽에서 host.docker.internal로 닿는다
+ var (
+-	kafkabroker1 = "kafka-host:9091"
+-	kafkabroker2 = "kafka-host:9092"
+-	kafkabroker3 = "kafka-host:9093"
++	kafkabroker1 = "host.docker.internal:9091"
++	kafkabroker2 = "host.docker.internal:9092"
++	kafkabroker3 = "host.docker.internal:9093"
+ )
+ 
+ func Config() *kafka.Consumer {
++	// KAFKA_BROKERS 가 있으면 그 목록을 쓴다 (예: 도커 내부망 kafka1:9090,kafka2:9090,kafka3:9090,
++	// 다른 호스트면 그 주소). 없으면 예전처럼 host.docker.internal 포트 전달(Serializer NOTES §45: 느리다).
+ 	brokers := kafkabroker1 + "," + kafkabroker2 + "," + kafkabroker3
++	if b := os.Getenv("KAFKA_BROKERS"); b != "" {
++		brokers = b
++	}
+ 
+ 	c, err := kafka.NewConsumer(&kafka.ConfigMap{
+ 		"bootstrap.servers": brokers,
+diff --git a/fabric/weaveutils/producer/producer.go b/fabric/weaveutils/producer/producer.go
+old mode 100755
+new mode 100644
+index 9d39bb9..57eac20
+--- a/fabric/weaveutils/producer/producer.go
++++ b/fabric/weaveutils/producer/producer.go
+@@ -13,22 +13,35 @@ import (
+ // 	kafkabroker3 = "kafka-host:9093"
+ // )
+ 
++// 로컬 실행: Kafka는 이 PC에서 돌고, 컨테이너와 호스트 양쪽에서 host.docker.internal로 닿는다
+ var (
+-	kafkabroker1 = "kafka-host:9091"
+-	kafkabroker2 = "kafka-host:9092"
+-	kafkabroker3 = "kafka-host:9093"
++	kafkabroker1 = "host.docker.internal:9091"
++	kafkabroker2 = "host.docker.internal:9092"
++	kafkabroker3 = "host.docker.internal:9093"
+ )
+ 
+ func Config() *kafka.Producer {
++	// KAFKA_BROKERS 가 있으면 그 목록을 쓴다 (예: 도커 내부망 kafka1:9090,kafka2:9090,kafka3:9090,
++	// 다른 호스트면 그 주소). 없으면 예전처럼 host.docker.internal 포트 전달(Serializer NOTES §45: 느리다).
+ 	brokers := kafkabroker1 + "," + kafkabroker2 + "," + kafkabroker3
++	if b := os.Getenv("KAFKA_BROKERS"); b != "" {
++		brokers = b
++	}
+ 
+ 	linger, _ := strconv.Atoi(os.Getenv("KAFKA_LINGER"))
+ 
++	// 배치(수백 KB~수 MB)를 압축해 보낸다. 서명·인증서가 반복되어 잘 줄어든다. 프로세서(sarama)가 푼다.
++	compression := os.Getenv("KAFKA_COMPRESSION")
++	if compression == "" {
++		compression = "lz4"
++	}
++
+ 	p, _ := kafka.NewProducer(&kafka.ConfigMap{
+ 		"bootstrap.servers": brokers,
+ 		"acks":              "all",
+ 		"linger.ms":         linger,
+ 		"message.max.bytes": 104857600,
++		"compression.type":  compression,
+ 	})
+ 
+ 	return p

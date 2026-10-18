@@ -1,0 +1,12 @@
+# 피어 두 대와 오더러의 운영 포트를 긁는다. 블록이 0.4초마다 나올 수 있어 간격을 짧게 둔다.
+global:
+  scrape_interval: 2s
+  evaluation_interval: 2s
+
+scrape_configs:
+  - job_name: peers
+    static_configs:
+      - targets: ["peer0.org1.example.com:9443", "peer0.org2.example.com:9443"]
+  - job_name: orderer
+    static_configs:
+      - targets: ["orderer.example.com:8443"]

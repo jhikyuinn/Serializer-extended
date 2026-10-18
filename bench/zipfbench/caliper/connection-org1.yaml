@@ -1,0 +1,61 @@
+# Org1 클라이언트용 정적 연결 프로파일. 주소는 zipf_fabric 네트워크 안의 이름이다.
+name: zipfbench-org1
+version: 1.0.0
+
+client:
+  organization: Org1
+  connection:
+    timeout:
+      peer:
+        endorser: "300"
+      orderer: "300"
+
+channels:
+  mychannel:
+    orderers:
+      - orderer.example.com
+    # 보증 정책이 OR('Org1MSP.peer','Org2MSP.peer') 라 Org1 피어 하나의 보증으로 충분하다.
+    # Org2 피어는 블록을 받아 검증·커밋만 한다.
+    peers:
+      peer0.org1.example.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+      peer0.org2.example.com:
+        endorsingPeer: false
+        chaincodeQuery: false
+        ledgerQuery: false
+        eventSource: false
+
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+      - peer0.org1.example.com
+  Org2:
+    mspid: Org2MSP
+    peers:
+      - peer0.org2.example.com
+
+orderers:
+  orderer.example.com:
+    url: grpcs://orderer.example.com:7050
+    tlsCACerts:
+      path: organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls/ca.crt
+    grpcOptions:
+      ssl-target-name-override: orderer.example.com
+
+peers:
+  peer0.org1.example.com:
+    url: grpcs://peer0.org1.example.com:7051
+    tlsCACerts:
+      path: organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+    grpcOptions:
+      ssl-target-name-override: peer0.org1.example.com
+  peer0.org2.example.com:
+    url: grpcs://peer0.org2.example.com:7051
+    tlsCACerts:
+      path: organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+    grpcOptions:
+      ssl-target-name-override: peer0.org2.example.com

@@ -1,0 +1,8 @@
+# Caliper 가 작업 폴더에서 자동으로 읽는 설정
+caliper:
+  networkconfig: networkconfig.yaml
+  fabric:
+    timeout:
+      # B 에서 프로세서가 버린 트랜잭션은 어느 블록에도 들어가지 않아 커밋 이벤트가 오지 않는다.
+      # Caliper 는 이 시간(초)을 기다린 뒤 실패로 센다.
+      invokeorquery: 10

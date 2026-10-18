@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: watchdog
+
+resources:
+  - namespace.yaml
+  - configmap.yaml
+  - rbac.yaml
+  - deployment.yaml
+  - service.yaml
+  - pdb.yaml
+
+# 유지할 s-node pod 수 (활성 1개 + 대기)
+replicas:
+  - name: snode
+    count: 3
+
+# 레지스트리에 올린 이미지로 바꾼다
+images:
+  - name: watchdog/s-node
+    newName: watchdog/s-node
+    newTag: mttr-1017g   # §48 설정(NOTES §48~§49). deployment.yaml 과 같게 둔다

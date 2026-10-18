@@ -1,0 +1,30 @@
+--- src//bls/ffi/go/bls/bls.go	2023-01-23 17:14:02.857374208 +0900
++++ bls/bls.go	2023-01-23 17:15:35.064970601 +0900
+@@ -1,16 +1,10 @@
+ package bls
+ 
+ /*
+-#cgo bn256 CFLAGS:-DMCLBN_FP_UNIT_SIZE=4
+-#cgo bn256 LDFLAGS:-lbls256
+-#cgo bn384 CFLAGS:-DMCLBN_FP_UNIT_SIZE=6
+-#cgo bn384 LDFLAGS:-lbls384
+-#cgo bn384_256 CFLAGS:-DMCLBN_FP_UNIT_SIZE=6 -DMCLBN_FR_UNIT_SIZE=4
+-#cgo bn384_256 LDFLAGS:-lbls384_256
+-
+-#cgo LDFLAGS:-lstdc++
++#cgo CFLAGS:-I${SRCDIR}./include -DBLS_ETH
+ typedef unsigned int (*ReadRandFunc)(void *, void *, unsigned int);
+ int wrapReadRandCgo(void *self, void *buf, unsigned int n);
++#include <mcl/bn_c384_256.h>
+ #include <bls/bls.h>
+ */
+ import "C"
+@@ -22,7 +16,7 @@ import (
+ 	"unsafe"
+ )
+ 
+-const ethMode = false
++const ethMode = true
+ 
+ const EthModeOld = C.BLS_ETH_MODE_OLD
+ const EthModeDraft05 = C.BLS_ETH_MODE_DRAFT_05

@@ -1,0 +1,5 @@
+.git
+grpc-go
+vendor
+k8s
+*.log

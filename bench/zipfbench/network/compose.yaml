@@ -1,0 +1,160 @@
+# Zipf 실험용 Fabric 네트워크: 오더러 1, 피어 2(Org1, Org2, LevelDB), Prometheus, CLI.
+# 비교할 시스템은 이미지만 바꿔 같은 파일로 띄운다 (network.sh 가 SYSTEM 에 따라 정한다).
+#   B  : serializer/fabric-*        수정된 Fabric (오더러 → Kafka → 프로세서 → 오더러)
+#   A1 : 같은 소스에서 오더러의 Kafka 경로만 되돌린 것 (zipfbench/fabric-orderer-vanilla)
+#   A2 : 공식 hyperledger/fabric-*:2.5.10
+#
+# 호스트 포트는 Prometheus(19090)만 연다. 기존 serializer-fabric 네트워크와 같이 떠 있어도
+# 포트가 겹치지 않는다. Caliper 는 같은 Docker 네트워크(zipf_fabric) 안에서 붙는다.
+name: zipfbench
+
+networks:
+  fabric:
+    name: zipf_fabric
+  # Serializer/kafka 의 docker compose 가 만드는 네트워크. Kafka 를 먼저 띄워야 한다
+  kafka:
+    name: kafka_default
+    external: true
+
+volumes:
+  orderer.example.com:
+  peer0.org1.example.com:
+  peer0.org2.example.com:
+
+# 오더러의 [COMMITDATA] 출력이 매우 크므로 로그 파일 크기를 묶어 둔다
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "50m"
+    max-file: "2"
+
+x-peer-common: &peer-common
+  image: ${PEER_IMAGE:-serializer/fabric-peer:latest}
+  working_dir: /root
+  command: peer node start
+  logging: *logging
+  networks:
+    - fabric
+
+x-peer-env: &peer-env
+  FABRIC_CFG_PATH: /etc/hyperledger/peercfg
+  FABRIC_LOGGING_SPEC: INFO
+  CORE_PEER_TLS_ENABLED: "true"
+  CORE_PEER_PROFILE_ENABLED: "false"
+  CORE_PEER_TLS_CERT_FILE: /etc/hyperledger/fabric/tls/server.crt
+  CORE_PEER_TLS_KEY_FILE: /etc/hyperledger/fabric/tls/server.key
+  CORE_PEER_TLS_ROOTCERT_FILE: /etc/hyperledger/fabric/tls/ca.crt
+  CORE_PEER_MSPCONFIGPATH: /etc/hyperledger/fabric/msp
+  CORE_PEER_LISTENADDRESS: 0.0.0.0:7051
+  CORE_PEER_CHAINCODELISTENADDRESS: 0.0.0.0:7052
+  CORE_CHAINCODE_EXECUTETIMEOUT: 300s
+  CORE_VM_ENDPOINT: unix:///host/var/run/docker.sock
+  CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE: zipf_fabric
+  CORE_LEDGER_STATE_STATEDATABASE: goleveldb
+  # Prometheus 가 긁어 가는 운영 포트 (ledger_block_processing_time 등)
+  CORE_OPERATIONS_LISTENADDRESS: 0.0.0.0:9443
+  CORE_METRICS_PROVIDER: prometheus
+
+services:
+  orderer.example.com:
+    image: ${ORDERER_IMAGE:-serializer/fabric-orderer:latest}
+    environment:
+      FABRIC_LOGGING_SPEC: INFO
+      ORDERER_GENERAL_LISTENADDRESS: 0.0.0.0
+      ORDERER_GENERAL_LISTENPORT: 7050
+      ORDERER_GENERAL_LOCALMSPID: OrdererMSP
+      ORDERER_GENERAL_LOCALMSPDIR: /var/hyperledger/orderer/msp
+      ORDERER_GENERAL_TLS_ENABLED: "true"
+      ORDERER_GENERAL_TLS_PRIVATEKEY: /var/hyperledger/orderer/tls/server.key
+      ORDERER_GENERAL_TLS_CERTIFICATE: /var/hyperledger/orderer/tls/server.crt
+      ORDERER_GENERAL_TLS_ROOTCAS: "[/var/hyperledger/orderer/tls/ca.crt]"
+      ORDERER_GENERAL_CLUSTER_CLIENTCERTIFICATE: /var/hyperledger/orderer/tls/server.crt
+      ORDERER_GENERAL_CLUSTER_CLIENTPRIVATEKEY: /var/hyperledger/orderer/tls/server.key
+      ORDERER_GENERAL_CLUSTER_ROOTCAS: "[/var/hyperledger/orderer/tls/ca.crt]"
+      ORDERER_GENERAL_BOOTSTRAPMETHOD: none
+      ORDERER_CHANNELPARTICIPATION_ENABLED: "true"
+      ORDERER_ADMIN_TLS_ENABLED: "true"
+      ORDERER_ADMIN_TLS_CERTIFICATE: /var/hyperledger/orderer/tls/server.crt
+      ORDERER_ADMIN_TLS_PRIVATEKEY: /var/hyperledger/orderer/tls/server.key
+      ORDERER_ADMIN_TLS_ROOTCAS: "[/var/hyperledger/orderer/tls/ca.crt]"
+      ORDERER_ADMIN_TLS_CLIENTROOTCAS: "[/var/hyperledger/orderer/tls/ca.crt]"
+      ORDERER_ADMIN_LISTENADDRESS: 0.0.0.0:7053
+      ORDERER_OPERATIONS_LISTENADDRESS: 0.0.0.0:8443
+      ORDERER_METRICS_PROVIDER: prometheus
+      # B 에서만 쓰인다: 오더러가 배치를 Kafka 로 보낼 때의 linger (weaveutils/producer)
+      KAFKA_LINGER: "0"
+      # Kafka 브로커와 incoming 형식 (B 에서만 쓰인다, Serializer NOTES §45~§46)
+      #   기본: 도커 내부망(kafka_default)으로 직접, tx 별 메타데이터만 보낸다
+      #   예전 방식: KAFKA_BROKERS=host.docker.internal:9091,host.docker.internal:9092,host.docker.internal:9093 KAFKA_INCOMING_FORMAT=envelope
+      KAFKA_BROKERS: ${KAFKA_BROKERS:-kafka1:9090,kafka2:9090,kafka3:9090}
+      KAFKA_INCOMING_FORMAT: ${KAFKA_INCOMING_FORMAT:-meta}
+    working_dir: /root
+    command: orderer
+    logging: *logging
+    volumes:
+      - ./organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/var/hyperledger/orderer/msp
+      - ./organizations/ordererOrganizations/example.com/orderers/orderer.example.com/tls:/var/hyperledger/orderer/tls
+      - orderer.example.com:/var/hyperledger/production/orderer
+    # B 의 오더러는 Kafka 의 도커 네트워크(kafka_default)에도 붙어 브로커에 직접 닿는다
+    networks:
+      - fabric
+      - kafka
+
+  peer0.org1.example.com:
+    <<: *peer-common
+    environment:
+      <<: *peer-env
+      CORE_PEER_ID: peer0.org1.example.com
+      CORE_PEER_ADDRESS: peer0.org1.example.com:7051
+      CORE_PEER_CHAINCODEADDRESS: peer0.org1.example.com:7052
+      CORE_PEER_GOSSIP_BOOTSTRAP: peer0.org1.example.com:7051
+      CORE_PEER_GOSSIP_EXTERNALENDPOINT: peer0.org1.example.com:7051
+      CORE_PEER_LOCALMSPID: Org1MSP
+    volumes:
+      - ./organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com:/etc/hyperledger/fabric
+      - ./peercfg:/etc/hyperledger/peercfg
+      - peer0.org1.example.com:/var/hyperledger/production
+      - /var/run/docker.sock:/host/var/run/docker.sock
+
+  peer0.org2.example.com:
+    <<: *peer-common
+    environment:
+      <<: *peer-env
+      CORE_PEER_ID: peer0.org2.example.com
+      CORE_PEER_ADDRESS: peer0.org2.example.com:7051
+      CORE_PEER_CHAINCODEADDRESS: peer0.org2.example.com:7052
+      CORE_PEER_GOSSIP_BOOTSTRAP: peer0.org2.example.com:7051
+      CORE_PEER_GOSSIP_EXTERNALENDPOINT: peer0.org2.example.com:7051
+      CORE_PEER_LOCALMSPID: Org2MSP
+    volumes:
+      - ./organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com:/etc/hyperledger/fabric
+      - ./peercfg:/etc/hyperledger/peercfg
+      - peer0.org2.example.com:/var/hyperledger/production
+      - /var/run/docker.sock:/host/var/run/docker.sock
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=1d
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "19090:9090"
+    networks:
+      - fabric
+
+  # 인증서·채널·체인코드 작업은 모두 이 컨테이너 안에서 한다
+  cli:
+    image: ${TOOLS_IMAGE:-serializer/fabric-tools:latest}
+    working_dir: /work
+    command: sleep infinity
+    environment:
+      FABRIC_CFG_PATH: /work/peercfg
+      CORE_PEER_TLS_ENABLED: "true"
+      FABRIC_LOGGING_SPEC: "INFO:grpc=error"
+    volumes:
+      - .:/work
+    networks:
+      - fabric

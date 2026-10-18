@@ -1,0 +1,15 @@
+# 클라우드(여러 VM) 실행용 덧붙임: CLOUD=1 ./network.sh ... 이면 network.sh 가 compose.yaml 위에 얹는다.
+# 클라이언트(Caliper)가 다른 VM 에 있으므로 오더러와 피어 포트를 이 VM 에 연다.
+# 두 피어는 컨테이너 안에서 모두 7051 이라 호스트 포트를 나눈다(org2 → 9051). Caliper 는 connection-org1.cloud.yaml 을 쓴다.
+# 오더러가 붙는 Kafka 는 KAFKA_BROKERS(다른 VM 의 주소)로 정한다. compose.yaml 의 kafka_default 망은 이 VM 에서는
+# 빈 망으로 미리 만들어 둔다(deploy/cloud/20-fabric.sh).
+services:
+  orderer.example.com:
+    ports:
+      - "7050:7050"
+  peer0.org1.example.com:
+    ports:
+      - "7051:7051"
+  peer0.org2.example.com:
+    ports:
+      - "9051:7051"

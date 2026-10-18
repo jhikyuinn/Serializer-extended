@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: snode-config
+data:
+  # Kafka 프로세서(HTTP/3 :8082, 채널 목록 조회) 주소
+  KAFKA_PROCESSOR_ADDR: "host.docker.internal"
+  KAFKA_BROKERS: "host.docker.internal:9091,host.docker.internal:9092,host.docker.internal:9093"
+  # s-node가 만드는 토픽의 복제 계수. 브로커 수보다 클 수 없다.
+  KAFKA_REPLICATION: "3"
